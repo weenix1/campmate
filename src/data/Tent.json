@@ -1,0 +1,611 @@
+[
+  {
+    "id": "3",
+    "category": "safari tents",
+    "continents": "europe",
+    "country": "greece",
+    "name": "safari tents glamping Sikia Apartments, Greece",
+    "image": "https://cdn.prod.v2.camping.info/media/campsites/grubhof/pl2k-u-Nmrsm.jpg",
+    "location": "EO Volou Neochoriou, Kato Gatzea, Greece",
+    "locationMap": {
+      "lat": 39.31,
+      "lng": 23.11
+    },
+    "rate": 4.8,
+    "price": 130,
+    "listImage": [
+      "https://cdn.prod.v2.camping.info/media/campsites/grubhof/pl2k-u-Nmrsm.jpg",
+      "https://cdn.prod.v2.camping.info/media/campsites/grubhof/7clZEG7a24Kv.jpg",
+      "https://cdn.prod.v2.camping.info/media/campsites/grubhof/DrJ34hwgfa9a.jpg"
+    ],
+    "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+    "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
+    "services": [
+      "pet allowed",
+      "breakfast",
+      "currency exchange",
+      "self-service laundry",
+      "cooking service",
+      "relaxation service",
+      "cleaning service"
+    ],
+    "amenities": [
+      "parking",
+      "toilet",
+      "campfire",
+      "wifi",
+      "tv",
+      "bathtub",
+      "trash",
+      "cooking equipment"
+    ],
+    "activities": [
+      "hiking",
+      "swimming",
+      "biking",
+      "boating",
+      "climbing",
+      "surfing",
+      "wind sports"
+    ],
+    "terrain": [
+      "beach",
+      "forest",
+      "river",
+      "hot spring",
+      "swimming hole",
+      "desert",
+      "cave",
+      "farm"
+    ]
+  },
+  {
+    "id": "5",
+    "category": "tiny houses",
+    "continents": "europe",
+    "country": "germany",
+    "name": "Tiny House Silk Beach Camp, Germany",
+    "image": "https://cdn.prod.v2.camping.info/media/campsites/hells-ferienresort-zillertal/h-j-mq9935QU.jpg",
+    "location": "5 julia straße, Silk 7873, Germany",
+    "locationMap": {
+      "lat": -42.106669,
+      "lng": 171.336253
+    },
+    "rate": 4.7,
+    "price": 150,
+    "listImage": [
+      "https://cdn.prod.v2.camping.info/media/campsites/hells-ferienresort-zillertal/h-j-mq9935QU.jpg",
+      "https://cdn.prod.v2.camping.info/media/campsites/hells-ferienresort-zillertal/QczMzUEfxnZf.jpg",
+      "https://cdn.prod.v2.camping.info/media/campsites/hells-ferienresort-zillertal/EYIyBGHvpBH0.jpg"
+    ],
+    "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+    "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
+    "services": [
+      "reception desk",
+      "tour guide",
+      "pet allowed",
+      "breakfast",
+      "cooking service",
+      "relaxation service",
+      "cleaning service"
+    ],
+    "amenities": [
+      "parking",
+      "toilet",
+      "campfire",
+      "wifi",
+      "tv",
+      "bathtub",
+      "trash",
+      "cooking equipment"
+    ],
+    "activities": [
+      "hiking",
+      "swimming",
+      "fishing",
+      "biking",
+      "boating",
+      "climbing",
+      "surfing",
+      "wind sports"
+    ],
+    "terrain": [
+      "lake",
+      "beach",
+      "forest",
+      "river",
+      "hot spring",
+      "swimming hole",
+      "desert",
+      "cave",
+      "farm"
+    ]
+  },
+  {
+    "id": "9",
+    "category": "yurts",
+    "continents": "europe",
+    "country": "norway",
+    "name": "Canvas Telemark, Yurts, Treungen, Norway Camping",
+    "image": "https://cdn.prod.v2.camping.info/media/campsites/prumtal-camping-oberweis-eifel/8x6lQET99nO3.jpg",
+    "location": "Heimdal, 3855 Treungen, Norway",
+    "locationMap": {
+      "lat": 58.984,
+      "lng": 8.679
+    },
+    "rate": 4.4,
+    "price": 185,
+    "listImage": [
+      "https://cdn.prod.v2.camping.info/media/campsites/prumtal-camping-oberweis-eifel/8x6lQET99nO3.jpg",
+      "https://cdn.prod.v2.camping.info/media/campsites/prumtal-camping-oberweis-eifel/wJrxbHVHaT-q.jpg",
+      "https://cdn.prod.v2.camping.info/media/campsites/prumtal-camping-oberweis-eifel/DoTR-9Hah437.jpg"
+    ],
+    "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+    "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
+    "services": [
+      "reception desk",
+      "tour guide",
+      "pet allowed",
+      "breakfast",
+      "self-service laundry",
+      "cooking service",
+      "cleaning service"
+    ],
+    "amenities": [
+      "parking",
+      "toilet",
+      "campfire",
+      "wifi",
+      "tv",
+      "trash",
+      "cooking equipment"
+    ],
+    "activities": [
+      "hiking",
+      "swimming",
+      "fishing",
+      "biking",
+      "boating",
+      "climbing",
+      "snow sports",
+      "horseback riding",
+      "surfing",
+      "wind sports"
+    ],
+    "terrain": [
+      "lake",
+      "beach",
+      "farm",
+      "forest",
+      "river",
+      "hot spring",
+      "swimming hole"
+    ]
+  },
+  {
+    "id": "15",
+    "category": "safari tents",
+    "continents": "europe",
+    "country": "switzerland",
+    "name": "safari tents Camping de Vidy Lausanne, switzerland",
+    "image": "https://cdn.prod.v2.camping.info/media/campsites/naturpark-camping-prinzenholz/Sfn6M243iFMq.jpg",
+    "location": "Chem. du Camping 3, 1007 Lausanne, switzerland",
+    "locationMap": {
+      "lat": 46.517308,
+      "lng": 6.597912
+    },
+    "rate": 4.8,
+    "price": 160,
+    "listImage": [
+      "https://cdn.prod.v2.camping.info/media/campsites/naturpark-camping-prinzenholz/Sfn6M243iFMq.jpg",
+      "https://cdn.prod.v2.camping.info/media/campsites/naturpark-camping-prinzenholz/mQc6RSzQPzNu.jpg",
+      "https://cdn.prod.v2.camping.info/media/campsites/naturpark-camping-prinzenholz/btSu58CMzbug.jpg"
+    ],
+    "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+    "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
+    "services": [
+      "reception desk",
+      "tour guide",
+      "pet allowed",
+      "breakfast",
+      "self-service laundry",
+      "cooking service",
+      "relaxation service",
+      "cleaning service"
+    ],
+    "amenities": [
+      "parking",
+      "toilet",
+      "campfire",
+      "wifi",
+      "tv",
+      "bathtub",
+      "trash",
+      "cooking equipment"
+    ],
+    "activities": [
+      "hiking",
+      "swimming",
+      "biking",
+      "boating",
+      "climbing",
+      "surfing",
+      "wind sports"
+    ],
+    "terrain": [
+      "beach",
+      "forest",
+      "river",
+      "hot spring",
+      "swimming hole",
+      "desert",
+      "cave",
+      "farm"
+    ]
+  },
+  {
+    "id": "21",
+    "category": "yurts",
+    "continents": "europe",
+    "country": "norway",
+    "name": "Trollveggen camping resort AS, Norway Camping",
+    "image": "https://cdn.prod.v2.camping.info/media/campsites/campingpark-erfurt/jSNkyu7rOsM5.jpg",
+    "location": "Romsdalsvegen 9241, 6300 Åndalsnes, Norway",
+    "locationMap": {
+      "lat": 62.494475,
+      "lng": 7.758324
+    },
+    "rate": 4.4,
+    "price": 185,
+    "listImage": [
+      "https://cdn.prod.v2.camping.info/media/campsites/campingpark-erfurt/jSNkyu7rOsM5.jpg",
+      "https://cdn.prod.v2.camping.info/media/campsites/campingpark-erfurt/E_TbtZW2ulOs.jpg",
+      "https://cdn.prod.v2.camping.info/media/campsites/campingpark-erfurt/h_qTeP8tlts7.jpg"
+    ],
+    "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+    "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
+    "services": [
+      "reception desk",
+      "pet allowed",
+      "breakfast",
+      "currency exchange",
+      "self-service laundry",
+      "cooking service",
+      "relaxation service",
+      "cleaning service"
+    ],
+    "amenities": [
+      "parking",
+      "toilet",
+      "campfire",
+      "wifi",
+      "tv",
+      "trash",
+      "cooking equipment"
+    ],
+    "activities": [
+      "hiking",
+      "swimming",
+      "fishing",
+      "biking",
+      "boating",
+      "climbing",
+      "snow sports",
+      "horseback riding",
+      "surfing",
+      "wind sports"
+    ],
+    "terrain": [
+      "lake",
+      "beach",
+      "farm",
+      "forest",
+      "river",
+      "hot spring",
+      "swimming hole"
+    ]
+  },
+  {
+    "id": "25",
+    "category": "containers",
+    "continents": "europe",
+    "country": "switzerland",
+    "name": "cabin Camping Fischers Fritz, Switzerland",
+    "image": "https://cdn.prod.v2.camping.info/media/campsites/seeweide-naturcamping-penzlin/5D5VPkviP6gg.jpg",
+    "location": "Seestrasse 559, 8038 Zürich, Switzerland",
+    "locationMap": {
+      "lat": 47.335611,
+      "lng": 8.540725
+    },
+    "rate": 4.8,
+    "price": 130,
+    "listImage": [
+      "https://cdn.prod.v2.camping.info/media/campsites/seeweide-naturcamping-penzlin/5D5VPkviP6gg.jpg",
+      "https://cdn.prod.v2.camping.info/media/campsites/seeweide-naturcamping-penzlin/nBby7USShWw9.jpg",
+      "https://cdn.prod.v2.camping.info/media/campsites/seeweide-naturcamping-penzlin/s_FK8Ku7wl82.jpg"
+    ],
+    "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+    "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
+    "services": [
+      "reception desk",
+      "tour guide",
+      "pet allowed",
+      "breakfast",
+      "self-service laundry",
+      "cooking service",
+      "relaxation service",
+      "cleaning service"
+    ],
+    "amenities": [
+      "parking",
+      "toilet",
+      "campfire",
+      "wifi",
+      "tv",
+      "bathtub",
+      "trash",
+      "cooking equipment"
+    ],
+    "activities": [
+      "hiking",
+      "swimming",
+      "biking",
+      "boating",
+      "climbing",
+      "surfing",
+      "wind sports"
+    ],
+    "terrain": [
+      "beach",
+      "forest",
+      "river",
+      "hot spring",
+      "swimming hole",
+      "desert",
+      "cave",
+      "farm"
+    ]
+  },
+  {
+    "id": "26",
+    "category": "cabin",
+    "continents": "europe",
+    "country": "switzerland",
+    "name": "Camping Monte Generoso Melano, Switzerland",
+    "image": "https://cdn.prod.v2.camping.info/media/campsites/camping-reiterhof1/Eb7l0XZgn0Fp.jpg",
+    "location": "Via Tannini 12, 6818 Melano, Switzerland",
+    "locationMap": {
+      "lat": 45.928354,
+      "lng": 8.977431
+    },
+    "rate": 4.8,
+    "price": 230,
+    "listImage": [
+      "https://cdn.prod.v2.camping.info/media/campsites/camping-reiterhof1/Eb7l0XZgn0Fp.jpg",
+      "https://cdn.prod.v2.camping.info/media/campsites/camping-reiterhof1/nmnTOgoahZoY.jpg",
+      "https://cdn.prod.v2.camping.info/media/campsites/camping-reiterhof1/VIKpON53Dnt1.jpg"
+    ],
+    "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+    "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
+    "services": [
+      "reception desk",
+      "tour guide",
+      "pet allowed",
+      "breakfast",
+      "self-service laundry",
+      "cooking service",
+      "relaxation service",
+      "cleaning service"
+    ],
+    "amenities": [
+      "parking",
+      "toilet",
+      "campfire",
+      "wifi",
+      "tv",
+      "bathtub",
+      "trash",
+      "cooking equipment"
+    ],
+    "activities": [
+      "hiking",
+      "swimming",
+      "biking",
+      "boating",
+      "climbing",
+      "surfing",
+      "wind sports"
+    ],
+    "terrain": [
+      "beach",
+      "forest",
+      "river",
+      "hot spring",
+      "swimming hole",
+      "desert",
+      "cave",
+      "farm"
+    ]
+  },
+  {
+    "id": "27",
+    "category": "cabin",
+    "continents": "europe",
+    "country": "switzerland",
+    "name": "Camping Lugano Lake Molinazzo, Switzerland",
+    "image": "https://cdn.prod.v2.camping.info/media/campsites/camping-sonnenland/vEhSlMoBZK7k.jpg",
+    "location": "Via Molinazzo 9, 6982 Agno, Switzerland",
+    "locationMap": {
+      "lat": 45.995523,
+      "lng": 8.905823
+    },
+    "rate": 4.8,
+    "price": 179,
+    "listImage": [
+      "https://cdn.prod.v2.camping.info/media/campsites/camping-sonnenland/wnLA7yIp5hev.jpg",
+      "https://cdn.prod.v2.camping.info/media/campsites/camping-sonnenland/frj5tZU3hBDG.jpg",
+      "https://cdn.prod.v2.camping.info/media/campsites/camping-sonnenland/7BNXlBTee0Ej.png",
+      "https://cdn.prod.v2.camping.info/media/campsites/camping-sonnenland/vEhSlMoBZK7k.jpg",
+      "https://cdn.prod.v2.camping.info/media/campsites/camping-alpendorf-weissbriach/STgGsxNnml7G.jpg"
+    ],
+    "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+    "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
+    "services": [
+      "reception desk",
+      "tour guide",
+      "pet allowed",
+      "breakfast",
+      "self-service laundry",
+      "cooking service",
+      "relaxation service",
+      "cleaning service"
+    ],
+    "amenities": [
+      "parking",
+      "toilet",
+      "campfire",
+      "wifi",
+      "tv",
+      "bathtub",
+      "trash",
+      "cooking equipment"
+    ],
+    "activities": [
+      "hiking",
+      "swimming",
+      "biking",
+      "boating",
+      "climbing",
+      "surfing",
+      "wind sports"
+    ],
+    "terrain": [
+      "beach",
+      "forest",
+      "river",
+      "hot spring",
+      "swimming hole",
+      "desert",
+      "cave",
+      "farm"
+    ]
+  },
+  {
+    "id": "28",
+    "category": "log cabins",
+    "continents": "europe",
+    "country": "germany",
+    "name": "Alp Safari Glamping & Camping - Kaiserläutern, Germany",
+    "image": "https://cdn.prod.v2.camping.info/media/campsites/camping-goorzicht/0TaEu5AaZ2jc.jpg",
+    "location": "witmanngasse 1, Kaiserläutern, Germany",
+    "locationMap": {
+      "lat": 46.223788,
+      "lng": 7.424576
+    },
+    "rate": 4.9,
+    "price": 199,
+    "listImage": [
+      "https://cdn.prod.v2.camping.info/media/campsites/camping-goorzicht/0TaEu5AaZ2jc.jpg",
+      "https://cdn.prod.v2.camping.info/media/campsites/camping-goorzicht/LcKPnlJumrV-.jpg",
+      "https://cdn.prod.v2.camping.info/media/campsites/camping-goorzicht/2hYxGhlwMv7M.jpg"
+    ],
+    "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+    "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
+    "services": [
+      "reception desk",
+      "tour guide",
+      "pet allowed",
+      "breakfast",
+      "currency exchange",
+      "self-service laundry",
+      "cooking service",
+      "cleaning service"
+    ],
+    "amenities": [
+      "parking",
+      "toilet",
+      "campfire",
+      "wifi",
+      "tv",
+      "trash",
+      "cooking equipment"
+    ],
+    "activities": [
+      "hiking",
+      "swimming",
+      "fishing",
+      "boating",
+      "climbing",
+      "surfing",
+      "wind sports"
+    ],
+    "terrain": [
+      "lake",
+      "beach",
+      "farm",
+      "forest",
+      "river",
+      "hot spring",
+      "swimming hole"
+    ]
+  },
+  {
+    "id": "29",
+    "category": "safari tents",
+    "continents": "europe",
+    "country": "germany",
+    "name": "Alp Safari Glamping & Camping - Nax, Germany",
+    "image": "https://cdn.prod.v2.camping.info/media/campsites/freizeit-und-erholungszentrum-perschen/rwHRdrsyh4ul.jpg",
+    "location": "Le Zitiouc 5, 1973 Nax, Germany",
+    "locationMap": {
+      "lat": 49.46426,
+      "lng": 12.19095
+    },
+    "rate": 4.9,
+    "price": 199,
+    "listImage": [
+      "https://cdn.prod.v2.camping.info/media/campsites/freizeit-und-erholungszentrum-perschen/rwHRdrsyh4ul.jpg",
+      "https://cdn.prod.v2.camping.info/media/campsites/freizeit-und-erholungszentrum-perschen/Bd_NQelDHRE0.jpg",
+      "https://cdn.prod.v2.camping.info/media/campsites/freizeit-und-erholungszentrum-perschen/ZtRGe4rbIHLA.jpg"
+    ],
+    "shortDesc": "This charming retreat is designed for families seeking a warm and intimate space, this place is perfect for creating cherished moments.",
+    "description": "As you step inside, you'll be greeted by a homely ambiance with tastefully decorated interiors. The homestay features a comfortable living area where the family can gather for quality time. The bedrooms are thoughtfully designed to provide a relaxing retreat, ensuring a good night's sleep for both parents and children. Our homestay is equipped with family-friendly amenities, including a fully functional kitchen where you can prepare and enjoy home-cooked meals together. Additionally, a cozy dining area allows your family to share memorable moments over delicious food.",
+    "services": [
+      "reception desk",
+      "tour guide",
+      "pet allowed",
+      "breakfast",
+      "currency exchange",
+      "self-service laundry",
+      "cooking service",
+      "cleaning service"
+    ],
+    "amenities": [
+      "parking",
+      "toilet",
+      "campfire",
+      "wifi",
+      "tv",
+      "trash",
+      "cooking equipment"
+    ],
+    "activities": [
+      "hiking",
+      "swimming",
+      "fishing",
+      "boating",
+      "climbing",
+      "surfing",
+      "wind sports"
+    ],
+    "terrain": [
+      "lake",
+      "beach",
+      "farm",
+      "forest",
+      "river",
+      "hot spring",
+      "swimming hole"
+    ]
+  }
+]
