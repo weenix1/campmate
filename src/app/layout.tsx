@@ -12,7 +12,7 @@ const dmsans = DM_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'CampingMate',
-  description: 'Listing Glamping Template',
+  description: 'Listing Camping Template',
 };
 
 export default function RootLayout({

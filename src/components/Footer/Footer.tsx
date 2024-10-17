@@ -109,7 +109,7 @@ const Footer = () => {
                                     </div>
                                 </div>
                                 <div className="caption1 mt-5">
-                                    Book Glamping Hassle-Free with CampingMate
+                                    Book Camping Hassle-Free with CampingMate
                                     and Boost Your Income.
                                 </div>
                                 <div className="location flex items-center gap-2 mt-3">
@@ -120,7 +120,7 @@ const Footer = () => {
                                     </div>
                                 </div>
                                 <div className="form-search mt-5">
-                                <div className="text-title pb-2">
+                                    <div className="text-title pb-2">
                                         Newsletter
                                     </div>
                                     <form className="w-full relative rounded-lg overflow-hidden">
@@ -160,7 +160,7 @@ const Footer = () => {
                                         href={'/pages/faqs'}
                                         className="caption1 text-variant1 has-line block w-fit whitespace-nowrap mt-2"
                                     >
-                                        Glamp FAQ
+                                        CampMate FAQ
                                     </Link>
                                     <Link
                                         href={'/term-of-use'}

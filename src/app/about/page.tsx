@@ -81,7 +81,7 @@ const About = () => {
                 <div className="container">
                     <TextHeading
                         title="Meet our Team"
-                        subTitle="Our team of Glamping enthusiasts and experts is at the heart of our mission"
+                        subTitle="Our team of Camping enthusiasts and experts is at the heart of our mission"
                     />
                     <div className="list grid md:grid-cols-3 gap-[30px] md:mt-10 mt-6">
                         <div className="item">
@@ -173,10 +173,10 @@ const About = () => {
                     <div className="content-main bg-surface sm:py-10 py-8 lg:px-[60px] sm:px-10 px-8 rounded-[20px] sm:flex items-center justify-between">
                         <div className="left sm:w-3/5">
                             <div className="heading3">
-                                Join the Glamping Community
+                                Join the Camping Community
                             </div>
                             <div className="body2 text-variant1 sm:mt-4 mt-3">
-                                Stay engaged with the Glamping community through
+                                Stay engaged with the Camping community through
                                 our events, contests, and exclusive offers. We
                                 {String.raw`'re`} more than a platform
                             </div>

@@ -156,17 +156,16 @@ const BlogDefault = () => {
                                     </div>
                                     <div className="list-cate pt-1">
                                         <div
-                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${
-                                                category === 'cooking'
-                                                    ? 'active'
-                                                    : ''
-                                            }`}
+                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === 'cooking'
+                                                ? 'active'
+                                                : ''
+                                                }`}
                                             onClick={() =>
                                                 handleCategory('cooking')
                                             }
                                         >
                                             <div className="capitalize has-line hover:text-black text-secondary">
-                                                Glamping Destinations
+                                                Camping Destinations
                                             </div>
                                             <div className="text-secondary2">
                                                 (
@@ -181,17 +180,16 @@ const BlogDefault = () => {
                                             </div>
                                         </div>
                                         <div
-                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${
-                                                category === 'experiences'
-                                                    ? 'active'
-                                                    : ''
-                                            }`}
+                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === 'experiences'
+                                                ? 'active'
+                                                : ''
+                                                }`}
                                             onClick={() =>
                                                 handleCategory('experiences')
                                             }
                                         >
                                             <div className="capitalize has-line hover:text-black text-secondary">
-                                                Glamping Experiences
+                                                Camping Experiences
                                             </div>
                                             <div className="text-secondary2">
                                                 (
@@ -206,11 +204,10 @@ const BlogDefault = () => {
                                             </div>
                                         </div>
                                         <div
-                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${
-                                                category === 'equipment'
-                                                    ? 'active'
-                                                    : ''
-                                            }`}
+                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === 'equipment'
+                                                ? 'active'
+                                                : ''
+                                                }`}
                                             onClick={() =>
                                                 handleCategory('equipment')
                                             }
@@ -231,11 +228,10 @@ const BlogDefault = () => {
                                             </div>
                                         </div>
                                         <div
-                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${
-                                                category === 'guides'
-                                                    ? 'active'
-                                                    : ''
-                                            }`}
+                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === 'guides'
+                                                ? 'active'
+                                                : ''
+                                                }`}
                                             onClick={() =>
                                                 handleCategory('guides')
                                             }
@@ -256,17 +252,16 @@ const BlogDefault = () => {
                                             </div>
                                         </div>
                                         <div
-                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${
-                                                category === 'glamping'
-                                                    ? 'active'
-                                                    : ''
-                                            }`}
+                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === 'glamping'
+                                                ? 'active'
+                                                : ''
+                                                }`}
                                             onClick={() =>
                                                 handleCategory('glamping')
                                             }
                                         >
                                             <div className="capitalize has-line hover:text-black text-secondary">
-                                                Glamping Adventure
+                                                Camping Adventure
                                             </div>
                                             <div className="text-secondary2">
                                                 (
@@ -281,11 +276,10 @@ const BlogDefault = () => {
                                             </div>
                                         </div>
                                         <div
-                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${
-                                                category === 'activities'
-                                                    ? 'active'
-                                                    : ''
-                                            }`}
+                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === 'activities'
+                                                ? 'active'
+                                                : ''
+                                                }`}
                                             onClick={() =>
                                                 handleCategory('activities')
                                             }
@@ -306,11 +300,10 @@ const BlogDefault = () => {
                                             </div>
                                         </div>
                                         <div
-                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${
-                                                category === 'camping'
-                                                    ? 'active'
-                                                    : ''
-                                            }`}
+                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === 'camping'
+                                                ? 'active'
+                                                : ''
+                                                }`}
                                             onClick={() =>
                                                 handleCategory('camping')
                                             }
@@ -331,11 +324,10 @@ const BlogDefault = () => {
                                             </div>
                                         </div>
                                         <div
-                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${
-                                                category === 'locations'
-                                                    ? 'active'
-                                                    : ''
-                                            }`}
+                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === 'locations'
+                                                ? 'active'
+                                                : ''
+                                                }`}
                                             onClick={() =>
                                                 handleCategory('locations')
                                             }
@@ -361,23 +353,21 @@ const BlogDefault = () => {
                                     <div className="heading6">Tags Cloud</div>
                                     <div className="list-tags flex items-center flex-wrap gap-5 mt-4">
                                         <div
-                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${
-                                                category === 'glamping'
-                                                    ? 'active'
-                                                    : ''
-                                            }`}
+                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${category === 'glamping'
+                                                ? 'active'
+                                                : ''
+                                                }`}
                                             onClick={() =>
                                                 handleCategory('glamping')
                                             }
                                         >
-                                            Glamping
+                                            Camping
                                         </div>
                                         <div
-                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${
-                                                category === 'camping'
-                                                    ? 'active'
-                                                    : ''
-                                            }`}
+                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${category === 'camping'
+                                                ? 'active'
+                                                : ''
+                                                }`}
                                             onClick={() =>
                                                 handleCategory('camping')
                                             }
@@ -385,11 +375,10 @@ const BlogDefault = () => {
                                             Camping
                                         </div>
                                         <div
-                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${
-                                                category === 'locations'
-                                                    ? 'active'
-                                                    : ''
-                                            }`}
+                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${category === 'locations'
+                                                ? 'active'
+                                                : ''
+                                                }`}
                                             onClick={() =>
                                                 handleCategory('locations')
                                             }
@@ -397,11 +386,10 @@ const BlogDefault = () => {
                                             locations
                                         </div>
                                         <div
-                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${
-                                                category === 'cooking'
-                                                    ? 'active'
-                                                    : ''
-                                            }`}
+                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${category === 'cooking'
+                                                ? 'active'
+                                                : ''
+                                                }`}
                                             onClick={() =>
                                                 handleCategory('cooking')
                                             }
@@ -409,11 +397,10 @@ const BlogDefault = () => {
                                             cooking
                                         </div>
                                         <div
-                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${
-                                                category === 'experiences'
-                                                    ? 'active'
-                                                    : ''
-                                            }`}
+                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${category === 'experiences'
+                                                ? 'active'
+                                                : ''
+                                                }`}
                                             onClick={() =>
                                                 handleCategory('experiences')
                                             }
@@ -421,11 +408,10 @@ const BlogDefault = () => {
                                             experiences
                                         </div>
                                         <div
-                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${
-                                                category === 'guides'
-                                                    ? 'active'
-                                                    : ''
-                                            }`}
+                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${category === 'guides'
+                                                ? 'active'
+                                                : ''
+                                                }`}
                                             onClick={() =>
                                                 handleCategory('guides')
                                             }
@@ -433,11 +419,10 @@ const BlogDefault = () => {
                                             guides
                                         </div>
                                         <div
-                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${
-                                                category === 'activities'
-                                                    ? 'active'
-                                                    : ''
-                                            }`}
+                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${category === 'activities'
+                                                ? 'active'
+                                                : ''
+                                                }`}
                                             onClick={() =>
                                                 handleCategory('activities')
                                             }
@@ -445,11 +430,10 @@ const BlogDefault = () => {
                                             activities
                                         </div>
                                         <div
-                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${
-                                                category === 'equipment'
-                                                    ? 'active'
-                                                    : ''
-                                            }`}
+                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${category === 'equipment'
+                                                ? 'active'
+                                                : ''
+                                                }`}
                                             onClick={() =>
                                                 handleCategory('equipment')
                                             }

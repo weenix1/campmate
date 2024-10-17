@@ -27,7 +27,7 @@ const Contact = () => {
                                         We’d love to help
                                     </div>
                                     <div className="body2 text-variant1 mt-4">
-                                        Your Glamping Dreams, Our Expertise:
+                                        Your CampingMate Dreams, Our Expertise:
                                         Crafting Unforgettable Adventures
                                         Together
                                     </div>
@@ -107,7 +107,7 @@ const Contact = () => {
                             <div className="heading4">Drop Us A Line</div>
                             <div className="body2 text-variant1 mt-3">
                                 Connect with Us to Embark on a Journey to Create
-                                Your Dream Glamping Experience
+                                Your Dream Camping Experience
                             </div>
                             <form className="md:mt-7 mt-4">
                                 <div className="grid sm:grid-cols-2 grid-cols-1 gap-5">
