@@ -3,15 +3,14 @@
         "id": "1",
         "name": "Ronald Richards",
         "position": "Ethical Hacker",
-        "avatar": "/images/avatar/60x60.png",
+        "avatar": "/images/avatar/ronald.jpg",
         "date": "November 10, 2023",
         "address": "Tokyo, Japan",
-        "description": "Our GlampHub experience was nothing short of amazing. It offered a tranquil escape from the daily grind, and we were impressed by the sustainable practices and the sense of community.",
+        "description": "Our Campingmate experience was nothing short of amazing. It offered a tranquil escape from the daily grind, and we were impressed by the sustainable practices and the sense of community.",
         "images": [
-            "/images/tent/900x900.png",
-            "/images/tent/900x900.png",
-            "/images/tent/900x900.png",
-            "/images/tent/900x900.png"
+            "https://cdn.prod.v2.camping.info/media/campsites/freizeitpark-am-emsdeich-ostfriesland/RtComYGLrS-N.jpg",
+            "https://cdn.prod.v2.camping.info/media/campsites/freizeitpark-am-emsdeich-ostfriesland/kf1TrXU2zEwh.jpg",
+            "https://cdn.prod.v2.camping.info/media/campsites/freizeitpark-am-emsdeich-ostfriesland/_zHat5U3Ndjb.jpg"
         ],
         "star": 5
     },
@@ -19,14 +18,13 @@
         "id": "2",
         "name": "Darlene Robertson",
         "position": "Scrum Master",
-        "avatar": "/images/avatar/60x60.png",
+        "avatar": "/images/avatar/robertson.jpg",
         "date": "November 11, 2023",
         "address": "Madrid, Spain",
-        "description": "Choosing GlampHub for our glamping retreat was an excellent decision. It provided a serene environment away from the hustle of the city, and we loved the eco-friendly approach and the camaraderie.",
+        "description": "Choosing CampingMate for our glamping retreat was an excellent decision. It provided a serene environment away from the hustle of the city, and we loved the eco-friendly approach and the camaraderie.",
         "images": [
-            "/images/tent/900x900.png",
-            "/images/tent/900x900.png",
-            "/images/tent/900x900.png"
+            "https://cdn.prod.v2.camping.info/media/campsites/freizeitpark-am-emsdeich-ostfriesland/0KzzuAk5PgkW.jpg",
+            "https://cdn.prod.v2.camping.info/media/campsites/barracuda-beach-camping/yTlfP_XmFGqd.jpg"
         ],
         "star": 5
     },
@@ -34,10 +32,10 @@
         "id": "3",
         "name": "Floyd Miles",
         "position": "Project Manager",
-        "avatar": "/images/avatar/60x60.png",
+        "avatar": "/images/avatar/floyd.jpg",
         "date": "November 13, 2023",
         "address": "Manchester, UK",
-        "description": "GlampHub exceeded our expectations! It was an oasis of calm amidst nature, and we appreciated the eco-conscious mindset and the friendly ambiance.",
+        "description": "CampingMate exceeded our expectations! It was an oasis of calm amidst nature, and we appreciated the eco-conscious mindset and the friendly ambiance.",
         "images": [],
         "star": 4
     },
@@ -45,15 +43,15 @@
         "id": "4",
         "name": "Jerome Bell",
         "position": "Team Leader",
-        "avatar": "/images/avatar/60x60.png",
+        "avatar": "/images/avatar/jerome.jpg",
         "date": "November 15, 2023",
         "address": "California, USA",
-        "description": "Our stay at GlampHub was fantastic. It allowed us to unwind from our busy lives, and we admired the commitment to sustainability and the welcoming vibe of the place.",
+        "description": "Our stay at CampingMate was fantastic. It allowed us to unwind from our busy lives, and we admired the commitment to sustainability and the welcoming vibe of the place.",
         "images": [
-            "/images/tent/900x900.png",
-            "/images/tent/900x900.png",
-            "/images/tent/900x900.png",
-            "/images/tent/900x900.png"
+            "https://cdn.prod.v2.camping.info/media/campsites/barracuda-beach-camping/q-Cm-VzqPygS.jpg",
+            "https://cdn.prod.v2.camping.info/media/campsites/barracuda-beach-camping/FmNsq8ucBQg1.jpg",
+            "https://cdn.prod.v2.camping.info/media/campsites/seepark-ternsche/pELB98OQSqbd.jpg",
+            "https://cdn.prod.v2.camping.info/media/campsites/seepark-ternsche/TSvm5kb9l-cG.jpg"
         ],
         "star": 5
     },
@@ -61,13 +59,13 @@
         "id": "5",
         "name": "Mina Bonino",
         "position": "UI/UX Designer",
-        "avatar": "/images/avatar/60x60.png",
+        "avatar": "/images/avatar/mina.jpg",
         "date": "November 18, 2023",
         "address": "Paris, France",
-        "description": "GlampHub was a perfect getaway! It offered a peaceful respite, and we were delighted by the eco-friendly initiatives and the inclusive atmosphere.",
+        "description": "CampingMate was a perfect getaway! It offered a peaceful respite, and we were delighted by the eco-friendly initiatives and the inclusive atmosphere.",
         "images": [
-            "/images/tent/900x900.png",
-            "/images/tent/900x900.png"
+            "https://cdn.prod.v2.camping.info/media/campsites/seepark-ternsche/dj20vGdu399l.jpg",
+            "https://cdn.prod.v2.camping.info/media/campsites/eurocamp-spreewaldtor/GcMcDj66VWcW.jpg"
         ],
         "star": 4
     },
@@ -75,98 +73,77 @@
         "id": "6",
         "name": "Maria Sarapova",
         "position": "UI/UX Designer",
-        "avatar": "/images/avatar/60x60.png",
+        "avatar": "/images/avatar/maria.jpg",
         "date": "November 19, 2023",
         "address": "London, UK",
-        "description": "We had a wonderful time at GlampHub. It provided a much-needed escape, and we were pleased with the focus on sustainability and the communal spirit.",
-        "images": [
-            "/images/tent/900x900.png",
-            "/images/tent/900x900.png"
-        ],
+        "description": "We had a wonderful time at CampingMate. It provided a much-needed escape, and we were pleased with the focus on sustainability and the communal spirit.",
+        "images": ["/images/tent/900x900.png", "/images/tent/900x900.png"],
         "star": 5
     },
     {
         "id": "7",
         "name": "Christian Eriksen",
         "position": "Project Manager",
-        "avatar": "/images/avatar/60x60.png",
+        "avatar": "/images/avatar/christian.jpg",
         "date": "November 15, 2023",
         "address": "California, USA",
-        "description": "Choosing GlampHub for our glamping adventure was a brilliant choice. It provided a serene retreat, and we were impressed by the eco-conscious values and the sense of togetherness.",
-        "images": [
-            "/images/tent/900x900.png",
-            "/images/tent/900x900.png"
-        ],
+        "description": "Choosing CampingMate for our glamping adventure was a brilliant choice. It provided a serene retreat, and we were impressed by the eco-conscious values and the sense of togetherness.",
+        "images": ["/images/tent/900x900.png", "/images/tent/900x900.png"],
         "star": 5
     },
     {
         "id": "8",
         "name": "Emily Georgina",
         "position": "Software Tester",
-        "avatar": "/images/avatar/60x60.png",
+        "avatar": "/images/avatar/emily.jpg",
         "date": "November 18, 2023",
         "address": "Paris, France",
-        "description": "Our experience with GlampHub was incredible. It offered tranquility in nature's lap, and we valued the eco-friendly mindset and the warmth of the community.",
-        "images": [
-            "/images/tent/900x900.png",
-            "/images/tent/900x900.png"
-        ],
+        "description": "Our experience with CampingMate was incredible. It offered tranquility in nature's lap, and we valued the eco-friendly mindset and the warmth of the community.",
+        "images": ["/images/tent/900x900.png", "/images/tent/900x900.png"],
         "star": 5
     },
     {
         "id": "9",
         "name": "Carolina Christin",
         "position": "Software Development Manager",
-        "avatar": "/images/avatar/60x60.png",
+        "avatar": "/images/avatar/carolina.jpg",
         "date": "November 19, 2023",
         "address": "London, UK",
-        "description": "GlampHub was an exceptional choice for our glamping trip. It offered a peaceful haven, and we admired the commitment to sustainability and the friendly atmosphere.",
-        "images": [
-            "/images/tent/900x900.png",
-            "/images/tent/900x900.png"
-        ],
+        "description": "CampingMate was an exceptional choice for our glamping trip. It offered a peaceful haven, and we admired the commitment to sustainability and the friendly atmosphere.",
+        "images": ["/images/tent/900x900.png", "/images/tent/900x900.png"],
         "star": 4
     },
     {
         "id": "10",
         "name": "Yoshida Emi",
         "position": "Team Leader",
-        "avatar": "/images/avatar/60x60.png",
+        "avatar": "/images/avatar/emi.jpg",
         "date": "November 10, 2023",
         "address": "Tokyo, Japan",
-        "description": "Our time at GlampHub was delightful. It offered a much-needed break, and we appreciated the focus on sustainability and the inclusive environment.",
-        "images": [
-            "/images/tent/900x900.png",
-            "/images/tent/900x900.png"
-        ],
+        "description": "Our time at CampingMate was delightful. It offered a much-needed break, and we appreciated the focus on sustainability and the inclusive environment.",
+        "images": ["/images/tent/900x900.png", "/images/tent/900x900.png"],
         "star": 4
     },
     {
         "id": "11",
         "name": "Georgina Olsen",
         "position": "Software Tester",
-        "avatar": "/images/avatar/60x60.png",
+        "avatar": "/images/avatar/georgina.jpg",
         "date": "November 11, 2023",
         "address": "Madrid, Spain",
-        "description": "Choosing GlampHub for our glamping getaway was a fantastic decision. It provided a serene escape, and we loved the eco-friendly approach and the sense of belonging.",
-        "images": [
-            "/images/tent/900x900.png",
-            "/images/tent/900x900.png"
-        ],
+        "description": "Choosing Campingmate for our glamping getaway was a fantastic decision. It provided a serene escape, and we loved the eco-friendly approach and the sense of belonging.",
+        "images": ["/images/tent/900x900.png", "/images/tent/900x900.png"],
         "star": 5
     },
     {
         "id": "12",
         "name": "Elizabeth Adele",
         "position": "Software Developer",
-        "avatar": "/images/avatar/60x60.png",
+        "avatar": "/images/avatar/elizabeth.jpg",
         "date": "November 13, 2023",
         "address": "Manchester, UK",
-        "description": "GlampHub provided an outstanding glamping experience. It offered serenity amidst nature, and we cherished the eco-conscious values and the camaraderie among guests.",
-        "images": [
-            "/images/tent/900x900.png",
-            "/images/tent/900x900.png"
-        ],
+        "description": "Campingmate provided an outstanding glamping experience. It offered serenity amidst nature, and we cherished the eco-conscious values and the camaraderie among guests.",
+        "images": ["/images/tent/900x900.png", "/images/tent/900x900.png"],
         "star": 5
     }
 ]

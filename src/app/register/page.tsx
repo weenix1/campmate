@@ -1,25 +1,24 @@
-'use client'
+'use client';
 
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
-import * as Icon from "phosphor-react";
-import HeaderOne from '@/components/Header/HeaderOne'
-import Breadcrumb from '@/components/Breadcrumb/Breadcrumb'
-import Footer from '@/components/Footer/Footer'
-import {
-    SignInButton,
-    SignedIn,
-    SignedOut,
-    UserButton
-} from '@clerk/nextjs'
+import * as Icon from 'phosphor-react';
+import HeaderOne from '@/components/Header/HeaderOne';
+import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
+import Footer from '@/components/Footer/Footer';
+import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 
 const Register = () => {
     return (
         <>
             <HeaderOne />
-            <Breadcrumb img='/images/breadcrumb/1920x320.png' heading='Register' subHeading="Access Your Account. GlampHub's Secure Register Experience." />
-            <div className='login-us lg:py-20 md:py-14 py-10'>
+            <Breadcrumb
+                img="/images/breadcrumb/1920x320.png"
+                heading="Register"
+                subHeading="Access Your Account. CampingMate's Secure Register Experience."
+            />
+            <div className="login-us lg:py-20 md:py-14 py-10">
                 <div className="container">
                     <SignedOut>
                         <SignInButton />
@@ -70,7 +69,7 @@ const Register = () => {
             </div>
             <Footer />
         </>
-    )
-}
+    );
+};
 
-export default Register
+export default Register;

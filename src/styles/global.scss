@@ -2,20 +2,19 @@
 
 /* Main color */
 :root {
-    --primary: #E05028;
+    --primary: #e05028;
     --primary-hover: #c42e04;
-    --black: #382C28;
-    --variant1: #776E6B;
-    --variant2: #B4ABA8;
+    --black: #382c28;
+    --variant1: #776e6b;
+    --variant2: #b4aba8;
     --white: #ffffff;
-    --outline: #E4E4E4;
-    --surface: #F8F8F8;
-    --red: #C72929;
-    --success: #37B853;
-    --yellow: #F4D118;
-    --line: #E9E9E9;
+    --outline: #e4e4e4;
+    --surface: #f8f8f8;
+    --red: #c72929;
+    --success: #37b853;
+    --yellow: #f4d118;
+    --line: #e9e9e9;
 }
-
 
 /* Reset */
 * {
@@ -55,7 +54,7 @@ select {
 .select-block {
     position: relative;
 
-    >.icon {
+    > .icon {
         position: absolute;
         top: 50%;
         transform: translateY(calc(-50% - 1px));
@@ -102,12 +101,12 @@ textarea:focus {
         opacity: 0;
     }
 
-    input:checked+.icon-checkbox {
+    input:checked + .icon-checkbox {
         opacity: 1;
     }
 }
 
-/* Main class used in Glamphub */
+/* Main class used in CampingMate */
 .container {
     max-width: 1322px !important;
     width: 100%;
@@ -117,7 +116,7 @@ textarea:focus {
 }
 
 .bg-linear {
-    background: linear-gradient(238deg, #FAF8F1 0%, #F6F3EF 99.66%);
+    background: linear-gradient(238deg, #faf8f1 0%, #f6f3ef 99.66%);
 }
 
 .box-shadow {
@@ -125,7 +124,7 @@ textarea:focus {
 }
 
 .box-shadow-sm {
-    box-shadow: 0px 2px 2px 0px rgba(28, 36, 51, 0.10);
+    box-shadow: 0px 2px 2px 0px rgba(28, 36, 51, 0.1);
 }
 
 .heading1 {
@@ -133,7 +132,7 @@ textarea:focus {
     line-height: 88px;
     font-weight: 600;
     text-transform: capitalize;
-    font-family: "Jost", '__Jost_f47db6';
+    font-family: 'Jost', '__Jost_f47db6';
 }
 
 .heading2 {
@@ -141,7 +140,7 @@ textarea:focus {
     line-height: 68px;
     font-weight: 600;
     text-transform: capitalize;
-    font-family: "Jost", '__Jost_f47db6';
+    font-family: 'Jost', '__Jost_f47db6';
 }
 
 .heading3 {
@@ -149,7 +148,7 @@ textarea:focus {
     line-height: 52px;
     font-weight: 600;
     text-transform: capitalize;
-    font-family: "Jost", '__Jost_f47db6';
+    font-family: 'Jost', '__Jost_f47db6';
 }
 
 .heading4 {
@@ -157,7 +156,7 @@ textarea:focus {
     line-height: 40px;
     font-weight: 600;
     text-transform: capitalize;
-    font-family: "Jost", '__Jost_f47db6';
+    font-family: 'Jost', '__Jost_f47db6';
 }
 
 .heading5 {
@@ -165,14 +164,14 @@ textarea:focus {
     line-height: 32px;
     font-weight: 600;
     text-transform: capitalize;
-    font-family: "Jost", '__Jost_f47db6';
+    font-family: 'Jost', '__Jost_f47db6';
 }
 
 .heading6 {
     font-size: 20px;
     line-height: 28px;
     font-weight: 600;
-    font-family: "Jost", '__Jost_f47db6';
+    font-family: 'Jost', '__Jost_f47db6';
 }
 
 .text-title {
@@ -180,7 +179,7 @@ textarea:focus {
     line-height: 28px;
     font-weight: 600;
     text-transform: capitalize;
-    font-family: "Jost", '__Jost_f47db6';
+    font-family: 'Jost', '__Jost_f47db6';
 }
 
 .text-button {
@@ -189,14 +188,14 @@ textarea:focus {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1.28px;
-    font-family: "Jost", '__Jost_f47db6';
+    font-family: 'Jost', '__Jost_f47db6';
 }
 
 .text-button-sm {
     font-size: 14px;
     line-height: 22px;
     font-weight: 600;
-    font-family: "Jost", '__Jost_f47db6';
+    font-family: 'Jost', '__Jost_f47db6';
 }
 
 .body2 {
@@ -223,7 +222,7 @@ textarea:focus {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.96px;
-    font-family: "Jost", '__Jost_f47db6';
+    font-family: 'Jost', '__Jost_f47db6';
 }
 
 .button-main {
@@ -231,7 +230,7 @@ textarea:focus {
     line-height: 24px;
     font-weight: 600;
     text-transform: uppercase;
-    font-family: "Jost", '__Jost_f47db6';
+    font-family: 'Jost', '__Jost_f47db6';
     letter-spacing: 1.28px;
     color: var(--white);
     background-color: var(--primary);
@@ -280,7 +279,6 @@ textarea:focus {
 }
 
 @media (max-width: 767.98px) {
-
     html,
     body,
     div,

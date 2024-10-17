@@ -1,173 +1,173 @@
 [
-  {
-    "id": "1",
-    "category": "cooking",
-    "title": "10 Camping Destinations That Redefine Luxury in Nature.",
-    "thumbnail": "/images/blog/city.png",
-    "author": "Jerome Bell",
-    "avatar": "/images/avatar/60x60.png",
-    "date": "November 10, 2023",
-    "shortDesc": "Explore a curated list of 10 extraordinary Camping destinations worldwide tranquil escape from redefine luxury in nature.",
-    "description": "Embark on a journey to 10 breathtaking camping destinations that redefine luxury in nature, providing an unforgettable experience blending opulence and the great outdoors.",
-    "images": ["/images/blog/outside.jpeg", "/images/blog/salad.jpg"]
-  },
-  {
-    "id": "2",
-    "category": "guides",
-    "title": "The Ultimate Guide to Planning Your First Camping Adventure.",
-    "thumbnail": "/images/blog/flower.jpg",
-    "author": "Annette Black",
-    "avatar": "/images/avatar/60x60.png",
-    "date": "November 10, 2023",
-    "shortDesc": "From selecting the perfect location to packing essentials, discover a tranquil escape with our ultimate guide",
-    "description": "Plan your inaugural Camping adventure with our ultimate guide, offering comprehensive insights to ensure your first outdoor retreat is both memorable and comfortable.",
-    "images": ["/images/blog/food.jpeg", "/images/blog/salad.jpg"]
-  },
-  {
-    "id": "3",
-    "category": "Camping",
-    "title": "Innovative Camping Trends You Need to Experience This Year.",
-    "thumbnail": "https://cdn.prod.v2.camping.info/media/campsites/schwimmbad-camping-mossler/X-o2CI8plJqw.jpg",
-    "author": "Arlene McCoy",
-    "avatar": "/images/avatar/60x60.png",
-    "date": "November 10, 2023",
-    "shortDesc": "Stay updated on the most creative Camping trends this year, from tent designs to escape from the daily grind.",
-    "description": "Explore the latest innovative Camping trends shaping the outdoor hospitality landscape, providing unique and immersive experiences for the modern adventurer.",
-    "images": [
-      "https://cdn.prod.v2.camping.info/media/campsites/camping-vidor-family-wellness-resort/PW95VzNMpSit.jpg",
-      "https://cdn.prod.v2.camping.info/media/campsites/camping-vidor-family-wellness-resort/VMwPMnXOdmJO.jpg"
-    ]
-  },
-  {
-    "id": "4",
-    "category": "Camping",
-    "title": "Camping vs. Camping: Which Adventure Fits Your Style?",
-    "thumbnail": "https://cdn.prod.v2.camping.info/media/campsites/campingplatz-am-hardausee/278KDAaWeP72.jpg",
-    "author": "Jenny Wilson",
-    "avatar": "/images/avatar/60x60.png",
-    "date": "November 10, 2023",
-    "shortDesc": "Comparing Camping and Camping, explore their differences and find out which adventure from the latest innovative Camping.",
-    "description": "Immerse yourself in the latest innovative Camping trends shaping the outdoor hospitality landscape, providing unique and immersive experiences for the modern adventurer.",
-    "images": [
-      "https://cdn.prod.v2.camping.info/media/campsites/campingplatz-am-hardausee/o-shHV0d6HPf.jpg",
-      "https://cdn.prod.v2.camping.info/media/campsites/campingplatz-am-hardausee/3QH_GcEf0Bgj.jpg"
-    ]
-  },
-  {
-    "id": "5",
-    "category": "experiences",
-    "title": "Behind the Scenes: Crafting the Perfect Camping Experience.",
-    "thumbnail": "https://cdn.prod.v2.camping.info/media/campsites/thermenland-camping-bad-waltersdorf/5W3bWdDr1kKQ.jpg",
-    "author": "Ronald Richards",
-    "avatar": "/images/avatar/60x60.png",
-    "date": "November 10, 2023",
-    "shortDesc": "Peek behind the curtain and unravel the secrets and efforts that craft the perfect escape from the Camping vs camping debate.",
-    "description": "Engage in the Camping vs camping debate, exploring which outdoor adventure aligns best with your personal style and preferences for a memorable getaway.",
-    "images": [
-      "https://cdn.prod.v2.camping.info/media/campsites/thermenland-camping-bad-waltersdorf/gF4YVEzIs-Sb.jpg",
-      "https://cdn.prod.v2.camping.info/media/campsites/thermenland-camping-bad-waltersdorf/eX_5lQrvKBs7.jpg"
-    ]
-  },
-  {
-    "id": "6",
-    "category": "locations",
-    "title": "Sustainability in Camping: Eco-Friendly Retreats Around.",
-    "thumbnail": "https://cdn.prod.v2.camping.info/media/campsites/camping-hetzingen/hXOKfGE23bvV.jpg",
-    "author": "Robert Fox",
-    "avatar": "/images/avatar/60x60.png",
-    "date": "November 10, 2023",
-    "shortDesc": "Explore eco-conscious Camping retreats worldwide, where luxury meets tranquil escape from the daily grind.",
-    "description": "Explore eco-friendly retreats prioritizing sustainability in Camping, showcasing environmentally conscious accommodations set in stunning natural surroundings.",
-    "images": [
-      "https://cdn.prod.v2.camping.info/media/campsites/camping-hetzingen/z101ODaEG67s.jpg",
-      "https://cdn.prod.v2.camping.info/media/campsites/camping-hetzingen/lepPHVDWvFCp.jpg"
-    ]
-  },
-  {
-    "id": "7",
-    "category": "equipment",
-    "title": "Unveiling the World's Most Unique Camping Accommodations.",
-    "thumbnail": "https://cdn.prod.v2.camping.info/media/campsites/camping-solden/P-SqToFTd1I4.jpg",
-    "author": "Floyd Miles",
-    "avatar": "/images/avatar/60x60.png",
-    "date": "November 10, 2023",
-    "shortDesc": "Dive into a list of the most unique Camping accommodations globally a tranquil escape from the daily.",
-    "description": "Embark on a virtual tour unveiling the world's most unique Camping accommodations, each offering a distinct and extraordinary escape from the ordinary.",
-    "images": [
-      "https://cdn.prod.v2.camping.info/media/campsites/camping-solden/9ZoxXpnp73ou.jpg",
-      "https://cdn.prod.v2.camping.info/media/campsites/camping-solden/A8caHFDpUluf.jpg"
-    ]
-  },
-  {
-    "id": "8",
-    "category": "activities",
-    "title": "The Art of Camping: Infusing Luxury into Outdoor Adventures.",
-    "thumbnail": "https://cdn.prod.v2.camping.info/media/campsites/vital-camping-bayerbach/bjeMOuIezjo9.jpg",
-    "author": "Ralph Edwards",
-    "avatar": "/images/avatar/60x60.png",
-    "date": "November 10, 2023",
-    "shortDesc": "Discover the art of Camping and how luxury intertwines with outdoor escapades indulgent experience.",
-    "description": "Delve into the art of Camping, where luxury meets outdoor adventure, transforming traditional camping into a sophisticated and indulgent experience.",
-    "images": [
-      "https://cdn.prod.v2.camping.info/media/campsites/vital-camping-bayerbach/q2HrkEczZJEI.jpg",
-      "https://cdn.prod.v2.camping.info/media/campsites/vital-camping-bayerbach/-VPXEJ3GrNeE.jpg"
-    ]
-  },
-  {
-    "id": "9",
-    "category": "locations",
-    "title": "How Nature and Luxury Combine for Wellness?",
-    "thumbnail": "/images/blog/1920x1280.png",
-    "author": "Arlene McCoy",
-    "avatar": "/images/avatar/60x60.png",
-    "date": "November 10, 2023",
-    "shortDesc": "Explore the psychological aspects of Camping, understanding how nature tranquil the sense of community.",
-    "description": "Discover how nature and luxury harmonize to promote wellness in Camping, offering a rejuvenating escape that nurtures both mind and body.",
-    "images": ["/images/blog/1920x1280.png", "/images/blog/1920x1280.png"]
-  },
-  {
-    "id": "10",
-    "category": "activities",
-    "title": "Top Camping Destination for a Luxurious Escape",
-    "thumbnail": "https://cdn.prod.v2.camping.info/media/campsites/skiveren-camping/L8uqd2DRIbIT.jpg",
-    "author": "Jude Bellingham",
-    "avatar": "/images/avatar/60x60.png",
-    "date": "November 10, 2023",
-    "shortDesc": "Secure storage options for valuable items are available at GlampHub, and details can be discussed with our customer service.",
-    "description": "Our GlampHub experience was nothing short of amazing. It offered a tranquil escape from the daily grind, and we were impressed by the sustainable practices and the sense of community.",
-    "images": [
-      "https://cdn.prod.v2.camping.info/media/campsites/skiveren-camping/qUkTCm9aWiq7.jpg",
-      "https://cdn.prod.v2.camping.info/media/campsites/skiveren-camping/fIbWBXLy5fER.jpg"
-    ]
-  },
-  {
-    "id": "11",
-    "category": "equipment",
-    "title": "10 Essential Camping Gear & Equipment",
-    "thumbnail": "https://cdn.prod.v2.camping.info/media/campsites/aktiv-camp-purgstall-camping-und-ferienpark/fXX_VWn6DbW_.jpg",
-    "author": "Federico Signio",
-    "avatar": "/images/avatar/60x60.png",
-    "date": "November 10, 2023",
-    "shortDesc": "Explore a curated list of 10 extraordinary Camping destinations worldwide tranquil escape from the daily grind.",
-    "description": "Embark on a journey to 10 breathtaking Camping destinations that redefine luxury in nature, providing an unforgettable experience blending opulence and the great outdoors.",
-    "images": [
-      "https://cdn.prod.v2.camping.info/media/campsites/aktiv-camp-purgstall-camping-und-ferienpark/wHgK4qO4m2lq.jpg",
-      "https://cdn.prod.v2.camping.info/media/campsites/otztaler-naturcamping/QxZrHoYTB1V9.jpg"
-    ]
-  },
-  {
-    "id": "12",
-    "category": "camping",
-    "title": "Delicious Recipes for Your Camping Adventure",
-    "thumbnail": "https://cdn.prod.v2.camping.info/media/campsites/campingplatz-am-barenbache/dGsbDV8PJND3.jpg",
-    "author": "Antoni Pavard",
-    "avatar": "/images/avatar/60x60.png",
-    "date": "November 10, 2023",
-    "shortDesc": "Take an exclusive look behind the scenes to understand the meticulous planning and details involved in crafting of amazing.",
-    "description": "Immerse yourself in the latest innovative Camping trends shaping the outdoor hospitality landscape, providing unique and immersive experiences for the modern adventurer.",
-    "images": [
-      "https://cdn.prod.v2.camping.info/media/campsites/campingplatz-am-barenbache/Cs-q7Pdgm6ZH.jpg",
-      "https://cdn.prod.v2.camping.info/media/campsites/campingplatz-am-barenbache/Aka9FKLd3A5f.jpg"
-    ]
-  }
+    {
+        "id": "1",
+        "category": "cooking",
+        "title": "10 Camping Destinations That Redefine Luxury in Nature.",
+        "thumbnail": "/images/blog/city.png",
+        "author": "Jerome Bell",
+        "avatar": "/images/avatar/jerome.jpg",
+        "date": "September 10, 2021",
+        "shortDesc": "Explore a curated list of 10 extraordinary Camping destinations worldwide tranquil escape from redefine luxury in nature.",
+        "description": "Embark on a journey to 10 breathtaking camping destinations that redefine luxury in nature, providing an unforgettable experience blending opulence and the great outdoors.",
+        "images": ["/images/blog/outside.jpeg", "/images/blog/salad.jpg"]
+    },
+    {
+        "id": "2",
+        "category": "guides",
+        "title": "The Ultimate Guide to Planning Your First Camping Adventure.",
+        "thumbnail": "/images/blog/flower.jpg",
+        "author": "Annette Black",
+        "avatar": "/images/avatar/elizabeth.jpg",
+        "date": "November 10, 2023",
+        "shortDesc": "From selecting the perfect location to packing essentials, discover a tranquil escape with our ultimate guide",
+        "description": "Plan your inaugural Camping adventure with our ultimate guide, offering comprehensive insights to ensure your first outdoor retreat is both memorable and comfortable.",
+        "images": ["/images/blog/food.jpeg", "/images/blog/salad.jpg"]
+    },
+    {
+        "id": "3",
+        "category": "Camping",
+        "title": "Innovative Camping Trends You Need to Experience This Year.",
+        "thumbnail": "https://cdn.prod.v2.camping.info/media/campsites/schwimmbad-camping-mossler/X-o2CI8plJqw.jpg",
+        "author": "Arlene McCoy",
+        "avatar": "/images/avatar/christian.jpg",
+        "date": "August 20, 2023",
+        "shortDesc": "Stay updated on the most creative Camping trends this year, from tent designs to escape from the daily grind.",
+        "description": "Explore the latest innovative Camping trends shaping the outdoor hospitality landscape, providing unique and immersive experiences for the modern adventurer.",
+        "images": [
+            "https://cdn.prod.v2.camping.info/media/campsites/camping-vidor-family-wellness-resort/PW95VzNMpSit.jpg",
+            "https://cdn.prod.v2.camping.info/media/campsites/camping-vidor-family-wellness-resort/VMwPMnXOdmJO.jpg"
+        ]
+    },
+    {
+        "id": "4",
+        "category": "Camping",
+        "title": "Camping vs. Camping: Which Adventure Fits Your Style?",
+        "thumbnail": "https://cdn.prod.v2.camping.info/media/campsites/campingplatz-am-hardausee/278KDAaWeP72.jpg",
+        "author": "Jenny Wilson",
+        "avatar": "/images/avatar/georgina.jpg",
+        "date": "July 5, 2020",
+        "shortDesc": "Comparing Camping and Camping, explore their differences and find out which adventure from the latest innovative Camping.",
+        "description": "Immerse yourself in the latest innovative Camping trends shaping the outdoor hospitality landscape, providing unique and immersive experiences for the modern adventurer.",
+        "images": [
+            "https://cdn.prod.v2.camping.info/media/campsites/campingplatz-am-hardausee/o-shHV0d6HPf.jpg",
+            "https://cdn.prod.v2.camping.info/media/campsites/campingplatz-am-hardausee/3QH_GcEf0Bgj.jpg"
+        ]
+    },
+    {
+        "id": "5",
+        "category": "experiences",
+        "title": "Behind the Scenes: Crafting the Perfect Camping Experience.",
+        "thumbnail": "https://cdn.prod.v2.camping.info/media/campsites/thermenland-camping-bad-waltersdorf/5W3bWdDr1kKQ.jpg",
+        "author": "Ronald Richards",
+        "avatar": "/images/avatar/ronald.jpg",
+        "date": "June 17, 2024",
+        "shortDesc": "Peek behind the curtain and unravel the secrets and efforts that craft the perfect escape from the Camping vs camping debate.",
+        "description": "Engage in the Camping vs camping debate, exploring which outdoor adventure aligns best with your personal style and preferences for a memorable getaway.",
+        "images": [
+            "https://cdn.prod.v2.camping.info/media/campsites/thermenland-camping-bad-waltersdorf/gF4YVEzIs-Sb.jpg",
+            "https://cdn.prod.v2.camping.info/media/campsites/thermenland-camping-bad-waltersdorf/eX_5lQrvKBs7.jpg"
+        ]
+    },
+    {
+        "id": "6",
+        "category": "locations",
+        "title": "Sustainability in Camping: Eco-Friendly Retreats Around.",
+        "thumbnail": "https://cdn.prod.v2.camping.info/media/campsites/camping-hetzingen/hXOKfGE23bvV.jpg",
+        "author": "Robert Fox",
+        "avatar": "/images/avatar/robertson.jpg",
+        "date": "April 25, 2022",
+        "shortDesc": "Explore eco-conscious Camping retreats worldwide, where luxury meets tranquil escape from the daily grind.",
+        "description": "Explore eco-friendly retreats prioritizing sustainability in Camping, showcasing environmentally conscious accommodations set in stunning natural surroundings.",
+        "images": [
+            "https://cdn.prod.v2.camping.info/media/campsites/camping-hetzingen/z101ODaEG67s.jpg",
+            "https://cdn.prod.v2.camping.info/media/campsites/camping-hetzingen/lepPHVDWvFCp.jpg"
+        ]
+    },
+    {
+        "id": "7",
+        "category": "equipment",
+        "title": "Unveiling the World's Most Unique Camping Accommodations.",
+        "thumbnail": "https://cdn.prod.v2.camping.info/media/campsites/camping-solden/P-SqToFTd1I4.jpg",
+        "author": "Floyd Miles",
+        "avatar": "/images/avatar/floyd.jpg",
+        "date": "October 11, 2021",
+        "shortDesc": "Dive into a list of the most unique Camping accommodations globally a tranquil escape from the daily.",
+        "description": "Embark on a virtual tour unveiling the world's most unique Camping accommodations, each offering a distinct and extraordinary escape from the ordinary.",
+        "images": [
+            "https://cdn.prod.v2.camping.info/media/campsites/camping-solden/9ZoxXpnp73ou.jpg",
+            "https://cdn.prod.v2.camping.info/media/campsites/camping-solden/A8caHFDpUluf.jpg"
+        ]
+    },
+    {
+        "id": "8",
+        "category": "activities",
+        "title": "The Art of Camping: Infusing Luxury into Outdoor Adventures.",
+        "thumbnail": "https://cdn.prod.v2.camping.info/media/campsites/vital-camping-bayerbach/bjeMOuIezjo9.jpg",
+        "author": "Ralph Edwards",
+        "avatar": "/images/avatar/mina.jpg",
+        "date": "December 10, 2020",
+        "shortDesc": "Discover the art of Camping and how luxury intertwines with outdoor escapades indulgent experience.",
+        "description": "Delve into the art of Camping, where luxury meets outdoor adventure, transforming traditional camping into a sophisticated and indulgent experience.",
+        "images": [
+            "https://cdn.prod.v2.camping.info/media/campsites/vital-camping-bayerbach/q2HrkEczZJEI.jpg",
+            "https://cdn.prod.v2.camping.info/media/campsites/vital-camping-bayerbach/-VPXEJ3GrNeE.jpg"
+        ]
+    },
+    {
+        "id": "9",
+        "category": "locations",
+        "title": "How Nature and Luxury Combine for Wellness?",
+        "thumbnail": "https://cdn.prod.v2.camping.info/media/campsites/camping-solden/P-SqToFTd1I4.jpg",
+        "author": "Arlene McCoy",
+        "avatar": "/images/avatar/carolina.jpg",
+        "date": "Feburary 7, 2020",
+        "shortDesc": "Explore the psychological aspects of Camping, understanding how nature tranquil the sense of community.",
+        "description": "Discover how nature and luxury harmonize to promote wellness in Camping, offering a rejuvenating escape that nurtures both mind and body.",
+        "images": ["/images/blog/1920x1280.png", "/images/blog/1920x1280.png"]
+    },
+    {
+        "id": "10",
+        "category": "activities",
+        "title": "Top Camping Destination for a Luxurious Escape",
+        "thumbnail": "https://cdn.prod.v2.camping.info/media/campsites/skiveren-camping/L8uqd2DRIbIT.jpg",
+        "author": "Jude Bellingham",
+        "avatar": "/images/avatar/emi.jpg",
+        "date": "March 15, 2023",
+        "shortDesc": "Secure storage options for valuable items are available at CampingMate, and details can be discussed with our customer service.",
+        "description": "Our CampingMate experience was nothing short of amazing. It offered a tranquil escape from the daily grind, and we were impressed by the sustainable practices and the sense of community.",
+        "images": [
+            "https://cdn.prod.v2.camping.info/media/campsites/skiveren-camping/qUkTCm9aWiq7.jpg",
+            "https://cdn.prod.v2.camping.info/media/campsites/skiveren-camping/fIbWBXLy5fER.jpg"
+        ]
+    },
+    {
+        "id": "11",
+        "category": "equipment",
+        "title": "10 Essential Camping Gear & Equipment",
+        "thumbnail": "https://cdn.prod.v2.camping.info/media/campsites/aktiv-camp-purgstall-camping-und-ferienpark/fXX_VWn6DbW_.jpg",
+        "author": "Federico Signio",
+        "avatar": "/images/avatar/maria.jpg",
+        "date": "May 30, 2022",
+        "shortDesc": "Explore a curated list of 10 extraordinary Camping destinations worldwide tranquil escape from the daily grind.",
+        "description": "Embark on a journey to 10 breathtaking Camping destinations that redefine luxury in nature, providing an unforgettable experience blending opulence and the great outdoors.",
+        "images": [
+            "https://cdn.prod.v2.camping.info/media/campsites/aktiv-camp-purgstall-camping-und-ferienpark/wHgK4qO4m2lq.jpg",
+            "https://cdn.prod.v2.camping.info/media/campsites/otztaler-naturcamping/QxZrHoYTB1V9.jpg"
+        ]
+    },
+    {
+        "id": "12",
+        "category": "camping",
+        "title": "Delicious Recipes for Your Camping Adventure",
+        "thumbnail": "https://cdn.prod.v2.camping.info/media/campsites/campingplatz-am-barenbache/dGsbDV8PJND3.jpg",
+        "author": "Antoni Pavard",
+        "avatar": "/images/avatar/emily.jpg",
+        "date": "October 10, 2021",
+        "shortDesc": "Take an exclusive look behind the scenes to understand the meticulous planning and details involved in crafting of amazing.",
+        "description": "Immerse yourself in the latest innovative Camping trends shaping the outdoor hospitality landscape, providing unique and immersive experiences for the modern adventurer.",
+        "images": [
+            "https://cdn.prod.v2.camping.info/media/campsites/campingplatz-am-barenbache/Cs-q7Pdgm6ZH.jpg",
+            "https://cdn.prod.v2.camping.info/media/campsites/campingplatz-am-barenbache/Aka9FKLd3A5f.jpg"
+        ]
+    }
 ]
