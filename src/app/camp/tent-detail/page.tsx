@@ -33,6 +33,8 @@ import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import Rate from '@/components/Other/Rate';
 import StickyBox from 'react-sticky-box';
+import { useUser } from '@clerk/nextjs';
+import toast from 'react-hot-toast';
 
 interface GuestType {
     adult: number;
@@ -56,6 +58,11 @@ const TentDetail = () => {
         },
     ]);
 
+
+
+
+    const { isLoaded, isSignedIn, user } = useUser();
+    console.log('User', user);
     const [guest, setGuest] = useState<GuestType>({
         adult: 1,
         children: 0,
@@ -295,6 +302,12 @@ const TentDetail = () => {
     // Book Reservation
     const handleBooking = (e: { preventDefault: () => void }) => {
         e.preventDefault();
+        console.log('Booking');
+        console.log('!isSignedIn', !isSignedIn);
+        if (!isSignedIn) {
+            toast.error('Please sign in to book a reservation');
+            return;
+        }
         const { startDate, endDate } = state[0];
         const reservationData = {
             tentId,
@@ -304,6 +317,7 @@ const TentDetail = () => {
             startDate,
             endDate,
         };
+
         console.log(reservationData);
     };
 
@@ -328,25 +342,40 @@ const TentDetail = () => {
 
     const handleReviewSubmit = (e: { preventDefault: () => void }) => {
         e.preventDefault();
-        const submittedDate = new Date();
+        //const submittedDate = new Date();
+        const totalRating = ratingCategories.reduce((acc, category) => acc + category.currentRate, 0);
+        const averageRating = totalRating / ratingCategories.length;
+
         const reviewDetails = {
             ...reviewData,
             images: files.map((file: any) => file.base64),
-            id: `${testimonialData.length + 1}`,
-            date: submittedDate.toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-            }),
+            id: String(testimonialData.length + 1),
+            date: new Date().toLocaleDateString(),
             position: 'Ethical Hacker',
-            avatar: '/images/avatar/ronald.jpg',
+            avatar: user?.imageUrl ?? '',
             address: 'Tokyo, Japan',
             description: reviewData.review,
-            star: 5,
+            star: parseFloat(averageRating.toFixed(1)),
         };
-   const updatedTestimonialData = [reviewDetails, ...testimonialData];
-   setTestimonialData(updatedTestimonialData); 
+        const updatedTestimonialData = [reviewDetails, ...testimonialData];
+        setTestimonialData(updatedTestimonialData);
+        localStorage.setItem('testimonialData', JSON.stringify(updatedTestimonialData));
+        toast.success('Review submitted successfully');
+        setReviewData({
+            name: '',
+            email: '',
+            review: '',
+        });
+        setFiles([]);
     };
+
+    useEffect(() => {
+        const savedTestimonials = localStorage.getItem('testimonialData');
+        if (savedTestimonials) {
+            setTestimonialData(JSON.parse(savedTestimonials));
+        }
+    }, []);
+
 
     return (
         <>
@@ -404,9 +433,8 @@ const TentDetail = () => {
                                         {tentMain.shortDesc}
                                     </div>
                                     <div
-                                        className={`body2 text-variant1 ${
-                                            viewMoreDesc ? '' : 'hidden'
-                                        }`}
+                                        className={`body2 text-variant1 ${viewMoreDesc ? '' : 'hidden'
+                                            }`}
                                     >
                                         {tentMain.description}
                                     </div>
@@ -634,37 +662,37 @@ const TentDetail = () => {
                                                         </div>
                                                         {item.images.length !==
                                                             0 && (
-                                                            <div className="list-img flex items-center gap-4 mt-4">
-                                                                {item.images.map(
-                                                                    (
-                                                                        img,
-                                                                        index
-                                                                    ) => (
-                                                                        <Image
-                                                                            key={
-                                                                                index
-                                                                            }
-                                                                            src={
-                                                                                img
-                                                                            }
-                                                                            width={
-                                                                                400
-                                                                            }
-                                                                            height={
-                                                                                400
-                                                                            }
-                                                                            priority={
-                                                                                true
-                                                                            }
-                                                                            alt={
-                                                                                item.name
-                                                                            }
-                                                                            className="w-[60px] h-[60px] object-cover"
-                                                                        />
-                                                                    )
-                                                                )}
-                                                            </div>
-                                                        )}
+                                                                <div className="list-img flex items-center gap-4 mt-4">
+                                                                    {item.images.map(
+                                                                        (
+                                                                            img,
+                                                                            index
+                                                                        ) => (
+                                                                            <Image
+                                                                                key={
+                                                                                    index
+                                                                                }
+                                                                                src={
+                                                                                    img
+                                                                                }
+                                                                                width={
+                                                                                    400
+                                                                                }
+                                                                                height={
+                                                                                    400
+                                                                                }
+                                                                                priority={
+                                                                                    true
+                                                                                }
+                                                                                alt={
+                                                                                    item.name
+                                                                                }
+                                                                                className="w-[60px] h-[60px] object-cover"
+                                                                            />
+                                                                        )
+                                                                    )}
+                                                                </div>
+                                                            )}
                                                     </div>
                                                 </div>
                                             ))}
@@ -731,6 +759,7 @@ const TentDetail = () => {
                                                     value={reviewData.name}
                                                     onChange={handleValueChange}
                                                     required
+                                                    disabled={!isSignedIn}
                                                 />
                                             </div>
                                             <div className="mail">
@@ -749,6 +778,7 @@ const TentDetail = () => {
                                                     value={reviewData.email}
                                                     onChange={handleValueChange}
                                                     required
+                                                    disabled={!isSignedIn}
                                                 />
                                             </div>
                                             <div className="col-span-full review">
@@ -759,11 +789,10 @@ const TentDetail = () => {
                                                     Upload Images {'(optional)'}
                                                 </label>
                                                 <ul
-                                                    className={` ${
-                                                        files.length !== 0
-                                                            ? ' p-2 mt-3 '
-                                                            : ''
-                                                    } flex gap-6`}
+                                                    className={` ${files.length !== 0
+                                                        ? ' p-2 mt-3 '
+                                                        : ''
+                                                        } flex gap-6`}
                                                 >
                                                     {files?.map(
                                                         (file: {
@@ -822,6 +851,7 @@ const TentDetail = () => {
                                                         <input
                                                             {...getInputProps()}
                                                             name="images"
+                                                            disabled={!isSignedIn}
                                                         />
                                                         {isDragActive ? (
                                                             <p className="p-9 border-2 rounded-md w-full border-line inline-block text-cente">
@@ -862,6 +892,7 @@ const TentDetail = () => {
                                                         });
                                                     }}
                                                     required
+                                                    disabled={!isSignedIn}
                                                 ></textarea>
                                             </div>
                                             <div className="col-span-full flex items-start -mt-2 gap-2">
@@ -928,11 +959,10 @@ const TentDetail = () => {
                                                         </div>
                                                     </div>
                                                     <DateRangePicker
-                                                        className={`form-date-picker box-shadow ${
-                                                            openDate
-                                                                ? 'open'
-                                                                : ''
-                                                        }`}
+                                                        className={`form-date-picker box-shadow ${openDate
+                                                            ? 'open'
+                                                            : ''
+                                                            }`}
                                                         onChange={(item) =>
                                                             setState([
                                                                 item.selection,
@@ -970,11 +1000,10 @@ const TentDetail = () => {
                                                         <Icon.CaretDown className="text-2xl" />
                                                     </div>
                                                     <div
-                                                        className={`sub-menu-guest bg-white rounded-b-xl overflow-hidden p-5 absolute top-full -mt-px left-0 w-full box-shadow ${
-                                                            openGuest
-                                                                ? 'open'
-                                                                : ''
-                                                        }`}
+                                                        className={`sub-menu-guest bg-white rounded-b-xl overflow-hidden p-5 absolute top-full -mt-px left-0 w-full box-shadow ${openGuest
+                                                            ? 'open'
+                                                            : ''
+                                                            }`}
                                                     >
                                                         <div className="item flex items-center justify-between pb-4 border-b border-outline">
                                                             <div className="left">
@@ -985,12 +1014,11 @@ const TentDetail = () => {
                                                             </div>
                                                             <div className="right flex items-center gap-5">
                                                                 <div
-                                                                    className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${
-                                                                        guest.adult ===
+                                                                    className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${guest.adult ===
                                                                         0
-                                                                            ? 'opacity-[0.4] cursor-default'
-                                                                            : 'cursor-pointer hover:bg-black hover:text-white'
-                                                                    }`}
+                                                                        ? 'opacity-[0.4] cursor-default'
+                                                                        : 'cursor-pointer hover:bg-black hover:text-white'
+                                                                        }`}
                                                                     onClick={() =>
                                                                         decreaseGuest(
                                                                             'adult'
@@ -1025,12 +1053,11 @@ const TentDetail = () => {
                                                             </div>
                                                             <div className="right flex items-center gap-5">
                                                                 <div
-                                                                    className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${
-                                                                        guest.children ===
+                                                                    className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${guest.children ===
                                                                         0
-                                                                            ? 'opacity-[0.4] cursor-default'
-                                                                            : 'cursor-pointer hover:bg-black hover:text-white'
-                                                                    }`}
+                                                                        ? 'opacity-[0.4] cursor-default'
+                                                                        : 'cursor-pointer hover:bg-black hover:text-white'
+                                                                        }`}
                                                                     onClick={() =>
                                                                         decreaseGuest(
                                                                             'children'
@@ -1065,12 +1092,11 @@ const TentDetail = () => {
                                                             </div>
                                                             <div className="right flex items-center gap-5">
                                                                 <div
-                                                                    className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${
-                                                                        guest.infant ===
+                                                                    className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${guest.infant ===
                                                                         0
-                                                                            ? 'opacity-[0.4] cursor-default'
-                                                                            : 'cursor-pointer hover:bg-black hover:text-white'
-                                                                    }`}
+                                                                        ? 'opacity-[0.4] cursor-default'
+                                                                        : 'cursor-pointer hover:bg-black hover:text-white'
+                                                                        }`}
                                                                     onClick={() =>
                                                                         decreaseGuest(
                                                                             'infant'
@@ -1102,12 +1128,11 @@ const TentDetail = () => {
                                                             </div>
                                                             <div className="right flex items-center gap-5">
                                                                 <div
-                                                                    className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${
-                                                                        guest.pet ===
+                                                                    className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${guest.pet ===
                                                                         0
-                                                                            ? 'opacity-[0.4] cursor-default'
-                                                                            : 'cursor-pointer hover:bg-black hover:text-white'
-                                                                    }`}
+                                                                        ? 'opacity-[0.4] cursor-default'
+                                                                        : 'cursor-pointer hover:bg-black hover:text-white'
+                                                                        }`}
                                                                     onClick={() =>
                                                                         decreaseGuest(
                                                                             'pet'
@@ -1258,7 +1283,7 @@ const TentDetail = () => {
                                         </div>
                                         <div className="flex items-center gap-2 mt-2">
                                             <Icon.Envelope className="text-variant1" />
-                                            <span>hi.avitex@gmail.com</span>
+                                            <span>{`${user?.emailAddresses[0].emailAddress ?? ''}`}</span>
                                         </div>
                                     </div>
 

@@ -13,11 +13,13 @@ import Testimonial from '@/components/Testimonial/Testimonial'
 import dataTestimonial from '@/data/Testimonial.json'
 import News from '@/components/News/News'
 import Footer from '@/components/Footer/Footer'
+import { Toaster } from 'react-hot-toast'
 
 const Home = () => {
   return (
     <>
       <div className="page-one overflow-x-hidden">
+        <Toaster />
         <HeaderOne />
         <SliderOne />
         <LocationOne />
