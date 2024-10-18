@@ -1,0 +1,37 @@
+{
+    "general": {
+        "back": "Back",
+        "next": "Next"
+    },
+    "header": {
+        "home": "Home",
+        "explore-camp": "Explore Camping",
+        "discover-camp": "Discover Camping",
+        "discover-luxury-camp": "Discover Luxury Camping",
+        "camps": "Camps",
+        "topmap-grid": "Top Map & Grid",
+        "topmap-list": "Top Map & List",
+        "filter-scrolls": "Filter Scrolls",
+        "filter-dropdown": "Filter Dropdown",
+        "topmap-sidebar": "Top Map & Sidebar",
+        "halfmap-grid": "Half Map & Grid",
+        "halfmap-list": "Half Map & List",
+        "tent-details": "Tent Details",
+        "about-us": "About Us",
+        "blog": "Blog",
+        "blog-default": "Blog Default",
+        "blog-details": "Blog Details",
+        "blog-grid": "Blog Grid",
+        "pages": "Pages",
+        "contact-us": "Contact Us",
+        "faqs": "FAQs",
+        "review": "Review"
+    },
+    "slider": {
+        "search-destination": "Search destination",
+        "add-dates": "Add Dates",
+        "add-guest": "Add Guest",
+        "find-yourself-outside": "Find yourself outside",
+        "reserve-spots": "Reserve beautiful private RV spots and campsites—found only on Hipcamp."
+    }
+}

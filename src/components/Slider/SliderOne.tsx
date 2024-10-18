@@ -7,6 +7,7 @@ import { addDays } from 'date-fns';
 import { DateRangePicker } from 'react-date-range';
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
+import { useTranslation } from 'react-i18next';
 
 interface GuestType {
     adult: number;
@@ -36,6 +37,8 @@ const SliderOne = () => {
             pet: 0
         }
     );
+
+    const { t } = useTranslation();
 
     const handleOpenDate = () => {
         setOpenDate(!openDate)
@@ -118,8 +121,8 @@ const SliderOne = () => {
                 <div className="container py-[176px]">
                     <div className="content w-full relative">
                         <div className="heading flex-col items-center justify-center">
-                            <div className="heading2 text-white text-center">Find yourself outside</div>
-                            <div className="heading6 text-white text-center mt-3">Reserve beautiful private RV spots and campsites—found <br className='max-sm:hidden' />only on Hipcamp.</div>
+                            <div className="heading2 text-white text-center">{t('slider.find-yourself-outside')}</div>
+                            <div className="heading6 text-white text-center mt-3">{t('slider.reserve-spots')}</div>
                         </div>
 
                         <div className="form-search md:mt-10 mt-6 w-full">
@@ -129,7 +132,7 @@ const SliderOne = () => {
                                     <input
                                         className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg'
                                         type="text"
-                                        placeholder='Search destination'
+                                        placeholder={t('slider.search-destination')}
                                         value={location || ''}
                                         onChange={(e) => setLocation(e.target.value)}
                                     />
@@ -141,7 +144,7 @@ const SliderOne = () => {
                                         <input
                                             className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg'
                                             type="text"
-                                            placeholder='Add Dates'
+                                            placeholder={t('slider.add-dates')}
                                             value={`${state[0].startDate.toLocaleDateString()} - ${state[0].endDate.toLocaleDateString()}`}
                                             readOnly // prevent user edit value
                                         />
@@ -164,7 +167,7 @@ const SliderOne = () => {
                                         <input
                                             className='body2 w-full pl-12 pr-5 py-3 border border-outline rounded-lg'
                                             type="text"
-                                            placeholder='Add Guest'
+                                            placeholder={t('slider.add-guest')}
                                             value={`${guest.adult > 0 ? (guest.adult === 1 ? (guest.adult + ' adult') : (guest.adult + ' adults')) : ('')}${guest.children > 0 ? (guest.children === 1 ? (', ' + guest.children + ' children') : (', ' + guest.children + ' childrens')) : ('')}${guest.infant > 0 ? (guest.infant === 1 ? (', ' + guest.infant + ' infant') : (', ' + guest.infant + ' infants')) : ('')}${guest.pet > 0 ? (guest.pet === 1 ? (', ' + guest.pet + ' pet') : (', ' + guest.pet + ' pets')) : ('')}`}
                                             readOnly
                                         />

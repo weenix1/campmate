@@ -1,30 +1,37 @@
 {
-  "general": {
-    "back": "Zurück",
-    "next": "Weiter"
-  },
-  "header": {
-    "home": "Startseite",
-    "explore-camp": "Camping erkunden",
-    "discover-camp": "Camping entdecken",
-    "discover-luxury-camp": "Luxus-Camping entdecken",
-    "camps": "Camps",
-    "topmap-grid": "Top-Karte & Raster",
-    "topmap-list": "Top-Karte & Liste",
-    "filter-scrolls": "Filters Scrolls",
-    "filter-dropdown": "Filters Dropdown",
-    "topmap-sidebar": "Top-Karte & Seitenleiste",
-    "halfmap-grid": "Halbkarte & Raster",
-    "halfmap-list": "Halbkarte & Liste",
-    "tent-details": "Zelt Details",
-    "about-us": "Über uns",
-    "blog": "Blog",
-    "blog-default": "Blog Standard",
-    "blog-details": "Blog Details",
-    "blog-grid": "Blog Raster",
-    "pages": "Seiten",
-    "contact-us": "Kontaktiere uns",
-    "faqs": "FAQs",
-    "review": "Bewertung"
-  }
+    "general": {
+        "back": "Zurück",
+        "next": "Weiter"
+    },
+    "header": {
+        "home": "Startseite",
+        "explore-camp": "Camping Entdecken",
+        "discover-camp": "Camping Entdecken",
+        "discover-luxury-camp": "Luxus-Camping Entdecken",
+        "camps": "Camps",
+        "topmap-grid": "Obere Karte & Raster",
+        "topmap-list": "Obere Karte & Liste",
+        "filter-scrolls": "Filter Scrolls",
+        "filter-dropdown": "Filter Dropdown",
+        "topmap-sidebar": "Obere Karte & Seitenleiste",
+        "halfmap-grid": "Halbe Karte & Raster",
+        "halfmap-list": "Halbe Karte & Liste",
+        "tent-details": "Zelt Details",
+        "about-us": "Über Uns",
+        "blog": "Blog",
+        "blog-default": "Standardblog",
+        "blog-details": "Blogdetails",
+        "blog-grid": "Blog-Raster",
+        "pages": "Seiten",
+        "contact-us": "Kontaktieren Sie Uns",
+        "faqs": "FAQs",
+        "review": "Bewertung"
+    },
+    "slider": {
+        "search-destination": "Ziel Suchen",
+        "add-dates": "Daten Hinzufügen",
+        "add-guest": "Gäste Hinzufügen",
+        "find-yourself-outside": "Finden Sie sich draußen",
+        "reserve-spots": "Reservieren Sie schöne private Wohnmobilplätze und Campingplätze—nur auf Hipcamp gefunden."
+    }
 }

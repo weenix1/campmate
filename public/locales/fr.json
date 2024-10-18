@@ -1,0 +1,38 @@
+{
+    "general": {
+      "back": "Retour",
+      "next": "Suivant"
+    },
+    "header": {
+      "home": "Accueil",
+      "explore-camp": "Explorer le Camping",
+      "discover-camp": "Découvrir le Camping",
+      "discover-luxury-camp": "Découvrir le Camping de Luxe",
+      "camps": "Camps",
+      "topmap-grid": "Carte Supérieure & Grille",
+      "topmap-list": "Carte Supérieure & Liste",
+      "filter-scrolls": "Défilements de Filtre",
+      "filter-dropdown": "Menu Déroulant de Filtre",
+      "topmap-sidebar": "Carte Supérieure & Barre Latérale",
+      "halfmap-grid": "Demi Carte & Grille",
+      "halfmap-list": "Demi Carte & Liste",
+      "tent-details": "Détails de la Tente",
+      "about-us": "À Propos de Nous",
+      "blog": "Blog",
+      "blog-default": "Blog par Défaut",
+      "blog-details": "Détails du Blog",
+      "blog-grid": "Grille du Blog",
+      "pages": "Pages",
+      "contact-us": "Contactez Nous",
+      "faqs": "FAQs",
+      "review": "Critique"
+    },
+    "slider": {
+      "search-destination": "Rechercher une destination",
+      "add-dates": "Ajouter des Dates",
+      "add-guest": "Ajouter un Invité",
+      "find-yourself-outside": "Trouvez-vous dehors",
+      "reserve-spots": "Réservez de magnifiques emplacements privés pour camping-cars et campings—trouvés uniquement sur Hipcamp."
+    }
+  }
+  
