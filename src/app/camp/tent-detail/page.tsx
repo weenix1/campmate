@@ -15,7 +15,7 @@ import Footer from '@/components/Footer/Footer';
 import tentData from '@/data/Tent.json';
 import initialTestimonialData from '@/data/Testimonial.json';
 import { TentType } from '@/type/TentType';
-import { useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useDropzone } from 'react-dropzone';
 import dynamic from 'next/dynamic';
 
@@ -37,6 +37,13 @@ import { useUser } from '@clerk/nextjs';
 import toast from 'react-hot-toast';
 import TentDetailsModal from '@/components/TentDetailsModal/TentDetailsModal';
 
+
+
+// Todo 
+
+
+
+
 interface GuestType {
     adult: number;
     children: number;
@@ -53,6 +60,7 @@ const TentDetail = () => {
     const [viewMoreDesc, setViewMoreDesc] = useState<boolean>(false);
     const [openDate, setOpenDate] = useState(false);
     const [openGuest, setOpenGuest] = useState(false);
+    // const [showCheckout, setShowCheckout] = useState(false);
     const [state, setState] = useState([
         {
             startDate: new Date(),
@@ -60,6 +68,21 @@ const TentDetail = () => {
             key: 'selection',
         },
     ]);
+
+    const router = useRouter()
+
+    const [tentMain, setTentMain] = useState<TentType | null>(null);
+
+
+    useEffect(() => {
+        console.log("Tent ID from URL:", tentId);
+        console.log("Tent Data:", tentData); // Log tentData to check its contents
+
+        if (tentId && tentData.length > 0) {
+            const foundTent = tentData.find((tent: TentType) => tent.id === tentId) || null;
+            setTentMain(foundTent);
+        }
+    }, [tentId]);
 
     const [showModal, setShowModal] = useState(false);
     const { isLoaded, isSignedIn, user } = useUser();
@@ -153,11 +176,17 @@ const TentDetail = () => {
 
         return nights;
     };
+    //const tentMain = tentData.find((tent) => tent.id === tentId) as TentType;
 
     const calculateTotalBeforeTaxes = () => {
-        const nights = calculateNights();
-        const pricePerNight = tentMain.price;
-        const cleaningFee = 40 * guest.adult;
+        if (!tentMain) {
+            console.error('Tent main data is not available.');
+            return 0; // Or handle as needed
+        }
+
+        const nights = calculateNights(); // Ensure this function is defined
+        const pricePerNight = tentMain.price || 0; // Default to 0 if undefined
+        const cleaningFee = 40 * guest.adult; // Ensure guest is defined
         const serviceFee = 60 * guest.adult;
 
         // Total price for the stay
@@ -171,7 +200,7 @@ const TentDetail = () => {
         tentId = '1';
     }
 
-    const tentMain = tentData.find((tent) => tent.id === tentId) as TentType;
+
 
     const settings = {
         arrows: true,
@@ -311,6 +340,18 @@ const TentDetail = () => {
             return;
         }
         const { startDate, endDate } = state[0];
+
+        if (!startDate || !endDate) {
+            toast.error('Please select valid dates for your reservation');
+            return;
+        }
+
+        // Ensure there are guests (adults) selected
+        if (guest.adult === 0) {
+            toast.error('Please add at least one adult to your reservation');
+            return;
+        }
+
         const newReservationData = {
             tentId,
             guest,
@@ -319,10 +360,12 @@ const TentDetail = () => {
             startDate,
             endDate,
         };
-
+        console.log('Reservation data:', newReservationData);
         setReservationData(newReservationData);
-        setShowModal(true);
+        router.push(`/payment?amount=${calculateTotalBeforeTaxes()}&startDate=${state[0].startDate.toLocaleDateString()}&endDate=${state[0].endDate.toLocaleDateString()}&services=${selectedServices}&id=${tentId}`)
+        //setShowModal(true);
     };
+
 
     // Function to update the rate of a category
     const handleRateUpdate = (index: number, newRate: number) => {
@@ -385,6 +428,7 @@ const TentDetail = () => {
         }
     }, []);
 
+
     return (
         <>
             {showModal && (
@@ -398,7 +442,7 @@ const TentDetail = () => {
 
                 <div className="list-img-detail overflow-hidden">
                     <Slider {...settings} className="h-full">
-                        {tentMain.listImage.map((img, index) => (
+                        {tentMain?.listImage.map((img, index) => (
                             <div
                                 className="bg-img w-full aspect-[4/3]"
                                 key={index}
@@ -421,7 +465,7 @@ const TentDetail = () => {
                             <div className="content xl:w-2/3 lg:w-[60%] lg:pr-[15px] w-full">
                                 <div className="flex items-center justify-between gap-6">
                                     <div className="heading3">
-                                        {tentMain.name}
+                                        {tentMain?.name}
                                     </div>
                                     <div className="share w-12 h-12 rounded-full bg-white border border-outline flex-shrink-0 flex items-center justify-center cursor-pointer duration-300 hover:bg-black hover:text-white">
                                         <Icon.ShareNetwork className="text-2xl" />
@@ -431,11 +475,11 @@ const TentDetail = () => {
                                     <div className="flex items-center gap-1.5">
                                         <Icon.MapPin className="text-variant1" />
                                         <span className="text-variant1 capitalize">
-                                            {tentMain.location}
+                                            {tentMain?.location}
                                         </span>
                                     </div>
                                     <Link
-                                        href={`http://maps.google.com/?q=${tentMain.locationMap.lat},${tentMain.locationMap.lng}`}
+                                        href={`http://maps.google.com/?q=${tentMain?.locationMap.lat},${tentMain?.locationMap.lng}`}
                                         target="_blank"
                                         className="text-primary underline"
                                     >
@@ -445,14 +489,13 @@ const TentDetail = () => {
                                 <div className="desc lg:mt-10 mt-6 lg:pt-10 pt-6 border-t border-outline">
                                     <div className="heading5">Description</div>
                                     <div className="body2 text-variant1 mt-3">
-                                        {tentMain.shortDesc}
+                                        {tentMain?.shortDesc}
                                     </div>
                                     <div
-                                        className={`body2 text-variant1 ${
-                                            viewMoreDesc ? '' : 'hidden'
-                                        }`}
+                                        className={`body2 text-variant1 ${viewMoreDesc ? '' : 'hidden'
+                                            }`}
                                     >
-                                        {tentMain.description}
+                                        {tentMain?.description}
                                     </div>
                                     <div
                                         className="text-button-sm underline inline-block duration-300 cursor-pointer mt-3 hover:text-primary"
@@ -512,7 +555,7 @@ const TentDetail = () => {
                                                 Services:
                                             </div>
                                             <div className="list flex flex-col gap-2 mt-3">
-                                                {tentMain.services.map(
+                                                {tentMain?.services.map(
                                                     (item, index) => (
                                                         <div
                                                             key={index}
@@ -529,7 +572,7 @@ const TentDetail = () => {
                                                 Amenities:
                                             </div>
                                             <div className="list flex flex-col gap-2 mt-3">
-                                                {tentMain.amenities.map(
+                                                {tentMain?.amenities.map(
                                                     (item, index) => (
                                                         <div
                                                             key={index}
@@ -546,7 +589,7 @@ const TentDetail = () => {
                                                 Activities:
                                             </div>
                                             <div className="list flex flex-col gap-2 mt-3">
-                                                {tentMain.activities.map(
+                                                {tentMain?.activities.map(
                                                     (item, index) => (
                                                         <div
                                                             key={index}
@@ -562,7 +605,7 @@ const TentDetail = () => {
                                 </div>
                                 <div className="form-search lg:mt-10 mt-6 lg:pt-10 pt-6 border-t border-outline">
                                     <div className="text-title pb-2 text-xl">
-                                        Subscribe to {tentMain.name}
+                                        Subscribe to {tentMain?.name}
                                     </div>
                                     <form className="w-full relative rounded-lg overflow-hidden">
                                         <input
@@ -620,7 +663,7 @@ const TentDetail = () => {
                                     <div className="bg-img relative mt-3">
                                         <iframe
                                             className="w-full h-[360px]"
-                                            src={`https://maps.google.com/maps?q=${tentMain.locationMap.lat}, ${tentMain.locationMap.lng}&hl=es&z=14&amp&output=embed`}
+                                            src={`https://maps.google.com/maps?q=${tentMain?.locationMap.lat}, ${tentMain?.locationMap.lng}&hl=es&z=14&amp&output=embed`}
                                         ></iframe>
                                     </div>
                                 </div>
@@ -678,37 +721,37 @@ const TentDetail = () => {
                                                         </div>
                                                         {item.images.length !==
                                                             0 && (
-                                                            <div className="list-img flex items-center gap-4 mt-4">
-                                                                {item.images.map(
-                                                                    (
-                                                                        img,
-                                                                        index
-                                                                    ) => (
-                                                                        <Image
-                                                                            key={
-                                                                                index
-                                                                            }
-                                                                            src={
-                                                                                img
-                                                                            }
-                                                                            width={
-                                                                                400
-                                                                            }
-                                                                            height={
-                                                                                400
-                                                                            }
-                                                                            priority={
-                                                                                true
-                                                                            }
-                                                                            alt={
-                                                                                item.name
-                                                                            }
-                                                                            className="w-[60px] h-[60px] object-cover"
-                                                                        />
-                                                                    )
-                                                                )}
-                                                            </div>
-                                                        )}
+                                                                <div className="list-img flex items-center gap-4 mt-4">
+                                                                    {item.images.map(
+                                                                        (
+                                                                            img,
+                                                                            index
+                                                                        ) => (
+                                                                            <Image
+                                                                                key={
+                                                                                    index
+                                                                                }
+                                                                                src={
+                                                                                    img
+                                                                                }
+                                                                                width={
+                                                                                    400
+                                                                                }
+                                                                                height={
+                                                                                    400
+                                                                                }
+                                                                                priority={
+                                                                                    true
+                                                                                }
+                                                                                alt={
+                                                                                    item.name
+                                                                                }
+                                                                                className="w-[60px] h-[60px] object-cover"
+                                                                            />
+                                                                        )
+                                                                    )}
+                                                                </div>
+                                                            )}
                                                     </div>
                                                 </div>
                                             ))}
@@ -805,11 +848,10 @@ const TentDetail = () => {
                                                     Upload Images {'(optional)'}
                                                 </label>
                                                 <ul
-                                                    className={` ${
-                                                        files.length !== 0
-                                                            ? ' p-2 mt-3 '
-                                                            : ''
-                                                    } flex gap-6`}
+                                                    className={` ${files.length !== 0
+                                                        ? ' p-2 mt-3 '
+                                                        : ''
+                                                        } flex gap-6`}
                                                 >
                                                     {files?.map(
                                                         (file: {
@@ -979,11 +1021,10 @@ const TentDetail = () => {
                                                         </div>
                                                     </div>
                                                     <DateRangePicker
-                                                        className={`form-date-picker box-shadow ${
-                                                            openDate
-                                                                ? 'open'
-                                                                : ''
-                                                        }`}
+                                                        className={`form-date-picker box-shadow ${openDate
+                                                            ? 'open'
+                                                            : ''
+                                                            }`}
                                                         onChange={(item) =>
                                                             setState([
                                                                 item.selection,
@@ -1021,11 +1062,10 @@ const TentDetail = () => {
                                                         <Icon.CaretDown className="text-2xl" />
                                                     </div>
                                                     <div
-                                                        className={`sub-menu-guest bg-white rounded-b-xl overflow-hidden p-5 absolute top-full -mt-px left-0 w-full box-shadow ${
-                                                            openGuest
-                                                                ? 'open'
-                                                                : ''
-                                                        }`}
+                                                        className={`sub-menu-guest bg-white rounded-b-xl overflow-hidden p-5 absolute top-full -mt-px left-0 w-full box-shadow ${openGuest
+                                                            ? 'open'
+                                                            : ''
+                                                            }`}
                                                     >
                                                         <div className="item flex items-center justify-between pb-4 border-b border-outline">
                                                             <div className="left">
@@ -1036,12 +1076,11 @@ const TentDetail = () => {
                                                             </div>
                                                             <div className="right flex items-center gap-5">
                                                                 <div
-                                                                    className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${
-                                                                        guest.adult ===
+                                                                    className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${guest.adult ===
                                                                         0
-                                                                            ? 'opacity-[0.4] cursor-default'
-                                                                            : 'cursor-pointer hover:bg-black hover:text-white'
-                                                                    }`}
+                                                                        ? 'opacity-[0.4] cursor-default'
+                                                                        : 'cursor-pointer hover:bg-black hover:text-white'
+                                                                        }`}
                                                                     onClick={() =>
                                                                         decreaseGuest(
                                                                             'adult'
@@ -1076,12 +1115,11 @@ const TentDetail = () => {
                                                             </div>
                                                             <div className="right flex items-center gap-5">
                                                                 <div
-                                                                    className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${
-                                                                        guest.children ===
+                                                                    className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${guest.children ===
                                                                         0
-                                                                            ? 'opacity-[0.4] cursor-default'
-                                                                            : 'cursor-pointer hover:bg-black hover:text-white'
-                                                                    }`}
+                                                                        ? 'opacity-[0.4] cursor-default'
+                                                                        : 'cursor-pointer hover:bg-black hover:text-white'
+                                                                        }`}
                                                                     onClick={() =>
                                                                         decreaseGuest(
                                                                             'children'
@@ -1116,12 +1154,11 @@ const TentDetail = () => {
                                                             </div>
                                                             <div className="right flex items-center gap-5">
                                                                 <div
-                                                                    className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${
-                                                                        guest.infant ===
+                                                                    className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${guest.infant ===
                                                                         0
-                                                                            ? 'opacity-[0.4] cursor-default'
-                                                                            : 'cursor-pointer hover:bg-black hover:text-white'
-                                                                    }`}
+                                                                        ? 'opacity-[0.4] cursor-default'
+                                                                        : 'cursor-pointer hover:bg-black hover:text-white'
+                                                                        }`}
                                                                     onClick={() =>
                                                                         decreaseGuest(
                                                                             'infant'
@@ -1153,12 +1190,11 @@ const TentDetail = () => {
                                                             </div>
                                                             <div className="right flex items-center gap-5">
                                                                 <div
-                                                                    className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${
-                                                                        guest.pet ===
+                                                                    className={`minus w-8 h-8 flex items-center justify-center rounded-full border border-outline duration-300 ${guest.pet ===
                                                                         0
-                                                                            ? 'opacity-[0.4] cursor-default'
-                                                                            : 'cursor-pointer hover:bg-black hover:text-white'
-                                                                    }`}
+                                                                        ? 'opacity-[0.4] cursor-default'
+                                                                        : 'cursor-pointer hover:bg-black hover:text-white'
+                                                                        }`}
                                                                     onClick={() =>
                                                                         decreaseGuest(
                                                                             'pet'
@@ -1200,7 +1236,7 @@ const TentDetail = () => {
                                                     Add Services
                                                 </div>
                                                 <div className="list flex flex-col gap-2 mt-3">
-                                                    {tentMain.services.map(
+                                                    {tentMain?.services.map(
                                                         (item, index) => (
                                                             <div
                                                                 className="flex items-center cursor-pointer"
@@ -1252,13 +1288,13 @@ const TentDetail = () => {
                                                 <div className="list mt-2">
                                                     <div className="flex items-center justify-between">
                                                         <div>
-                                                            €{tentMain.price} x{' '}
+                                                            €{tentMain?.price} x{' '}
                                                             {calculateNights()}{' '}
                                                             Nights
                                                         </div>
                                                         <div className="text-button">
                                                             {calculateNights()}{' '}
-                                                            x €{tentMain.price}
+                                                            x €{tentMain?.price}
                                                         </div>
                                                     </div>
                                                     <div className="flex items-center justify-between mt-1">
@@ -1283,36 +1319,37 @@ const TentDetail = () => {
                                                         {calculateTotalBeforeTaxes()}
                                                     </div>
                                                 </div>
-                                                <button
+                                                < button
                                                     type="submit"
                                                     className="button-main bg-primary w-full text-center mt-5"
                                                 >
                                                     Book Tent
                                                 </button>
+
                                             </div>
                                         </div>
                                     </form>
+
 
                                     <div className="reservation bg-surface p-6 rounded-md md:mt-10 mt-6">
                                         <div className="bg-img relative">
                                             <iframe
                                                 className="w-full lg:h-[200px] sm:h-[350px] h-[300px]"
-                                                src={`https://maps.google.com/maps?q=${tentMain.locationMap.lat}, ${tentMain.locationMap.lng}&hl=es&z=14&amp&output=embed`}
+                                                src={`https://maps.google.com/maps?q=${tentMain?.locationMap.lat}, ${tentMain?.locationMap.lng}&hl=es&z=14&amp&output=embed`}
                                             ></iframe>
                                         </div>
                                         <div className="heading6 mt-5">
-                                            {tentMain.name}
+                                            {tentMain?.name}
                                         </div>
                                         <div className="flex items-center gap-2 mt-2">
                                             <Icon.MapPin className="text-variant1" />
-                                            <span>{tentMain.location}</span>
+                                            <span>{tentMain?.location}</span>
                                         </div>
                                         <div className="flex items-center gap-2 mt-2">
                                             <Icon.Envelope className="text-variant1" />
-                                            <span>{`${
-                                                user?.emailAddresses[0]
-                                                    .emailAddress ?? ''
-                                            }`}</span>
+                                            <span>{`${user?.emailAddresses[0]
+                                                .emailAddress ?? ''
+                                                }`}</span>
                                         </div>
                                     </div>
 
@@ -1381,7 +1418,7 @@ const TentDetail = () => {
                     </div>
                 </div>
                 <Footer />
-            </div>
+            </div >
         </>
     );
 };

@@ -70,7 +70,7 @@ const TentDetailsModal = ({
         if (files[0]) {
             localStorage.setItem(
                 'reservationData',
-                JSON.stringify({ user, imageId: files[0].base64, reservationData })
+                JSON.stringify({ user, /* imageId: files[0].base64, */ reservationData })
             );
             toast.success('Image uploaded successfully');
             router.push(`/reservation?id=${reservationData.tentId}`);
@@ -95,9 +95,8 @@ const TentDetailsModal = ({
                         Upload Image ID
                     </label>
                     <ul
-                        className={` ${
-                            files.length !== 0 ? ' p-2 mt-3 ' : ''
-                        } flex gap-6`}
+                        className={` ${files.length !== 0 ? ' p-2 mt-3 ' : ''
+                            } flex gap-6`}
                     >
                         {files?.map(
                             (file: { name: string; base64: string }) => (
