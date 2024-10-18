@@ -11,6 +11,7 @@ import {
     SignedOut,
     UserButton
 } from '@clerk/nextjs'
+import { useTranslation } from 'react-i18next';
 
 const HeaderOne = () => {
     const pathname = usePathname()
@@ -22,6 +23,8 @@ const HeaderOne = () => {
     const handleOpenSubNavMobile = (index: number) => {
         setOpenSubNavMobile(openSubNavMobile === index ? null : index)
     }
+
+    const { t } = useTranslation()
 
     useEffect(() => {
         const handleScroll = () => {
@@ -60,23 +63,23 @@ const HeaderOne = () => {
                                     href="#!"
                                     className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/' || pathname.includes('/homepages/') ? 'active' : ''}`}
                                 >
-                                    Home
+                                    {t('header.home')}
                                 </Link>
                                 <div className="sub-menu absolute bg-white">
                                     <ul>
                                         <li>
                                             <Link href="/" className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname === '/' ? 'active' : ''}`}>
-                                                Explore Camps
+                                                {t('header.explore-camp')}
                                             </Link>
                                         </li>
                                         <li>
                                             <Link href="/homepages/home2" className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname === '/homepages/home2' ? 'active' : ''}`}>
-                                                Discover Camps
+                                                {t('header.discover-camp')}
                                             </Link>
                                         </li>
                                         <li>
                                             <Link href="/homepages/home3" className={`link text-button text-variant1 py-4 pl-6 pr-16 duration-300 ${pathname === '/homepages/home3' ? 'active' : ''}`}>
-                                                Discover Luxury Camps
+                                                {t('header.discover-luxury-camp')}
                                             </Link>
                                         </li>
                                     </ul>
@@ -87,7 +90,7 @@ const HeaderOne = () => {
                                     href="#!"
                                     className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname.includes('/camp/') ? 'active' : ''}`}
                                 >
-                                    Camps
+                                    {t('header.camps')}
                                 </Link>
                                 <div className="sub-menu absolute bg-white">
                                     <ul>

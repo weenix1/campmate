@@ -1,0 +1,30 @@
+{
+  "general": {
+    "back": "Zurück",
+    "next": "Weiter"
+  },
+  "header": {
+    "home": "Startseite",
+    "explore-camp": "Camping erkunden",
+    "discover-camp": "Camping entdecken",
+    "discover-luxury-camp": "Luxus-Camping entdecken",
+    "camps": "Camps",
+    "topmap-grid": "Top-Karte & Raster",
+    "topmap-list": "Top-Karte & Liste",
+    "filter-scrolls": "Filters Scrolls",
+    "filter-dropdown": "Filters Dropdown",
+    "topmap-sidebar": "Top-Karte & Seitenleiste",
+    "halfmap-grid": "Halbkarte & Raster",
+    "halfmap-list": "Halbkarte & Liste",
+    "tent-details": "Zelt Details",
+    "about-us": "Über uns",
+    "blog": "Blog",
+    "blog-default": "Blog Standard",
+    "blog-details": "Blog Details",
+    "blog-grid": "Blog Raster",
+    "pages": "Seiten",
+    "contact-us": "Kontaktiere uns",
+    "faqs": "FAQs",
+    "review": "Bewertung"
+  }
+}

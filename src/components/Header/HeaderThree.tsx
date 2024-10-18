@@ -45,7 +45,7 @@ const HeaderThree = () => {
 
     const [openDate, setOpenDate] = useState(false)
     const [openGuest, setOpenGuest] = useState(false)
-    const [location, setLocation] = useState('namibia')
+    const [location, setLocation] = useState('germany')
     const [state, setState] = useState([
         {
             startDate: new Date(),
