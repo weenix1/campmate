@@ -394,6 +394,7 @@ const TentDetail = () => {
             address: 'Tokyo, Japan',
             description: reviewData.review,
             star: parseFloat(averageRating.toFixed(1)),
+            replies:[]
         };
         const updatedTestimonialData = [reviewDetails, ...testimonialData];
         setTestimonialData(updatedTestimonialData);

@@ -12,7 +12,8 @@
             "https://cdn.prod.v2.camping.info/media/campsites/freizeitpark-am-emsdeich-ostfriesland/kf1TrXU2zEwh.jpg",
             "https://cdn.prod.v2.camping.info/media/campsites/freizeitpark-am-emsdeich-ostfriesland/_zHat5U3Ndjb.jpg"
         ],
-        "star": 5
+        "star": 5,
+        "replies":[]
     },
     {
         "id": "2",
@@ -26,7 +27,8 @@
             "https://cdn.prod.v2.camping.info/media/campsites/freizeitpark-am-emsdeich-ostfriesland/0KzzuAk5PgkW.jpg",
             "https://cdn.prod.v2.camping.info/media/campsites/barracuda-beach-camping/yTlfP_XmFGqd.jpg"
         ],
-        "star": 5
+        "star": 5,
+        "replies":[]
     },
     {
         "id": "3",
@@ -37,7 +39,8 @@
         "address": "Manchester, UK",
         "description": "CampingMate exceeded our expectations! It was an oasis of calm amidst nature, and we appreciated the eco-conscious mindset and the friendly ambiance.",
         "images": [],
-        "star": 4
+        "star": 4,
+        "replies":[]
     },
     {
         "id": "4",
@@ -53,7 +56,8 @@
             "https://cdn.prod.v2.camping.info/media/campsites/seepark-ternsche/pELB98OQSqbd.jpg",
             "https://cdn.prod.v2.camping.info/media/campsites/seepark-ternsche/TSvm5kb9l-cG.jpg"
         ],
-        "star": 5
+        "star": 5,
+        "replies":[]
     },
     {
         "id": "5",
@@ -67,7 +71,8 @@
             "https://cdn.prod.v2.camping.info/media/campsites/seepark-ternsche/dj20vGdu399l.jpg",
             "https://cdn.prod.v2.camping.info/media/campsites/eurocamp-spreewaldtor/GcMcDj66VWcW.jpg"
         ],
-        "star": 4
+        "star": 4,
+        "replies":[]
     },
     {
         "id": "6",
@@ -78,7 +83,8 @@
         "address": "London, UK",
         "description": "We had a wonderful time at CampingMate. It provided a much-needed escape, and we were pleased with the focus on sustainability and the communal spirit.",
         "images": ["/images/tent/900x900.png", "/images/tent/900x900.png"],
-        "star": 5
+        "star": 5,
+        "replies":[]
     },
     {
         "id": "7",
@@ -89,7 +95,8 @@
         "address": "California, USA",
         "description": "Choosing CampingMate for our glamping adventure was a brilliant choice. It provided a serene retreat, and we were impressed by the eco-conscious values and the sense of togetherness.",
         "images": ["/images/tent/900x900.png", "/images/tent/900x900.png"],
-        "star": 5
+        "star": 5,
+        "replies":[]
     },
     {
         "id": "8",
@@ -100,7 +107,8 @@
         "address": "Paris, France",
         "description": "Our experience with CampingMate was incredible. It offered tranquility in nature's lap, and we valued the eco-friendly mindset and the warmth of the community.",
         "images": ["/images/tent/900x900.png", "/images/tent/900x900.png"],
-        "star": 5
+        "star": 5,
+        "replies":[]
     },
     {
         "id": "9",
@@ -111,7 +119,8 @@
         "address": "London, UK",
         "description": "CampingMate was an exceptional choice for our glamping trip. It offered a peaceful haven, and we admired the commitment to sustainability and the friendly atmosphere.",
         "images": ["/images/tent/900x900.png", "/images/tent/900x900.png"],
-        "star": 4
+        "star": 4,
+        "replies":[]
     },
     {
         "id": "10",
@@ -122,7 +131,8 @@
         "address": "Tokyo, Japan",
         "description": "Our time at CampingMate was delightful. It offered a much-needed break, and we appreciated the focus on sustainability and the inclusive environment.",
         "images": ["/images/tent/900x900.png", "/images/tent/900x900.png"],
-        "star": 4
+        "star": 4,
+        "replies":[]
     },
     {
         "id": "11",
@@ -133,7 +143,8 @@
         "address": "Madrid, Spain",
         "description": "Choosing Campingmate for our glamping getaway was a fantastic decision. It provided a serene escape, and we loved the eco-friendly approach and the sense of belonging.",
         "images": ["/images/tent/900x900.png", "/images/tent/900x900.png"],
-        "star": 5
+        "star": 5,
+        "replies":[]
     },
     {
         "id": "12",
@@ -144,6 +155,7 @@
         "address": "Manchester, UK",
         "description": "Campingmate provided an outstanding glamping experience. It offered serenity amidst nature, and we cherished the eco-conscious values and the camaraderie among guests.",
         "images": ["/images/tent/900x900.png", "/images/tent/900x900.png"],
-        "star": 5
+        "star": 5,
+        "replies":[]
     }
 ]
