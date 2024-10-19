@@ -20,6 +20,7 @@ const HeaderOne = () => {
     const [language, setLanguage] = useState(i18n.language);
 
     const isCheckedIn = localStorage.getItem('checkedIn');
+    const reservation = localStorage.getItem('reservationData')
 
     const handleOpenSubNavMobile = (index: number) => {
         setOpenSubNavMobile(openSubNavMobile === index ? null : index);
@@ -253,7 +254,7 @@ const HeaderOne = () => {
                                 </Link>
 
                             </li>}
-                            {isCheckedIn && <li className="h-full relative">
+                            {reservation && <li className="h-full relative">
                                 <Link
                                     href="/reservation"
                                     className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname.includes('/reservation/')
