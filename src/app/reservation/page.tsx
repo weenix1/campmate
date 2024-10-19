@@ -1,11 +1,6 @@
 'use client';
 import {
-    JSXElementConstructor,
     Key,
-    PromiseLikeOfReactNode,
-    ReactElement,
-    ReactNode,
-    ReactPortal,
     useEffect,
     useState,
 } from 'react';
@@ -348,85 +343,77 @@ const Reservation = () => {
                                                             ?.reservationData
                                                             .guest?.adult >
                                                             0 && (
-                                                            <div className="text-title">
-                                                                {`${
-                                                                    reservationDetails
-                                                                        ?.reservationData
-                                                                        .guest
-                                                                        .adult
-                                                                } ${
-                                                                    reservationDetails
-                                                                        ?.reservationData
-                                                                        .guest
-                                                                        .adult ===
-                                                                    1
-                                                                        ? 'Adult'
-                                                                        : 'Adults'
-                                                                }`}
-                                                            </div>
-                                                        )}
+                                                                <div className="text-title">
+                                                                    {`${reservationDetails
+                                                                            ?.reservationData
+                                                                            .guest
+                                                                            .adult
+                                                                        } ${reservationDetails
+                                                                            ?.reservationData
+                                                                            .guest
+                                                                            .adult ===
+                                                                            1
+                                                                            ? 'Adult'
+                                                                            : 'Adults'
+                                                                        }`}
+                                                                </div>
+                                                            )}
                                                         {reservationDetails
                                                             ?.reservationData
                                                             .guest?.children >
                                                             0 && (
-                                                            <div className="text-title">
-                                                                {`${
-                                                                    reservationDetails
-                                                                        ?.reservationData
-                                                                        .guest
-                                                                        .children
-                                                                } ${
-                                                                    reservationDetails
-                                                                        ?.reservationData
-                                                                        .guest
-                                                                        .children ===
-                                                                    1
-                                                                        ? 'Child'
-                                                                        : 'Children'
-                                                                }`}
-                                                            </div>
-                                                        )}
+                                                                <div className="text-title">
+                                                                    {`${reservationDetails
+                                                                            ?.reservationData
+                                                                            .guest
+                                                                            .children
+                                                                        } ${reservationDetails
+                                                                            ?.reservationData
+                                                                            .guest
+                                                                            .children ===
+                                                                            1
+                                                                            ? 'Child'
+                                                                            : 'Children'
+                                                                        }`}
+                                                                </div>
+                                                            )}
                                                         {reservationDetails
                                                             ?.reservationData
                                                             .guest?.infant >
                                                             0 && (
-                                                            <div className="text-title">
-                                                                {`${
-                                                                    reservationDetails
-                                                                        ?.reservationData
-                                                                        .guest
-                                                                        .infant
-                                                                } ${
-                                                                    reservationDetails
-                                                                        ?.reservationData
-                                                                        .guest
-                                                                        .infant ===
-                                                                    1
-                                                                        ? 'Infant'
-                                                                        : 'Infants'
-                                                                }`}
-                                                            </div>
-                                                        )}
+                                                                <div className="text-title">
+                                                                    {`${reservationDetails
+                                                                            ?.reservationData
+                                                                            .guest
+                                                                            .infant
+                                                                        } ${reservationDetails
+                                                                            ?.reservationData
+                                                                            .guest
+                                                                            .infant ===
+                                                                            1
+                                                                            ? 'Infant'
+                                                                            : 'Infants'
+                                                                        }`}
+                                                                </div>
+                                                            )}
                                                         {reservationDetails
                                                             ?.reservationData
                                                             .guest?.pet > 0 && (
-                                                            <div className="text-title">
-                                                                {`${
-                                                                    reservationDetails
-                                                                        ?.reservationData
-                                                                        .guest
-                                                                        .pet
-                                                                } ${
-                                                                    reservationDetails
-                                                                        ?.reservationData
-                                                                        .guest
-                                                                        .pet ===
-                                                                    1
-                                                                        ? 'Pet'
-                                                                        : 'Pets'
-                                                                }`}
-                                                            </div>
-                                                        )}
+                                                                <div className="text-title">
+                                                                    {`${reservationDetails
+                                                                            ?.reservationData
+                                                                            .guest
+                                                                            .pet
+                                                                        } ${reservationDetails
+                                                                            ?.reservationData
+                                                                            .guest
+                                                                            .pet ===
+                                                                            1
+                                                                            ? 'Pet'
+                                                                            : 'Pets'
+                                                                        }`}
+                                                                </div>
+                                                            )}
                                                     </div>
                                                     <div className="flex flex-col space-y-2">
                                                         <div className="mt-4">
@@ -464,31 +451,31 @@ const Reservation = () => {
                                                         ?.reservationData
                                                         .services.length >
                                                         0 && (
-                                                        <div className="w-fit mt-4">
-                                                            <div className="text-title">
-                                                                Services:
+                                                            <div className="w-fit mt-4">
+                                                                <div className="text-title">
+                                                                    Services:
+                                                                </div>
+                                                                <div className="list flex flex-col gap-2 mt-3">
+                                                                    {reservationDetails?.reservationData.services.map(
+                                                                        (
+                                                                            item: string,
+                                                                            index: Key
+                                                                        ) => (
+                                                                            <div
+                                                                                key={
+                                                                                    index
+                                                                                }
+                                                                                className="item capitalize"
+                                                                            >
+                                                                                {
+                                                                                    item
+                                                                                }
+                                                                            </div>
+                                                                        )
+                                                                    )}
+                                                                </div>
                                                             </div>
-                                                            <div className="list flex flex-col gap-2 mt-3">
-                                                                {reservationDetails?.reservationData.services.map(
-                                                                    (
-                                                                        item: string,
-                                                                        index: Key
-                                                                    ) => (
-                                                                        <div
-                                                                            key={
-                                                                                index
-                                                                            }
-                                                                            className="item capitalize"
-                                                                        >
-                                                                            {
-                                                                                item
-                                                                            }
-                                                                        </div>
-                                                                    )
-                                                                )}
-                                                            </div>
-                                                        </div>
-                                                    )}
+                                                        )}
                                                     <div className="total-block mt-5 pt-5 border-t border-outline flex items-center justify-between">
                                                         <div className="heading6">
                                                             Amount Paid
@@ -556,11 +543,10 @@ const Reservation = () => {
                                                 </div>
                                                 <div className="flex items-center gap-2 mt-2">
                                                     <Icon.Envelope className="text-variant1" />
-                                                    <span>{`${
-                                                        reservationDetails?.user
+                                                    <span>{`${reservationDetails?.user
                                                             ?.emailAddresses[0]
                                                             .emailAddress ?? ''
-                                                    }`}</span>
+                                                        }`}</span>
                                                 </div>
                                             </div>
 

@@ -19,6 +19,8 @@ const HeaderOne = () => {
     );
     const [language, setLanguage] = useState(i18n.language);
 
+    const isCheckedIn = localStorage.getItem('checkedIn');
+
     const handleOpenSubNavMobile = (index: number) => {
         setOpenSubNavMobile(openSubNavMobile === index ? null : index);
     };
@@ -239,7 +241,7 @@ const HeaderOne = () => {
                                     {t('header.about-us')}
                                 </Link>
                             </li>
-                            <li className="h-full relative">
+                            {isCheckedIn && <li className="h-full relative">
                                 <Link
                                     href="/community"
                                     className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname.includes('/community/')
@@ -250,7 +252,7 @@ const HeaderOne = () => {
                                     {t('header.community')}
                                 </Link>
 
-                            </li>
+                            </li>}
                             <li className="h-full relative">
                                 <Link
                                     href="#!"
