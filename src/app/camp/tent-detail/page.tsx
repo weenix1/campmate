@@ -360,7 +360,7 @@ const TentDetail = () => {
             endDate,
         };
         setReservationData(newReservationData);
-        localStorage.setItem('reservationData', JSON.stringify({user,reservationData:newReservationData}))
+        localStorage.setItem('reservationData', JSON.stringify({ user, reservationData: newReservationData }))
         router.push(`/payment?amount=${calculateTotalBeforeTaxes()}&startDate=${state[0].startDate.toLocaleDateString()}&endDate=${state[0].endDate.toLocaleDateString()}&services=${selectedServices}&id=${tentId}`)
     };
 
@@ -429,7 +429,7 @@ const TentDetail = () => {
 
     return (
         <>
-        
+
             <div className="ten-detail">
                 <HeaderOne />
 
@@ -1222,6 +1222,56 @@ const TentDetail = () => {
                                                             Done
                                                         </div>
                                                     </div>
+                                                </div>
+                                            </div>
+                                            <div className="services bg-white px-5 py-4 mt-5 border border-outline">
+                                                <div className="text-button">
+                                                    Choose House Form
+                                                </div>
+                                                <div className="list flex flex-col gap-2 mt-3">
+                                                    {tentMain?.houseform.map(
+                                                        (item, index) => (
+                                                            <div
+                                                                className="flex items-center cursor-pointer"
+                                                                key={index}
+                                                            >
+                                                                <div className="block-input">
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        name={
+                                                                            item
+                                                                        }
+                                                                        id={
+                                                                            item
+                                                                        }
+                                                                        checked={selectedServices.includes(
+                                                                            item
+                                                                        )}
+                                                                        onChange={() =>
+                                                                            handleAmenities(
+                                                                                item
+                                                                            )
+                                                                        }
+                                                                    />
+                                                                    <Icon.CheckSquare
+                                                                        size={
+                                                                            20
+                                                                        }
+                                                                        weight="fill"
+                                                                        className="icon-checkbox text-primary"
+                                                                    />
+                                                                </div>
+                                                                <label
+                                                                    htmlFor={
+                                                                        item
+                                                                    }
+                                                                    className="amenities-name capitalize pl-2 cursor-pointer"
+                                                                >
+                                                                    {item}
+                                                                </label>
+                                                            </div>
+                                                        )
+                                                    )}
                                                 </div>
                                             </div>
                                             <div className="services bg-white px-5 py-4 mt-5 border border-outline">

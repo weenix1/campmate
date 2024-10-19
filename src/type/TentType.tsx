@@ -18,6 +18,7 @@ export interface TentType {
     shortDesc: string;
     description: string;
     services: Array<string>,
+    houseform: Array<string>,
     amenities: Array<string>,
     activities: Array<string>,
     terrain: Array<string>,

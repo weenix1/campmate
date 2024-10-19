@@ -195,6 +195,7 @@ const TopMapList = () => {
       shortDesc: 'no-data',
       description: 'no-data',
       services: [],
+      houseform: [],
       amenities: [],
       activities: [],
       terrain: [],
@@ -333,6 +334,7 @@ const TopMapList = () => {
                   </div>
                 </div>
 
+
                 <div className="filter-service mt-8">
                   <div className="heading6">Services</div>
                   <div className="list-service flex flex-col gap-3 mt-3">
@@ -354,6 +356,28 @@ const TopMapList = () => {
                       </div>
                     ))}
                   </div>
+                </div>
+              </div>
+              <div className="filter-service mt-8">
+                <div className="heading6">House Types</div>
+                <div className="list-service flex flex-col gap-3 mt-3">
+                  {['Motorhome', 'caravan', 'container', 'Tent', 'log cabin', 'cabin',].map((item, index) => (
+                    <div key={index} className="service-item flex items-center justify-between">
+                      <div className="left flex items-center cursor-pointer">
+                        <div className="block-input">
+                          <input
+                            type="checkbox"
+                            name={item}
+                            id={item}
+                            checked={service.includes(item)}
+                            onChange={() => handleService(item)}
+                          />
+                          <Icon.CheckSquare size={20} weight='fill' className='icon-checkbox text-primary' />
+                        </div>
+                        <label htmlFor={item} className="service-name capitalize pl-2 cursor-pointer">{item}</label>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
 

@@ -12,7 +12,7 @@
       "lng": 23.11
     },
     "rate": 4.8,
-    "price": 130,
+    "price": 52,
     "listImage": [
       "https://cdn.prod.v2.camping.info/media/campsites/grubhof/pl2k-u-Nmrsm.jpg",
       "https://cdn.prod.v2.camping.info/media/campsites/grubhof/7clZEG7a24Kv.jpg",
@@ -28,6 +28,14 @@
       "cooking service",
       "relaxation service",
       "cleaning service"
+    ],
+    "houseform": [
+      "Motorhome",
+      "caravan",
+      "container",
+      "Tent",
+      "log cabin",
+      "cabin"
     ],
     "amenities": [
       "parking",
@@ -72,7 +80,7 @@
       "lng": 171.336253
     },
     "rate": 4.7,
-    "price": 150,
+    "price": 43,
     "listImage": [
       "https://cdn.prod.v2.camping.info/media/campsites/hells-ferienresort-zillertal/h-j-mq9935QU.jpg",
       "https://cdn.prod.v2.camping.info/media/campsites/hells-ferienresort-zillertal/QczMzUEfxnZf.jpg",
@@ -88,6 +96,14 @@
       "cooking service",
       "relaxation service",
       "cleaning service"
+    ],
+    "houseform": [
+      "Motorhome",
+      "caravan",
+      "container",
+      "Tent",
+      "log cabin",
+      "cabin"
     ],
     "amenities": [
       "parking",
@@ -134,7 +150,7 @@
       "lng": 8.679
     },
     "rate": 4.4,
-    "price": 185,
+    "price": 36,
     "listImage": [
       "https://cdn.prod.v2.camping.info/media/campsites/prumtal-camping-oberweis-eifel/8x6lQET99nO3.jpg",
       "https://cdn.prod.v2.camping.info/media/campsites/prumtal-camping-oberweis-eifel/wJrxbHVHaT-q.jpg",
@@ -150,6 +166,14 @@
       "self-service laundry",
       "cooking service",
       "cleaning service"
+    ],
+    "houseform": [
+      "Motorhome",
+      "caravan",
+      "container",
+      "Tent",
+      "log cabin",
+      "cabin"
     ],
     "amenities": [
       "parking",
@@ -195,7 +219,7 @@
       "lng": 6.597912
     },
     "rate": 4.8,
-    "price": 160,
+    "price": 66,
     "listImage": [
       "https://cdn.prod.v2.camping.info/media/campsites/naturpark-camping-prinzenholz/Sfn6M243iFMq.jpg",
       "https://cdn.prod.v2.camping.info/media/campsites/naturpark-camping-prinzenholz/mQc6RSzQPzNu.jpg",
@@ -212,6 +236,14 @@
       "cooking service",
       "relaxation service",
       "cleaning service"
+    ],
+    "houseform": [
+      "Motorhome",
+      "caravan",
+      "container",
+      "Tent",
+      "log cabin",
+      "cabin"
     ],
     "amenities": [
       "parking",
@@ -256,7 +288,7 @@
       "lng": 7.758324
     },
     "rate": 4.4,
-    "price": 185,
+    "price": 53,
     "listImage": [
       "https://cdn.prod.v2.camping.info/media/campsites/campingpark-erfurt/jSNkyu7rOsM5.jpg",
       "https://cdn.prod.v2.camping.info/media/campsites/campingpark-erfurt/E_TbtZW2ulOs.jpg",
@@ -273,6 +305,14 @@
       "cooking service",
       "relaxation service",
       "cleaning service"
+    ],
+    "houseform": [
+      "Motorhome",
+      "caravan",
+      "container",
+      "Tent",
+      "log cabin",
+      "cabin"
     ],
     "amenities": [
       "parking",
@@ -318,7 +358,7 @@
       "lng": 8.540725
     },
     "rate": 4.8,
-    "price": 130,
+    "price": 61,
     "listImage": [
       "https://cdn.prod.v2.camping.info/media/campsites/seeweide-naturcamping-penzlin/5D5VPkviP6gg.jpg",
       "https://cdn.prod.v2.camping.info/media/campsites/seeweide-naturcamping-penzlin/nBby7USShWw9.jpg",
@@ -335,6 +375,14 @@
       "cooking service",
       "relaxation service",
       "cleaning service"
+    ],
+    "houseform": [
+      "Motorhome",
+      "caravan",
+      "container",
+      "Tent",
+      "log cabin",
+      "cabin"
     ],
     "amenities": [
       "parking",
@@ -379,7 +427,7 @@
       "lng": 8.977431
     },
     "rate": 4.8,
-    "price": 230,
+    "price": 75,
     "listImage": [
       "https://cdn.prod.v2.camping.info/media/campsites/camping-reiterhof1/Eb7l0XZgn0Fp.jpg",
       "https://cdn.prod.v2.camping.info/media/campsites/camping-reiterhof1/nmnTOgoahZoY.jpg",
@@ -396,6 +444,14 @@
       "cooking service",
       "relaxation service",
       "cleaning service"
+    ],
+    "houseform": [
+      "Motorhome",
+      "caravan",
+      "container",
+      "Tent",
+      "log cabin",
+      "cabin"
     ],
     "amenities": [
       "parking",
@@ -440,7 +496,7 @@
       "lng": 8.905823
     },
     "rate": 4.8,
-    "price": 179,
+    "price": 49,
     "listImage": [
       "https://cdn.prod.v2.camping.info/media/campsites/camping-sonnenland/wnLA7yIp5hev.jpg",
       "https://cdn.prod.v2.camping.info/media/campsites/camping-sonnenland/frj5tZU3hBDG.jpg",
@@ -459,6 +515,14 @@
       "cooking service",
       "relaxation service",
       "cleaning service"
+    ],
+    "houseform": [
+      "Motorhome",
+      "caravan",
+      "container",
+      "Tent",
+      "log cabin",
+      "cabin"
     ],
     "amenities": [
       "parking",
@@ -503,7 +567,7 @@
       "lng": 7.424576
     },
     "rate": 4.9,
-    "price": 199,
+    "price": 90,
     "listImage": [
       "https://cdn.prod.v2.camping.info/media/campsites/camping-goorzicht/0TaEu5AaZ2jc.jpg",
       "https://cdn.prod.v2.camping.info/media/campsites/camping-goorzicht/LcKPnlJumrV-.jpg",
@@ -520,6 +584,14 @@
       "self-service laundry",
       "cooking service",
       "cleaning service"
+    ],
+    "houseform": [
+      "Motorhome",
+      "caravan",
+      "container",
+      "Tent",
+      "log cabin",
+      "cabin"
     ],
     "amenities": [
       "parking",
@@ -562,7 +634,7 @@
       "lng": 12.19095
     },
     "rate": 4.9,
-    "price": 199,
+    "price": 87,
     "listImage": [
       "https://cdn.prod.v2.camping.info/media/campsites/freizeit-und-erholungszentrum-perschen/rwHRdrsyh4ul.jpg",
       "https://cdn.prod.v2.camping.info/media/campsites/freizeit-und-erholungszentrum-perschen/Bd_NQelDHRE0.jpg",
@@ -579,6 +651,14 @@
       "self-service laundry",
       "cooking service",
       "cleaning service"
+    ],
+    "houseform": [
+      "Motorhome",
+      "caravan",
+      "container",
+      "Tent",
+      "log cabin",
+      "cabin"
     ],
     "amenities": [
       "parking",
