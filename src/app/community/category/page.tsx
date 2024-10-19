@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -8,10 +8,11 @@ import * as Icon from 'phosphor-react';
 import HeaderOne from '@/components/Header/HeaderOne';
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
 import HandlePagination from '@/components/Other/HandlePagination';
-import communityData from '@/data/Community.json';
+import initialCommunityData from '@/data/Community.json';
 import BlogItem from '@/components/Community/CommunityItem';
 import Footer from '@/components/Footer/Footer';
 import StickyBox from 'react-sticky-box';
+import CommunityModal from '@/components/Community/CommunityModal';
 
 const CommunityCategory = () => {
     const [currentPage, setCurrentPage] = useState(0);
@@ -21,6 +22,8 @@ const CommunityCategory = () => {
     const searchParams = useSearchParams();
     let dataCategory = searchParams.get('category');
     const [category, setCategory] = useState<string | null>(dataCategory);
+    const [communityData, setCommunityData] = useState(initialCommunityData);
+    const [communityModal, setCommunityModal] = useState(false);
 
     const handleCategory = (category: string) => {
         setCategory((prevCategory) =>
@@ -72,13 +75,27 @@ const CommunityCategory = () => {
         setCurrentPage(selected);
     };
 
+    useEffect(() => {
+        const savedCommunity = localStorage.getItem('community');
+        if (savedCommunity) {
+            setCommunityData(JSON.parse(savedCommunity));
+        }
+    }, []);
+
     return (
         <>
+            {communityModal && (
+                <CommunityModal
+                    setCommunityData={setCommunityData}
+                    setCommunityModal={setCommunityModal}
+                    communityData={communityData}
+                />
+            )}
             <HeaderOne />
             <Breadcrumb
                 img="https://cdn.prod.v2.camping.info/media/campsites/campingpark-ostseebad-rerik/lRO3ySa3thRd.jpg"
-                heading="Blog Default"
-                subHeading="Dive Into Nature's Chronicle. CampingMate's Default Blog Experience."
+                heading="Community Default"
+                subHeading="Dive Into Nature's Chronicle. CampingMate's Default Community Experience."
             />
             <div className="blog default lg:py-20 md:py-14 py-10">
                 <div className="container">
@@ -122,32 +139,34 @@ const CommunityCategory = () => {
                                 <div className="recent md:mt-10 mt-6">
                                     <div className="heading6">Recent Posts</div>
                                     <div className="list-recent">
-                                        {communityData.slice(8, 11).map((item) => (
-                                            <div
-                                                className="blog-item flex gap-4 mt-5 cursor-pointer"
-                                                key={item.id}
-                                                onClick={() =>
-                                                    handleBlogClick(item.id)
-                                                }
-                                            >
-                                                <Image
-                                                    src={item.thumbnail}
-                                                    width={500}
-                                                    height={400}
-                                                    alt={item.thumbnail}
-                                                    priority={true}
-                                                    className="w-[120px] h-[90px] object-cover rounded-lg flex-shrink-0"
-                                                />
-                                                <div>
-                                                    <div className="blog-tag text-label text-variant1 whitespace-nowrap">
-                                                        {item.category}
-                                                    </div>
-                                                    <div className="blog-title text-title mt-1">
-                                                        {item.title}
+                                        {communityData
+                                            .slice(8, 11)
+                                            .map((item) => (
+                                                <div
+                                                    className="blog-item flex gap-4 mt-5 cursor-pointer"
+                                                    key={item.id}
+                                                    onClick={() =>
+                                                        handleBlogClick(item.id)
+                                                    }
+                                                >
+                                                    <Image
+                                                        src={item.thumbnail}
+                                                        width={500}
+                                                        height={400}
+                                                        alt={item.thumbnail}
+                                                        priority={true}
+                                                        className="w-[120px] h-[90px] object-cover rounded-lg flex-shrink-0"
+                                                    />
+                                                    <div>
+                                                        <div className="blog-tag text-label text-variant1 whitespace-nowrap">
+                                                            {item.category}
+                                                        </div>
+                                                        <div className="blog-title text-title mt-1">
+                                                            {item.title}
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        ))}
+                                            ))}
                                     </div>
                                 </div>
                                 <div className="filter-category md:mt-10 mt-6">
@@ -156,10 +175,11 @@ const CommunityCategory = () => {
                                     </div>
                                     <div className="list-cate pt-1">
                                         <div
-                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === 'cooking'
-                                                ? 'active'
-                                                : ''
-                                                }`}
+                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${
+                                                category === 'cooking'
+                                                    ? 'active'
+                                                    : ''
+                                            }`}
                                             onClick={() =>
                                                 handleCategory('cooking')
                                             }
@@ -180,10 +200,11 @@ const CommunityCategory = () => {
                                             </div>
                                         </div>
                                         <div
-                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === 'experiences'
-                                                ? 'active'
-                                                : ''
-                                                }`}
+                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${
+                                                category === 'experiences'
+                                                    ? 'active'
+                                                    : ''
+                                            }`}
                                             onClick={() =>
                                                 handleCategory('experiences')
                                             }
@@ -204,10 +225,11 @@ const CommunityCategory = () => {
                                             </div>
                                         </div>
                                         <div
-                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === 'equipment'
-                                                ? 'active'
-                                                : ''
-                                                }`}
+                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${
+                                                category === 'equipment'
+                                                    ? 'active'
+                                                    : ''
+                                            }`}
                                             onClick={() =>
                                                 handleCategory('equipment')
                                             }
@@ -228,10 +250,11 @@ const CommunityCategory = () => {
                                             </div>
                                         </div>
                                         <div
-                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === 'guides'
-                                                ? 'active'
-                                                : ''
-                                                }`}
+                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${
+                                                category === 'guides'
+                                                    ? 'active'
+                                                    : ''
+                                            }`}
                                             onClick={() =>
                                                 handleCategory('guides')
                                             }
@@ -252,10 +275,11 @@ const CommunityCategory = () => {
                                             </div>
                                         </div>
                                         <div
-                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === 'glamping'
-                                                ? 'active'
-                                                : ''
-                                                }`}
+                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${
+                                                category === 'glamping'
+                                                    ? 'active'
+                                                    : ''
+                                            }`}
                                             onClick={() =>
                                                 handleCategory('glamping')
                                             }
@@ -276,10 +300,11 @@ const CommunityCategory = () => {
                                             </div>
                                         </div>
                                         <div
-                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === 'activities'
-                                                ? 'active'
-                                                : ''
-                                                }`}
+                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${
+                                                category === 'activities'
+                                                    ? 'active'
+                                                    : ''
+                                            }`}
                                             onClick={() =>
                                                 handleCategory('activities')
                                             }
@@ -300,10 +325,11 @@ const CommunityCategory = () => {
                                             </div>
                                         </div>
                                         <div
-                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === 'camping'
-                                                ? 'active'
-                                                : ''
-                                                }`}
+                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${
+                                                category === 'camping'
+                                                    ? 'active'
+                                                    : ''
+                                            }`}
                                             onClick={() =>
                                                 handleCategory('camping')
                                             }
@@ -324,10 +350,11 @@ const CommunityCategory = () => {
                                             </div>
                                         </div>
                                         <div
-                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${category === 'locations'
-                                                ? 'active'
-                                                : ''
-                                                }`}
+                                            className={`cate-item flex items-center justify-between cursor-pointer mt-3 ${
+                                                category === 'locations'
+                                                    ? 'active'
+                                                    : ''
+                                            }`}
                                             onClick={() =>
                                                 handleCategory('locations')
                                             }
@@ -353,10 +380,11 @@ const CommunityCategory = () => {
                                     <div className="heading6">Tags Cloud</div>
                                     <div className="list-tags flex items-center flex-wrap gap-5 mt-4">
                                         <div
-                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${category === 'glamping'
-                                                ? 'active'
-                                                : ''
-                                                }`}
+                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${
+                                                category === 'glamping'
+                                                    ? 'active'
+                                                    : ''
+                                            }`}
                                             onClick={() =>
                                                 handleCategory('glamping')
                                             }
@@ -364,10 +392,11 @@ const CommunityCategory = () => {
                                             Camping
                                         </div>
                                         <div
-                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${category === 'camping'
-                                                ? 'active'
-                                                : ''
-                                                }`}
+                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${
+                                                category === 'camping'
+                                                    ? 'active'
+                                                    : ''
+                                            }`}
                                             onClick={() =>
                                                 handleCategory('camping')
                                             }
@@ -375,10 +404,11 @@ const CommunityCategory = () => {
                                             Camping
                                         </div>
                                         <div
-                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${category === 'locations'
-                                                ? 'active'
-                                                : ''
-                                                }`}
+                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${
+                                                category === 'locations'
+                                                    ? 'active'
+                                                    : ''
+                                            }`}
                                             onClick={() =>
                                                 handleCategory('locations')
                                             }
@@ -386,10 +416,11 @@ const CommunityCategory = () => {
                                             locations
                                         </div>
                                         <div
-                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${category === 'cooking'
-                                                ? 'active'
-                                                : ''
-                                                }`}
+                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${
+                                                category === 'cooking'
+                                                    ? 'active'
+                                                    : ''
+                                            }`}
                                             onClick={() =>
                                                 handleCategory('cooking')
                                             }
@@ -397,10 +428,11 @@ const CommunityCategory = () => {
                                             cooking
                                         </div>
                                         <div
-                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${category === 'experiences'
-                                                ? 'active'
-                                                : ''
-                                                }`}
+                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${
+                                                category === 'experiences'
+                                                    ? 'active'
+                                                    : ''
+                                            }`}
                                             onClick={() =>
                                                 handleCategory('experiences')
                                             }
@@ -408,10 +440,11 @@ const CommunityCategory = () => {
                                             experiences
                                         </div>
                                         <div
-                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${category === 'guides'
-                                                ? 'active'
-                                                : ''
-                                                }`}
+                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${
+                                                category === 'guides'
+                                                    ? 'active'
+                                                    : ''
+                                            }`}
                                             onClick={() =>
                                                 handleCategory('guides')
                                             }
@@ -419,10 +452,11 @@ const CommunityCategory = () => {
                                             guides
                                         </div>
                                         <div
-                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${category === 'activities'
-                                                ? 'active'
-                                                : ''
-                                                }`}
+                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${
+                                                category === 'activities'
+                                                    ? 'active'
+                                                    : ''
+                                            }`}
                                             onClick={() =>
                                                 handleCategory('activities')
                                             }
@@ -430,10 +464,11 @@ const CommunityCategory = () => {
                                             activities
                                         </div>
                                         <div
-                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${category === 'equipment'
-                                                ? 'active'
-                                                : ''
-                                                }`}
+                                            className={`tags text-label has-line text-variant1 cursor-pointer duration-300 hover:text-black ${
+                                                category === 'equipment'
+                                                    ? 'active'
+                                                    : ''
+                                            }`}
                                             onClick={() =>
                                                 handleCategory('equipment')
                                             }
@@ -442,6 +477,12 @@ const CommunityCategory = () => {
                                         </div>
                                     </div>
                                 </div>
+                                <button
+                                    className="button-main bg-primary mt-4 w-full"
+                                    onClick={() => setCommunityModal(true)}
+                                >
+                                    Write to Community
+                                </button>
                             </StickyBox>
                         </div>
                     </div>

@@ -34,7 +34,7 @@ const Reservation = () => {
         const reservationData = JSON.parse(
             localStorage.getItem('reservationData')!
         );
-        console.log(reservationData)
+      
         setReservationDetails(reservationData);
         const reservationMain = tentData.find(
             (tent) => tent.id === reservationData?.reservationData?.tentId

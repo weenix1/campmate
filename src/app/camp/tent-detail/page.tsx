@@ -35,13 +35,6 @@ import Rate from '@/components/Other/Rate';
 import StickyBox from 'react-sticky-box';
 import { useUser } from '@clerk/nextjs';
 import toast from 'react-hot-toast';
-import TentDetailsModal from '@/components/TentDetailsModal/TentDetailsModal';
-
-
-
-// Todo 
-
-
 
 
 interface GuestType {
@@ -75,8 +68,6 @@ const TentDetail = () => {
 
 
     useEffect(() => {
-        console.log("Tent ID from URL:", tentId);
-        console.log("Tent Data:", tentData); // Log tentData to check its contents
 
         if (tentId && tentData.length > 0) {
             const foundTent = tentData.find((tent: TentType) => tent.id === tentId) || null;
