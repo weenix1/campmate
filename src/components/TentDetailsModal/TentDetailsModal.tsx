@@ -4,20 +4,18 @@ import { useUser } from '@clerk/nextjs';
 import { useDropzone } from 'react-dropzone';
 import Image from 'next/image';
 import toast from 'react-hot-toast';
-import { useRouter } from 'next/navigation';
 
 interface TentDetailsModalProps {
     setShowModal: Dispatch<SetStateAction<boolean>>;
-    reservationData: any;
+    setCheckedIn:Dispatch<SetStateAction<boolean>>
 }
 
 const TentDetailsModal = ({
     setShowModal,
-    reservationData,
+    setCheckedIn
 }: TentDetailsModalProps) => {
-    console.log(reservationData);
+
     const { isLoaded, isSignedIn, user } = useUser();
-    const router = useRouter();
     const [files, setFiles] = useState<any>([]);
 
     const convertToBase64 = (file: File): Promise<string> => {
@@ -69,9 +67,10 @@ const TentDetailsModal = ({
     const handleUploadImage = (e: { preventDefault: () => void }) => {
         e.preventDefault();
         if (files[0]) {
-            localStorage.setItem('checkedIn', 'checkedIn');
-            setShowModal(false);
-            toast.success('Image ID has been verified successfully');
+            toast.success('Image uploaded successfully');
+            localStorage.setItem('checkedIn','checkedIn')
+            setCheckedIn(true)
+            setShowModal(false)
         } else {
             toast.error('Please upload an image');
         }
@@ -93,9 +92,8 @@ const TentDetailsModal = ({
                         Upload Image ID
                     </label>
                     <ul
-                        className={` ${
-                            files.length !== 0 ? ' p-2 mt-3 ' : ''
-                        } flex gap-6`}
+                        className={` ${files.length !== 0 ? ' p-2 mt-3 ' : ''
+                            } flex gap-6`}
                     >
                         {files?.map(
                             (file: { name: string; base64: string }) => (

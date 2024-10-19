@@ -1,5 +1,14 @@
 'use client';
-import { Key, useEffect, useState } from 'react';
+import {
+    JSXElementConstructor,
+    Key,
+    PromiseLikeOfReactNode,
+    ReactElement,
+    ReactNode,
+    ReactPortal,
+    useEffect,
+    useState,
+} from 'react';
 import Footer from '@/components/Footer/Footer';
 import HeaderOne from '@/components/Header/HeaderOne';
 import tentData from '@/data/Tent.json';
@@ -23,20 +32,23 @@ const Reservation = () => {
     const [reservationDetails, setReservationDetails] = useState<any>(null);
     const [checkedIn, setCheckedIn] = useState(false);
     const [showModal, setShowModal] = useState(false);
+    const [reservationMain, setReservationMain] = useState<any>(null);
 
     const router = useRouter();
     useEffect(() => {
         const reservationData = JSON.parse(
             localStorage.getItem('reservationData')!
         );
+        console.log(reservationData)
+        setReservationDetails(reservationData);
+        const reservationMain = tentData.find(
+            (tent) => tent.id === reservationData?.reservationData?.tentId
+        ) as TentType;
+        setReservationMain(reservationMain);
         const checkedIn = localStorage.getItem('checkedIn');
         checkedIn ? setCheckedIn(true) : setCheckedIn(false);
-        setReservationDetails(reservationData);
-    }, [showModal]);
+    }, []);
 
-    const reservationMain = tentData.find(
-        (tent) => tent.id === reservationDetails?.reservationData?.tentId
-    ) as TentType;
 
     const settings = {
         arrows: true,
@@ -97,7 +109,7 @@ const Reservation = () => {
     const handleCheckIn = () => {
         setShowModal(true);
 
-        setCheckedIn(true);
+        // setCheckedIn(true);
     };
 
     const handleCheckOut = () => {
@@ -116,7 +128,7 @@ const Reservation = () => {
             {showModal && (
                 <TentDetailsModal
                     setShowModal={setShowModal}
-                    reservationData={reservationDetails}
+                    setCheckedIn={setCheckedIn}
                 />
             )}
             <div className="ten-detail">
@@ -126,21 +138,23 @@ const Reservation = () => {
                     <>
                         <div className="list-img-detail overflow-hidden">
                             <Slider {...settings} className="h-full">
-                                {reservationMain.listImage.map((img, index) => (
-                                    <div
-                                        className="bg-img w-full aspect-[4/3]"
-                                        key={index}
-                                    >
-                                        <Image
-                                            src={img}
-                                            width={3000}
-                                            height={3000}
-                                            alt={img}
-                                            priority={true}
-                                            className="w-full h-full object-cover"
-                                        />
-                                    </div>
-                                ))}
+                                {reservationMain.listImage.map(
+                                    (img: string, index: Key) => (
+                                        <div
+                                            className="bg-img w-full aspect-[4/3]"
+                                            key={index}
+                                        >
+                                            <Image
+                                                src={img}
+                                                width={3000}
+                                                height={3000}
+                                                alt={img}
+                                                priority={true}
+                                                className="w-full h-full object-cover"
+                                            />
+                                        </div>
+                                    )
+                                )}
                             </Slider>
                         </div>
                         <div className="content-detail lg:py-20 md:py-14 py-10">
@@ -206,6 +220,13 @@ const Reservation = () => {
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div>
+                                                {checkedIn && (
+                                                    <p className="text-success mt-4">
+                                                        Document Verified
+                                                    </p>
+                                                )}
+                                            </div>
                                         </div>
                                         <div className="feature lg:mt-10 mt-6 lg:pt-10 pt-6 border-t border-outline">
                                             <div className="heading5">
@@ -218,7 +239,10 @@ const Reservation = () => {
                                                     </div>
                                                     <div className="list flex flex-col gap-2 mt-3">
                                                         {reservationMain.services.map(
-                                                            (item, index) => (
+                                                            (
+                                                                item: string,
+                                                                index: Key
+                                                            ) => (
                                                                 <div
                                                                     key={index}
                                                                     className="item capitalize"
@@ -235,7 +259,10 @@ const Reservation = () => {
                                                     </div>
                                                     <div className="list flex flex-col gap-2 mt-3">
                                                         {reservationMain.amenities.map(
-                                                            (item, index) => (
+                                                            (
+                                                                item: string,
+                                                                index: Key
+                                                            ) => (
                                                                 <div
                                                                     key={index}
                                                                     className="item capitalize"
@@ -252,7 +279,10 @@ const Reservation = () => {
                                                     </div>
                                                     <div className="list flex flex-col gap-2 mt-3">
                                                         {reservationMain.activities.map(
-                                                            (item, index) => (
+                                                            (
+                                                                item: string,
+                                                                index: Key
+                                                            ) => (
                                                                 <div
                                                                     key={index}
                                                                     className="item capitalize"
