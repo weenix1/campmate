@@ -253,6 +253,19 @@ const HeaderOne = () => {
                                 </Link>
 
                             </li>}
+                            {isCheckedIn && <li className="h-full relative">
+                                <Link
+                                    href="/reservation"
+                                    className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname.includes('/reservation/')
+                                        ? 'active'
+                                        : ''
+                                        }`}
+                                >
+                                    {t('header.reservation')}
+                                </Link>
+
+                            </li>}
+                            
                             <li className="h-full relative">
                                 <Link
                                     href="#!"
@@ -515,6 +528,30 @@ const HeaderOne = () => {
                                             </span>
                                         </Link>
                                     </li>
+                                    {isCheckedIn && <li className="h-full relative">
+                                <Link
+                                    href="/community"
+                                      className="text-title uppercase flex items-center justify-between mt-5"
+                                >  <span className="text-right">
+                                <Icon.CaretRight size={20} />
+                            </span>
+
+                                    {t('header.community')}
+                                </Link>
+
+                            </li>}
+                            {isCheckedIn && <li className="h-full relative">
+                                <Link
+                                    href="/reservation"
+                                       className="text-title uppercase flex items-center justify-between mt-5"
+                                >
+                                      <span className="text-right">
+                                                <Icon.CaretRight size={20} />
+                                            </span>
+                                    {t('header.reservation')}
+                                </Link>
+
+                            </li>}
                                     <li
                                         className={`${openSubNavMobile === 4 ? 'open' : ''
                                             }`}

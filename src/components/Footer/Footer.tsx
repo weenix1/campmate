@@ -104,7 +104,7 @@ const Footer = () => {
                                             Need help? 24/7
                                         </div>
                                         <div className="text-title">
-                                            001-1234-88888
+                                           +491555555555
                                         </div>
                                     </div>
                                 </div>
@@ -115,8 +115,7 @@ const Footer = () => {
                                 <div className="location flex items-center gap-2 mt-3">
                                     <Icon.MapPin className="caption1" />
                                     <div className="caption1">
-                                        101 E 129th St, East Chicago, IN 46312,
-                                        US
+                                     Meisenweg 8, 67663 Kaiserslautern
                                     </div>
                                 </div>
                                 <div className="form-search mt-5">

@@ -13,7 +13,7 @@ const Contact = () => {
         <>
             <HeaderOne />
             <Breadcrumb
-                img="/images/breadcrumb/1920x320.png"
+                img="/images/breadcrumb/contact.jpg"
                 heading="Contact Us"
                 subHeading="Reach Out to CampingMate. Your Gateway to Outdoor Luxury."
             />

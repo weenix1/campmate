@@ -16,7 +16,7 @@ const Review = () => {
         <>
             <HeaderOne />
             <Breadcrumb
-                img="/images/breadcrumb/1920x320.png"
+                img="/images/breadcrumb/review.jpg"
                 heading="Our Testimonials"
                 subHeading="Stories That Speak. Echoes of Experiences at CampingMate."
             />

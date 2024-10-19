@@ -110,6 +110,7 @@ const Community = () => {
 
         const reviewDetails = {
             ...reviewData,
+            email: `${user?.emailAddresses[0].emailAddress}`,
             images: files.map((file: any) => file.base64),
             id: String(testimonialData.length + 1),
             date: new Date().toLocaleDateString(),
@@ -591,9 +592,12 @@ const Community = () => {
                                                 name="email"
                                                 type="email"
                                                 placeholder="Your Email *"
-                                                value={reviewData.email}
+                                                value={`${
+                                                    user?.emailAddresses[0]
+                                                        .emailAddress ?? ''
+                                                }`}
                                                 onChange={handleInputChange}
-                                                required
+                                                readOnly
                                             />
                                         </div>
                                         <div className="col-span-full review">

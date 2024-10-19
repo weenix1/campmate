@@ -20,7 +20,7 @@ const About = () => {
         <>
             <HeaderOne />
             <Breadcrumb
-                img="/images/breadcrumb/1920x320.png"
+                img="/images/breadcrumb/about-header.jpg"
                 heading="About The CampingMate"
                 subHeading="Unveiling the Heart of CampingMate. Where Nature and Luxury Coexist"
             />
@@ -41,7 +41,7 @@ const About = () => {
                     <div className="video-block relative rounded-[20px] overflow-hidden md:mt-10 mt-6">
                         <div className="bg-img w-full">
                             <Image
-                                src={'/images/other/bg-about.png'}
+                                src={'/images/other/bg-about.jpg'}
                                 width={2000}
                                 height={1000}
                                 alt="bg-img"
@@ -71,7 +71,7 @@ const About = () => {
                         e.stopPropagation();
                     }}
                 >
-                    <iframe src="https://www.youtube.com/embed/ilY3WAUTXaE?si=ryu4TuMisTtYqW3L"></iframe>
+                    <iframe src="https://youtu.be/oVheO65CoSo?si=96fhr9dbsBZSG8Xg"></iframe>
                 </div>
             </div>
             <Amenities />
@@ -87,12 +87,12 @@ const About = () => {
                         <div className="item">
                             <div className="avatar rounded-3xl overflow-hidden">
                                 <Image
-                                    src={'/images/avatar/615x615.png'}
-                                    width={1000}
-                                    height={800}
+                                    src={'/images/avatar/georgina.jpg'}
+                                    width={500}
+                                    height={500}
                                     alt="team1"
                                     priority={true}
-                                    className="w-full"
+                                    className="w-full h-96"
                                 />
                             </div>
                             <div className="flex items-center justify-between mt-5">
@@ -114,12 +114,12 @@ const About = () => {
                         <div className="item">
                             <div className="avatar rounded-3xl overflow-hidden">
                                 <Image
-                                    src={'/images/avatar/615x615.png'}
-                                    width={1000}
-                                    height={800}
+                                    src={'/images/avatar/robertson.jpg'}
+                                    width={500}
+                                    height={500}
                                     alt="team1"
                                     priority={true}
-                                    className="w-full"
+                                    className="w-full h-96"
                                 />
                             </div>
                             <div className="flex items-center justify-between mt-5">
@@ -141,12 +141,12 @@ const About = () => {
                         <div className="item">
                             <div className="avatar rounded-3xl overflow-hidden">
                                 <Image
-                                    src={'/images/avatar/615x615.png'}
-                                    width={1000}
-                                    height={800}
+                                    src={'/images/avatar/ronald.jpg'}
+                                    width={500}
+                                    height={500}
                                     alt="team1"
                                     priority={true}
-                                    className="w-full"
+                                    className="w-full h-96"
                                 />
                             </div>
                             <div className="flex items-center justify-between mt-5">

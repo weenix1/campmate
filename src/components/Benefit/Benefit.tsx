@@ -43,12 +43,12 @@ const Benefit = () => {
                         <div className="right lg:w-1/2 lg:pl-[45px] max-lg:mt-8">
                             <div className="bg-img rounded-xl overflow-hidden">
                                 <Image
-                                    src={'/images/blog/1920x1280.png'}
+                                    src={'/images/blog/about.jpg'}
                                     width={2000}
                                     height={1200}
                                     alt="bg-img"
                                     priority={true}
-                                    className="w-full"
+                                    className="w-full h-[600px]"
                                 />
                             </div>
                         </div>
