@@ -3,21 +3,20 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { BlogType } from '@/type/BlogType'
-import * as Icon from "phosphor-react";
+import { CommunityType } from '@/type/CommunityType'
 import { useRouter } from 'next/navigation'
 
-interface BlogProps {
-    data: BlogType
+interface CommunityProps {
+    data: CommunityType
     type: string
 }
 
-const BlogItem: React.FC<BlogProps> = ({ data, type }) => {
+const CommunityItem: React.FC<CommunityProps> = ({ data, type }) => {
     const router = useRouter()
 
     const handleBlogClick = (blogId: string) => {
         // Go to blog detail with blogId selected
-        router.push(`/blog/detail?id=${blogId}`);
+        router.push(`/community/detail?id=${blogId}`);
     };
 
     return (
@@ -63,8 +62,8 @@ const BlogItem: React.FC<BlogProps> = ({ data, type }) => {
                                         src={data.thumbnail}
                                         width={2000}
                                         height={1500}
-                                            alt='blog-img'
-                                            priority={true}
+                                        alt='blog-img'
+                                        priority={true}
                                         className='w-full duration-500'
                                     />
                                     <div className="tag absolute bottom-4 left-4 text-label bg-primary text-white py-1.5 px-2.5">{data.date}</div>
@@ -88,4 +87,4 @@ const BlogItem: React.FC<BlogProps> = ({ data, type }) => {
     )
 }
 
-export default BlogItem
+export default CommunityItem

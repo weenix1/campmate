@@ -193,6 +193,7 @@ const HalfMapGrid = () => {
       shortDesc: 'no-data',
       description: 'no-data',
       services: [],
+      houseform: [],
       amenities: [],
       activities: [],
       terrain: [],

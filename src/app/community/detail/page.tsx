@@ -5,32 +5,32 @@ import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { useRouter } from 'next/navigation'
 import HeaderOne from '@/components/Header/HeaderOne'
-import blogData from '@/data/Blog.json'
+import communityData from '@/data/Community.json'
 import Footer from '@/components/Footer/Footer'
 import * as Icon from "phosphor-react";
 import Rate from '@/components/Other/Rate';
-import BlogItem from '@/components/Blog/BlogItem';
+import CommunityItem from '@/components/Community/CommunityItem';
 import testimonialData from '@/data/Testimonial.json'
 
-const BlogDetail = () => {
+const CommunityDetail = () => {
     const searchParams = useSearchParams()
     const router = useRouter()
 
-    let blogId = searchParams.get('id')
-    if (blogId === null) {
-        blogId = '1'
+    let communityId = searchParams.get('id')
+    if (communityId === null) {
+        communityId = '1'
     }
 
-    const blogMain = blogData[Number(blogId) - 1]
+    const blogMain = communityData[Number(communityId) - 1]
 
     const handleBlogClick = (category: string) => {
         // Go to blog detail with category selected
-        router.push(`/blog/default?category=${category}`);
+        router.push(`/community/category?category=${category}`);
     };
 
-    const handleBlogDetail = (id: string) => {
+    const handleCommunityDetail = (id: string) => {
         // Go to blog detail with id selected
-        router.push(`/blog/detail?id=${id}`);
+        router.push(`/community/detail?id=${id}`);
     };
 
     return (
@@ -144,42 +144,42 @@ const BlogDetail = () => {
                                 </div>
                             </div>
                             <div className="next-pre grid sm:grid-cols-2 md:mt-8 mt-5 py-6 border-y border-line relative">
-                                {blogId === '1' ? (
+                                {communityId === '1' ? (
                                     <>
                                         <div className="left cursor-pointer xl:pr-[140px] sm:pr-[60px]"
-                                            onClick={() => handleBlogDetail(String(blogData.length))}
+                                            onClick={() => handleCommunityDetail(String(communityData.length))}
                                         >
                                             <div className="text-button text-variant2 duration-300">Previous</div>
-                                            <div className="title heading6 duration-300 mt-2">{blogData[blogData.length - 1].title}</div>
+                                            <div className="title heading6 duration-300 mt-2">{communityData[communityData.length - 1].title}</div>
                                         </div>
                                     </>
                                 ) : (
                                     <>
                                         <div className="left cursor-pointer xl:pr-[140px] sm:pr-[60px]"
-                                            onClick={() => handleBlogDetail(blogData[Number(blogId) - 2].id)}
+                                            onClick={() => handleCommunityDetail(communityData[Number(communityId) - 2].id)}
                                         >
                                             <div className="text-button text-variant2 duration-300">Previous</div>
-                                            <div className="title heading6 duration-300 mt-2">{blogData[Number(blogId) - 2].title}</div>
+                                            <div className="title heading6 duration-300 mt-2">{communityData[Number(communityId) - 2].title}</div>
                                         </div>
                                     </>
                                 )}
                                 <div className='h-[60px] w-px bg-outline absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-sm:hidden'></div>
-                                {Number(blogId) === blogData.length ? (
+                                {Number(communityId) === communityData.length ? (
                                     <>
                                         <div className="right sm:text-right cursor-pointer xl:pl-[140px] sm:pl-[60px] max-sm:mt-6"
-                                            onClick={() => handleBlogDetail('1')}
+                                            onClick={() => handleCommunityDetail('1')}
                                         >
                                             <div className="text-button text-variant2 duration-300">Next</div>
-                                            <div className="title heading6 duration-300 mt-2">{blogData[0].title}</div>
+                                            <div className="title heading6 duration-300 mt-2">{communityData[0].title}</div>
                                         </div>
                                     </>
                                 ) : (
                                     <>
                                         <div className="right sm:text-right cursor-pointer xl:pl-[140px] sm:pl-[60px] max-sm:mt-6"
-                                            onClick={() => handleBlogDetail(blogData[Number(blogId)].id)}
+                                            onClick={() => handleCommunityDetail(communityData[Number(communityId)].id)}
                                         >
                                             <div className="text-button text-variant2 duration-300">Next</div>
-                                            <div className="title heading6 duration-300 mt-2">{blogData[Number(blogId)].title}</div>
+                                            <div className="title heading6 duration-300 mt-2">{communityData[Number(communityId)].title}</div>
                                         </div>
                                     </>
                                 )}
@@ -267,8 +267,8 @@ const BlogDetail = () => {
                     <div className='news-insight-block lg:py-20 md:py-14 py-10'>
                         <div className="heading3 text-center">News insight</div>
                         <div className="list-blog grid lg:grid-cols-3 sm:grid-cols-2 gap-[30px] md:mt-10 mt-6">
-                            {blogData.slice(0, 3).map(item => (
-                                <BlogItem data={item} type='style-grid' key={item.id} />
+                            {communityData.slice(0, 3).map(item => (
+                                <CommunityItem data={item} type='style-grid' key={item.id} />
                             ))}
                         </div>
                     </div>
@@ -279,4 +279,4 @@ const BlogDetail = () => {
     )
 }
 
-export default BlogDetail
+export default CommunityDetail

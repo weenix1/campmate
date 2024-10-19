@@ -8,12 +8,12 @@ import * as Icon from 'phosphor-react';
 import HeaderOne from '@/components/Header/HeaderOne';
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
 import HandlePagination from '@/components/Other/HandlePagination';
-import blogData from '@/data/Blog.json';
-import BlogItem from '@/components/Blog/BlogItem';
+import communityData from '@/data/Community.json';
+import BlogItem from '@/components/Community/CommunityItem';
 import Footer from '@/components/Footer/Footer';
 import StickyBox from 'react-sticky-box';
 
-const BlogDefault = () => {
+const CommunityCategory = () => {
     const [currentPage, setCurrentPage] = useState(0);
     const blogPerPage = 3;
     const offset = currentPage * blogPerPage;
@@ -30,10 +30,10 @@ const BlogDefault = () => {
 
     const handleBlogClick = (blogId: string) => {
         // Go to blog detail with blogId selected
-        router.push(`/blog/detail?id=${blogId}`);
+        router.push(`/community/detail?id=${blogId}`);
     };
 
-    let filteredData = blogData.filter((blog) => {
+    let filteredData = communityData.filter((blog) => {
         let isCategoryMatched = true;
         if (category) {
             isCategoryMatched = blog.category === category;
@@ -122,7 +122,7 @@ const BlogDefault = () => {
                                 <div className="recent md:mt-10 mt-6">
                                     <div className="heading6">Recent Posts</div>
                                     <div className="list-recent">
-                                        {blogData.slice(8, 11).map((item) => (
+                                        {communityData.slice(8, 11).map((item) => (
                                             <div
                                                 className="blog-item flex gap-4 mt-5 cursor-pointer"
                                                 key={item.id}
@@ -170,7 +170,7 @@ const BlogDefault = () => {
                                             <div className="text-secondary2">
                                                 (
                                                 {
-                                                    blogData.filter(
+                                                    communityData.filter(
                                                         (dataItem) =>
                                                             dataItem.category ===
                                                             'cooking'
@@ -194,7 +194,7 @@ const BlogDefault = () => {
                                             <div className="text-secondary2">
                                                 (
                                                 {
-                                                    blogData.filter(
+                                                    communityData.filter(
                                                         (dataItem) =>
                                                             dataItem.category ===
                                                             'experiences'
@@ -218,7 +218,7 @@ const BlogDefault = () => {
                                             <div className="text-secondary2">
                                                 (
                                                 {
-                                                    blogData.filter(
+                                                    communityData.filter(
                                                         (dataItem) =>
                                                             dataItem.category ===
                                                             'equipment'
@@ -242,7 +242,7 @@ const BlogDefault = () => {
                                             <div className="text-secondary2">
                                                 (
                                                 {
-                                                    blogData.filter(
+                                                    communityData.filter(
                                                         (dataItem) =>
                                                             dataItem.category ===
                                                             'guides'
@@ -266,7 +266,7 @@ const BlogDefault = () => {
                                             <div className="text-secondary2">
                                                 (
                                                 {
-                                                    blogData.filter(
+                                                    communityData.filter(
                                                         (dataItem) =>
                                                             dataItem.category ===
                                                             'glamping'
@@ -290,7 +290,7 @@ const BlogDefault = () => {
                                             <div className="text-secondary2">
                                                 (
                                                 {
-                                                    blogData.filter(
+                                                    communityData.filter(
                                                         (dataItem) =>
                                                             dataItem.category ===
                                                             'activities'
@@ -314,7 +314,7 @@ const BlogDefault = () => {
                                             <div className="text-secondary2">
                                                 (
                                                 {
-                                                    blogData.filter(
+                                                    communityData.filter(
                                                         (dataItem) =>
                                                             dataItem.category ===
                                                             'camping'
@@ -338,7 +338,7 @@ const BlogDefault = () => {
                                             <div className="text-secondary2">
                                                 (
                                                 {
-                                                    blogData.filter(
+                                                    communityData.filter(
                                                         (dataItem) =>
                                                             dataItem.category ===
                                                             'locations'
@@ -452,4 +452,4 @@ const BlogDefault = () => {
     );
 };
 
-export default BlogDefault;
+export default CommunityCategory;

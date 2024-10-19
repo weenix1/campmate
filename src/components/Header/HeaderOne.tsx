@@ -51,9 +51,8 @@ const HeaderOne = () => {
         <>
             <div id="header" className="header">
                 <div
-                    className={`header-main h-20 w-full bg-white min-[1322px]:px-10 px-4 flex items-center justify-between ${
-                        fixedHeader ? 'fixed box-shadow' : ''
-                    }`}
+                    className={`header-main h-20 w-full bg-white min-[1322px]:px-10 px-4 flex items-center justify-between ${fixedHeader ? 'fixed box-shadow' : ''
+                        }`}
                 >
                     <Link href={'/'} className="logo">
                         <Image
@@ -70,12 +69,11 @@ const HeaderOne = () => {
                             <li className="h-full relative">
                                 <Link
                                     href="#!"
-                                    className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${
-                                        pathname === '/' ||
+                                    className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/' ||
                                         pathname.includes('/homepages/')
-                                            ? 'active'
-                                            : ''
-                                    }`}
+                                        ? 'active'
+                                        : ''
+                                        }`}
                                 >
                                     {t('header.home')}
                                 </Link>
@@ -84,11 +82,10 @@ const HeaderOne = () => {
                                         <li>
                                             <Link
                                                 href="/"
-                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${
-                                                    pathname === '/'
-                                                        ? 'active'
-                                                        : ''
-                                                }`}
+                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname === '/'
+                                                    ? 'active'
+                                                    : ''
+                                                    }`}
                                             >
                                                 {t('header.explore-camp')}
                                             </Link>
@@ -96,12 +93,11 @@ const HeaderOne = () => {
                                         <li>
                                             <Link
                                                 href="/homepages/home2"
-                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${
-                                                    pathname ===
+                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname ===
                                                     '/homepages/home2'
-                                                        ? 'active'
-                                                        : ''
-                                                }`}
+                                                    ? 'active'
+                                                    : ''
+                                                    }`}
                                             >
                                                 {t('header.discover-camp')}
                                             </Link>
@@ -109,12 +105,11 @@ const HeaderOne = () => {
                                         <li>
                                             <Link
                                                 href="/homepages/home3"
-                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 duration-300 ${
-                                                    pathname ===
+                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 duration-300 ${pathname ===
                                                     '/homepages/home3'
-                                                        ? 'active'
-                                                        : ''
-                                                }`}
+                                                    ? 'active'
+                                                    : ''
+                                                    }`}
                                             >
                                                 {t(
                                                     'header.discover-luxury-camp'
@@ -127,11 +122,10 @@ const HeaderOne = () => {
                             <li className="h-full relative">
                                 <Link
                                     href="#!"
-                                    className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${
-                                        pathname.includes('/camp/')
-                                            ? 'active'
-                                            : ''
-                                    }`}
+                                    className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname.includes('/camp/')
+                                        ? 'active'
+                                        : ''
+                                        }`}
                                 >
                                     {t('header.camps')}
                                 </Link>
@@ -140,12 +134,11 @@ const HeaderOne = () => {
                                         <li>
                                             <Link
                                                 href="/camp/topmap-grid"
-                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${
-                                                    pathname ===
+                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname ===
                                                     '/camp/topmap-grid'
-                                                        ? 'active'
-                                                        : ''
-                                                }`}
+                                                    ? 'active'
+                                                    : ''
+                                                    }`}
                                             >
                                                 {t('header.topmap-grid')}
                                             </Link>
@@ -153,12 +146,11 @@ const HeaderOne = () => {
                                         <li>
                                             <Link
                                                 href="/camp/topmap-list"
-                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${
-                                                    pathname ===
+                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname ===
                                                     '/camp/topmap-list'
-                                                        ? 'active'
-                                                        : ''
-                                                }`}
+                                                    ? 'active'
+                                                    : ''
+                                                    }`}
                                             >
                                                 {t('header.topmap-list')}
                                             </Link>
@@ -166,12 +158,11 @@ const HeaderOne = () => {
                                         <li>
                                             <Link
                                                 href="/camp/filter-scroll"
-                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${
-                                                    pathname ===
+                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname ===
                                                     '/camp/filter-scroll'
-                                                        ? 'active'
-                                                        : ''
-                                                }`}
+                                                    ? 'active'
+                                                    : ''
+                                                    }`}
                                             >
                                                 {t('header.filter-scrolls')}
                                             </Link>
@@ -179,12 +170,11 @@ const HeaderOne = () => {
                                         <li>
                                             <Link
                                                 href="/camp/filter-dropdown"
-                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${
-                                                    pathname ===
+                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname ===
                                                     '/camp/filter-dropdown'
-                                                        ? 'active'
-                                                        : ''
-                                                }`}
+                                                    ? 'active'
+                                                    : ''
+                                                    }`}
                                             >
                                                 {t('header.filter-dropdown')}
                                             </Link>
@@ -192,12 +182,11 @@ const HeaderOne = () => {
                                         <li>
                                             <Link
                                                 href="/camp/topmap-sidebar"
-                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${
-                                                    pathname ===
+                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname ===
                                                     '/camp/topmap-sidebar'
-                                                        ? 'active'
-                                                        : ''
-                                                }`}
+                                                    ? 'active'
+                                                    : ''
+                                                    }`}
                                             >
                                                 {t('header.topmap-sidebar')}
                                             </Link>
@@ -205,12 +194,11 @@ const HeaderOne = () => {
                                         <li>
                                             <Link
                                                 href="/camp/halfmap-grid"
-                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${
-                                                    pathname ===
+                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname ===
                                                     '/camp/halfmap-grid'
-                                                        ? 'active'
-                                                        : ''
-                                                }`}
+                                                    ? 'active'
+                                                    : ''
+                                                    }`}
                                             >
                                                 {t('header.halfmap-grid')}
                                             </Link>
@@ -218,12 +206,11 @@ const HeaderOne = () => {
                                         <li>
                                             <Link
                                                 href="/camp/halfmap-list"
-                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${
-                                                    pathname ===
+                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname ===
                                                     '/camp/halfmap-list'
-                                                        ? 'active'
-                                                        : ''
-                                                }`}
+                                                    ? 'active'
+                                                    : ''
+                                                    }`}
                                             >
                                                 {t('header.halfmap-list')}
                                             </Link>
@@ -231,12 +218,11 @@ const HeaderOne = () => {
                                         <li>
                                             <Link
                                                 href="/camp/tent-detail"
-                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 duration-300 ${
-                                                    pathname ===
+                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 duration-300 ${pathname ===
                                                     '/camp/tent-detail'
-                                                        ? 'active'
-                                                        : ''
-                                                }`}
+                                                    ? 'active'
+                                                    : ''
+                                                    }`}
                                             >
                                                 {t('header.tent-details')}
                                             </Link>
@@ -247,73 +233,31 @@ const HeaderOne = () => {
                             <li className="h-full relative">
                                 <Link
                                     href="/about"
-                                    className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${
-                                        pathname === '/about' ? 'active' : ''
-                                    }`}
+                                    className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname === '/about' ? 'active' : ''
+                                        }`}
                                 >
                                     {t('header.about-us')}
                                 </Link>
                             </li>
                             <li className="h-full relative">
                                 <Link
-                                    href="#!"
-                                    className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${
-                                        pathname.includes('/blog/')
-                                            ? 'active'
-                                            : ''
-                                    }`}
+                                    href="/community"
+                                    className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname.includes('/community/')
+                                        ? 'active'
+                                        : ''
+                                        }`}
                                 >
-                                    {t('header.blog')}
+                                    {t('header.community')}
                                 </Link>
-                                <div className="sub-menu absolute bg-white">
-                                    <ul>
-                                        <li>
-                                            <Link
-                                                href="/blog/default"
-                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${
-                                                    pathname === '/blog/default'
-                                                        ? 'active'
-                                                        : ''
-                                                }`}
-                                            >
-                                                {t('header.blog-default')}
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link
-                                                href="/blog/grid"
-                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${
-                                                    pathname === '/blog/grid'
-                                                        ? 'active'
-                                                        : ''
-                                                }`}
-                                            >
-                                                {t('header.blog-grid')}
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link
-                                                href="/blog/detail"
-                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 duration-300 ${
-                                                    pathname === '/blog/detail'
-                                                        ? 'active'
-                                                        : ''
-                                                }`}
-                                            >
-                                                {t('header.blog-details')}
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                </div>
+
                             </li>
                             <li className="h-full relative">
                                 <Link
                                     href="#!"
-                                    className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${
-                                        pathname.includes('/pages/')
-                                            ? 'active'
-                                            : ''
-                                    }`}
+                                    className={`text-button duration-300 h-full flex items-center justify-center gap-1 ${pathname.includes('/pages/')
+                                        ? 'active'
+                                        : ''
+                                        }`}
                                 >
                                     {t('header.pages')}
                                 </Link>
@@ -322,12 +266,11 @@ const HeaderOne = () => {
                                         <li>
                                             <Link
                                                 href="/pages/contact"
-                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${
-                                                    pathname ===
+                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname ===
                                                     '/pages/contact'
-                                                        ? 'active'
-                                                        : ''
-                                                }`}
+                                                    ? 'active'
+                                                    : ''
+                                                    }`}
                                             >
                                                 {t('header.contact-us')}
                                             </Link>
@@ -335,11 +278,10 @@ const HeaderOne = () => {
                                         <li>
                                             <Link
                                                 href="/pages/faqs"
-                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${
-                                                    pathname === '/pages/faqs'
-                                                        ? 'active'
-                                                        : ''
-                                                }`}
+                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 border-b border-outline duration-300 ${pathname === '/pages/faqs'
+                                                    ? 'active'
+                                                    : ''
+                                                    }`}
                                             >
                                                 {t('header.faqs')}
                                             </Link>
@@ -347,11 +289,10 @@ const HeaderOne = () => {
                                         <li>
                                             <Link
                                                 href="/pages/review"
-                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 duration-300 ${
-                                                    pathname === '/pages/review'
-                                                        ? 'active'
-                                                        : ''
-                                                }`}
+                                                className={`link text-button text-variant1 py-4 pl-6 pr-16 duration-300 ${pathname === '/pages/review'
+                                                    ? 'active'
+                                                    : ''
+                                                    }`}
                                             >
                                                 {t('header.review')}
                                             </Link>
@@ -434,9 +375,8 @@ const HeaderOne = () => {
                                         </a>
                                     </li>
                                     <li
-                                        className={`${
-                                            openSubNavMobile === 2 ? 'open' : ''
-                                        }`}
+                                        className={`${openSubNavMobile === 2 ? 'open' : ''
+                                            }`}
                                         onClick={() =>
                                             handleOpenSubNavMobile(2)
                                         }
@@ -445,7 +385,7 @@ const HeaderOne = () => {
                                             href={'#!'}
                                             className="text-title uppercase flex items-center justify-between mt-5"
                                         >
-                                                {t('header.camps')}
+                                            {t('header.camps')}
                                             <span className="text-right">
                                                 <Icon.CaretRight size={20} />
                                             </span>
@@ -465,105 +405,97 @@ const HeaderOne = () => {
                                                     <li>
                                                         <Link
                                                             href="/camp/topmap-grid"
-                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line has-line ${
-                                                                pathname ===
+                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line has-line ${pathname ===
                                                                 '/camp/topmap-grid'
-                                                                    ? 'active'
-                                                                    : ''
-                                                            }`}
+                                                                ? 'active'
+                                                                : ''
+                                                                }`}
                                                         >
-                                                                {t('header.topmap-grid')}
+                                                            {t('header.topmap-grid')}
                                                         </Link>
                                                     </li>
                                                     <li>
                                                         <Link
                                                             href="/camp/topmap-list"
-                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line has-line ${
-                                                                pathname ===
+                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line has-line ${pathname ===
                                                                 '/camp/topmap-list'
-                                                                    ? 'active'
-                                                                    : ''
-                                                            }`}
+                                                                ? 'active'
+                                                                : ''
+                                                                }`}
                                                         >
-                                                              {t('header.topmap-list')}
+                                                            {t('header.topmap-list')}
                                                         </Link>
                                                     </li>
                                                     <li>
                                                         <Link
                                                             href="/camp/filter-scroll"
-                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line has-line ${
-                                                                pathname ===
+                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line has-line ${pathname ===
                                                                 '/camp/filter-scroll'
-                                                                    ? 'active'
-                                                                    : ''
-                                                            }`}
+                                                                ? 'active'
+                                                                : ''
+                                                                }`}
                                                         >
-                                                              {t('header.filter-scrolls')}
+                                                            {t('header.filter-scrolls')}
                                                         </Link>
                                                     </li>
                                                     <li>
                                                         <Link
                                                             href="/camp/filter-dropdown"
-                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line has-line ${
-                                                                pathname ===
+                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line has-line ${pathname ===
                                                                 '/camp/filter-dropdown'
-                                                                    ? 'active'
-                                                                    : ''
-                                                            }`}
+                                                                ? 'active'
+                                                                : ''
+                                                                }`}
                                                         >
-                                                               {t('header.filter-dropdown')}
+                                                            {t('header.filter-dropdown')}
                                                         </Link>
                                                     </li>
                                                     <li>
                                                         <Link
                                                             href="/camp/topmap-sidebar"
-                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line has-line ${
-                                                                pathname ===
+                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line has-line ${pathname ===
                                                                 '/camp/topmap-sidebar'
-                                                                    ? 'active'
-                                                                    : ''
-                                                            }`}
+                                                                ? 'active'
+                                                                : ''
+                                                                }`}
                                                         >
-                                                                {t('header.topmap-sidebar')}
+                                                            {t('header.topmap-sidebar')}
                                                         </Link>
                                                     </li>
                                                     <li>
                                                         <Link
                                                             href="/camp/halfmap-grid"
-                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line has-line ${
-                                                                pathname ===
+                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line has-line ${pathname ===
                                                                 '/camp/halfmap-grid'
-                                                                    ? 'active'
-                                                                    : ''
-                                                            }`}
+                                                                ? 'active'
+                                                                : ''
+                                                                }`}
                                                         >
-                                                                {t('header.halfmap-grid')}
+                                                            {t('header.halfmap-grid')}
                                                         </Link>
                                                     </li>
                                                     <li>
                                                         <Link
                                                             href="/camp/halfmap-list"
-                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line has-line ${
-                                                                pathname ===
+                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line has-line ${pathname ===
                                                                 '/camp/halfmap-list'
-                                                                    ? 'active'
-                                                                    : ''
-                                                            }`}
+                                                                ? 'active'
+                                                                : ''
+                                                                }`}
                                                         >
-                                                               {t('header.halfmap-list')}
+                                                            {t('header.halfmap-list')}
                                                         </Link>
                                                     </li>
                                                     <li>
                                                         <Link
                                                             href="/camp/tent-detail"
-                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line has-line ${
-                                                                pathname ===
+                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line has-line ${pathname ===
                                                                 '/camp/tent-detail'
-                                                                    ? 'active'
-                                                                    : ''
-                                                            }`}
+                                                                ? 'active'
+                                                                : ''
+                                                                }`}
                                                         >
-                                                              {t('header.tent-details')}
+                                                            {t('header.tent-details')}
                                                         </Link>
                                                     </li>
                                                 </ul>
@@ -575,16 +507,15 @@ const HeaderOne = () => {
                                             href={'/about'}
                                             className="text-title uppercase flex items-center justify-between mt-5"
                                         >
-                                           {t('header.about-us')}
+                                            {t('header.about-us')}
                                             <span className="text-right">
                                                 <Icon.CaretRight size={20} />
                                             </span>
                                         </Link>
                                     </li>
                                     <li
-                                        className={`${
-                                            openSubNavMobile === 4 ? 'open' : ''
-                                        }`}
+                                        className={`${openSubNavMobile === 4 ? 'open' : ''
+                                            }`}
                                         onClick={() =>
                                             handleOpenSubNavMobile(4)
                                         }
@@ -593,7 +524,7 @@ const HeaderOne = () => {
                                             href={'#!'}
                                             className="text-title uppercase flex items-center justify-between mt-5"
                                         >
-                                               {t('header.blog')}
+                                            {t('header.blog')}
                                             <span className="text-right">
                                                 <Icon.CaretRight size={20} />
                                             </span>
@@ -613,40 +544,37 @@ const HeaderOne = () => {
                                                     <li>
                                                         <Link
                                                             href="/blog/default"
-                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line ${
-                                                                pathname ===
+                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line ${pathname ===
                                                                 '/blog/default'
-                                                                    ? 'active'
-                                                                    : ''
-                                                            }`}
+                                                                ? 'active'
+                                                                : ''
+                                                                }`}
                                                         >
-                                                                {t('header.blog-default')}
+                                                            {t('header.blog-default')}
                                                         </Link>
                                                     </li>
                                                     <li>
                                                         <Link
                                                             href="/blog/grid"
-                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line ${
-                                                                pathname ===
+                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line ${pathname ===
                                                                 '/blog/grid'
-                                                                    ? 'active'
-                                                                    : ''
-                                                            }`}
+                                                                ? 'active'
+                                                                : ''
+                                                                }`}
                                                         >
-                                                              {t('header.blog-grid')}
+                                                            {t('header.blog-grid')}
                                                         </Link>
                                                     </li>
                                                     <li>
                                                         <Link
                                                             href="/blog/detail"
-                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line ${
-                                                                pathname ===
+                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line ${pathname ===
                                                                 '/blog/detail'
-                                                                    ? 'active'
-                                                                    : ''
-                                                            }`}
+                                                                ? 'active'
+                                                                : ''
+                                                                }`}
                                                         >
-                                                                {t('header.blog-details')}
+                                                            {t('header.blog-details')}
                                                         </Link>
                                                     </li>
                                                 </ul>
@@ -654,9 +582,8 @@ const HeaderOne = () => {
                                         </div>
                                     </li>
                                     <li
-                                        className={`${
-                                            openSubNavMobile === 5 ? 'open' : ''
-                                        }`}
+                                        className={`${openSubNavMobile === 5 ? 'open' : ''
+                                            }`}
                                         onClick={() =>
                                             handleOpenSubNavMobile(5)
                                         }
@@ -665,7 +592,7 @@ const HeaderOne = () => {
                                             href={'#!'}
                                             className="text-title uppercase flex items-center justify-between mt-5"
                                         >
-                                              {t('header.pages')}
+                                            {t('header.pages')}
                                             <span className="text-right">
                                                 <Icon.CaretRight size={20} />
                                             </span>
@@ -685,40 +612,37 @@ const HeaderOne = () => {
                                                     <li>
                                                         <Link
                                                             href="/pages/contact"
-                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line ${
-                                                                pathname ===
+                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line ${pathname ===
                                                                 '/pages/contact'
-                                                                    ? 'active'
-                                                                    : ''
-                                                            }`}
+                                                                ? 'active'
+                                                                : ''
+                                                                }`}
                                                         >
-                                                                {t('header.about-us')}
+                                                            {t('header.about-us')}
                                                         </Link>
                                                     </li>
                                                     <li>
                                                         <Link
                                                             href="/pages/faqs"
-                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line ${
-                                                                pathname ===
+                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line ${pathname ===
                                                                 '/pages/faqs'
-                                                                    ? 'active'
-                                                                    : ''
-                                                            }`}
+                                                                ? 'active'
+                                                                : ''
+                                                                }`}
                                                         >
-                                                               {t('header.faqs')}
+                                                            {t('header.faqs')}
                                                         </Link>
                                                     </li>
                                                     <li>
                                                         <Link
                                                             href="/pages/review"
-                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line ${
-                                                                pathname ===
+                                                            className={`nav-item-mobile text-button link text-variant1 duration-300 has-line ${pathname ===
                                                                 '/pages/review'
-                                                                    ? 'active'
-                                                                    : ''
-                                                            }`}
+                                                                ? 'active'
+                                                                : ''
+                                                                }`}
                                                         >
-                                                                {t('header.review')}
+                                                            {t('header.review')}
                                                         </Link>
                                                     </li>
                                                 </ul>

@@ -1,37 +1,37 @@
 {
-    "general": {
-        "back": "Zurück",
-        "next": "Weiter"
-    },
-    "header": {
-        "home": "Startseite",
-        "explore-camp": "Camping Entdecken",
-        "discover-camp": "Camping Entdecken",
-        "discover-luxury-camp": "Luxus-Camping Entdecken",
-        "camps": "Camps",
-        "topmap-grid": "Obere Karte & Raster",
-        "topmap-list": "Obere Karte & Liste",
-        "filter-scrolls": "Filter Scrolls",
-        "filter-dropdown": "Filter Dropdown",
-        "topmap-sidebar": "Obere Karte & Seitenleiste",
-        "halfmap-grid": "Halbe Karte & Raster",
-        "halfmap-list": "Halbe Karte & Liste",
-        "tent-details": "Zelt Details",
-        "about-us": "Über Uns",
-        "blog": "Blog",
-        "blog-default": "Standardblog",
-        "blog-details": "Blogdetails",
-        "blog-grid": "Blog-Raster",
-        "pages": "Seiten",
-        "contact-us": "Kontaktieren Sie Uns",
-        "faqs": "FAQs",
-        "review": "Bewertung"
-    },
-    "slider": {
-        "search-destination": "Ziel Suchen",
-        "add-dates": "Daten Hinzufügen",
-        "add-guest": "Gäste Hinzufügen",
-        "find-yourself-outside": "Finden Sie sich draußen",
-        "reserve-spots": "Reservieren Sie schöne private Wohnmobilplätze und Campingplätze—nur auf Hipcamp gefunden."
-    }
+  "general": {
+    "back": "Zurück",
+    "next": "Weiter"
+  },
+  "header": {
+    "home": "Startseite",
+    "explore-camp": "Camping Entdecken",
+    "discover-camp": "Camping Entdecken",
+    "discover-luxury-camp": "Luxus-Camping Entdecken",
+    "camps": "Camps",
+    "topmap-grid": "Obere Karte & Raster",
+    "topmap-list": "Obere Karte & Liste",
+    "filter-scrolls": "Filter Scrolls",
+    "filter-dropdown": "Filter Dropdown",
+    "topmap-sidebar": "Obere Karte & Seitenleiste",
+    "halfmap-grid": "Halbe Karte & Raster",
+    "halfmap-list": "Halbe Karte & Liste",
+    "tent-details": "Zelt Details",
+    "about-us": "Über Uns",
+    "community": "Community",
+    "blog-default": "Standardblog",
+    "blog-details": "Blogdetails",
+    "blog-grid": "Blog-Raster",
+    "pages": "Seiten",
+    "contact-us": "Kontaktieren Sie Uns",
+    "faqs": "FAQs",
+    "review": "Bewertung"
+  },
+  "slider": {
+    "search-destination": "Ziel Suchen",
+    "add-dates": "Daten Hinzufügen",
+    "add-guest": "Gäste Hinzufügen",
+    "find-yourself-outside": "Finden Sie sich draußen",
+    "reserve-spots": "Reservieren Sie schöne private Wohnmobilplätze und Campingplätze—nur auf Hipcamp gefunden."
+  }
 }

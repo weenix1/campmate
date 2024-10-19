@@ -5,32 +5,32 @@ import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { useRouter } from 'next/navigation'
 import HeaderOne from '@/components/Header/HeaderOne'
-import blogData from '@/data/Blog.json'
+import communityData from '@/data/Community.json'
 import Footer from '@/components/Footer/Footer'
 import * as Icon from "phosphor-react";
 import Rate from '@/components/Other/Rate';
-import BlogItem from '@/components/Blog/BlogItem';
+import CommunityItem from '@/components/Community/CommunityItem';
 import testimonialData from '@/data/Testimonial.json'
 
 const Community = () => {
     const searchParams = useSearchParams()
     const router = useRouter()
 
-    let blogId = searchParams.get('id')
-    if (blogId === null) {
-        blogId = '1'
+    let communityId = searchParams.get('id')
+    if (communityId === null) {
+        communityId = '1'
     }
 
-    const blogMain = blogData[Number(blogId) - 1]
+    const mainCommunity = communityData[Number(communityId) - 1]
 
-    const handleBlogClick = (category: string) => {
+    const handleCommunityClick = (category: string) => {
         // Go to blog detail with category selected
         router.push(`/blog/default?category=${category}`);
     };
 
     const handleBlogDetail = (id: string) => {
         // Go to blog detail with id selected
-        router.push(`/blog/detail?id=${id}`);
+        router.push(`/community/detail?id=${id}`);
     };
 
     return (
@@ -39,10 +39,10 @@ const Community = () => {
             <div className='blog detail'>
                 <div className="bg-img 2xl:h-[800px] xl:h-[640px] lg:h-[500px] md:h-[400px] h-[300px]">
                     <Image
-                        src={blogMain.thumbnail}
+                        src={mainCommunity.thumbnail}
                         width={4000}
                         height={3000}
-                        alt={blogMain.title}
+                        alt={mainCommunity.title}
                         priority={true}
                         className='w-full h-full object-cover'
                     />
@@ -50,12 +50,12 @@ const Community = () => {
                 <div className="container">
                     <div className="blog-content flex items-center justify-center lg:pt-20 md:pt-14 pt-10">
                         <div className="main xl:basis-5/6">
-                            <div className="blog-tag bg-primary text-white py-1.5 px-2.5 text-label inline-block">{blogMain.category}</div>
-                            <div className="heading3 mt-3">{blogMain.title}</div>
+                            <div className="blog-tag bg-primary text-white py-1.5 px-2.5 text-label inline-block">{mainCommunity.category}</div>
+                            <div className="heading3 mt-3">{mainCommunity.title}</div>
                             <div className="author flex items-center gap-4 mt-4">
                                 <div className="avatar w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
                                     <Image
-                                        src={blogMain.avatar}
+                                        src={mainCommunity.avatar}
                                         width={200}
                                         height={200}
                                         alt='avatar'
@@ -64,14 +64,14 @@ const Community = () => {
                                     />
                                 </div>
                                 <div className='flex items-center gap-2'>
-                                    <div className="text-variant1">{blogMain.author}</div>
+                                    <div className="text-variant1">{mainCommunity.author}</div>
                                     <div className="line w-px h-4 bg-outline"></div>
-                                    <div className="text-variant1">{blogMain.date}</div>
+                                    <div className="text-variant1">{mainCommunity.date}</div>
                                 </div>
                             </div>
                             <div className="content mt-7">
-                                <div className="body2">{blogMain.shortDesc}</div>
-                                <div className="body2 mt-0">{blogMain.description}</div>
+                                <div className="body2">{mainCommunity.shortDesc}</div>
+                                <div className="body2 mt-0">{mainCommunity.description}</div>
                                 <div className="heading4 md:mt-8 mt-5">Blackberry Farm and Mountain</div>
                                 <div className="body2 mt-3">{`A Wanderful best seller even before social distancing was a ‘thing’ - Blackberry Farm has only escalated in popularity this past year and for great reason! Located on 4,200 acres in the gorgeous foothills of the Smoky Mountains, outside of Knoxville, TN, this Relais & Chateaux resort is known for their mouthwatering farm-to-table cuisine (and infamous wine cellar). With only 68 rooms, including many free-standing suites, cottages and multi-bedroom homes, the resort was made for socially distant honeymoons, anniversaries, milestone birthdays and multi-generational family retreats alike.`}</div>
                                 <div className="quote-block md:mt-8 mt-5 py-8 md:px-10 px-8 bg-surface border-l-4 border-primary rounded-xl">
@@ -82,7 +82,7 @@ const Community = () => {
                                     </div>
                                 </div>
                                 <div className="grid sm:grid-cols-2 gap-[30px] md:mt-8 mt-5">
-                                    {blogMain.images.map((item, index) => (
+                                    {mainCommunity.images.map((item, index) => (
                                         <Image
                                             key={index}
                                             src={item}
@@ -104,19 +104,19 @@ const Community = () => {
                                     <div className="list flex items-center gap-3 flex-wrap">
                                         <div
                                             className={`tags bg-surface py-2 px-4 text-label cursor-pointer duration-300 hover:bg-primary hover:text-white`}
-                                            onClick={() => handleBlogClick('glamping')}
+                                            onClick={() => handleCommunityClick('glamping')}
                                         >
                                             glamping
                                         </div>
                                         <div
                                             className={`tags bg-surface py-2 px-4 text-label cursor-pointer duration-300 hover:bg-primary hover:text-white`}
-                                            onClick={() => handleBlogClick('camping')}
+                                            onClick={() => handleCommunityClick('camping')}
                                         >
                                             camping
                                         </div>
                                         <div
                                             className={`tags bg-surface py-2 px-4 text-label cursor-pointer duration-300 hover:bg-primary hover:text-white`}
-                                            onClick={() => handleBlogClick('activities')}
+                                            onClick={() => handleCommunityClick('activities')}
                                         >
                                             activities
                                         </div>
@@ -144,42 +144,42 @@ const Community = () => {
                                 </div>
                             </div>
                             <div className="next-pre grid sm:grid-cols-2 md:mt-8 mt-5 py-6 border-y border-line relative">
-                                {blogId === '1' ? (
+                                {communityId === '1' ? (
                                     <>
                                         <div className="left cursor-pointer xl:pr-[140px] sm:pr-[60px]"
-                                            onClick={() => handleBlogDetail(String(blogData.length))}
+                                            onClick={() => handleBlogDetail(String(communityData.length))}
                                         >
                                             <div className="text-button text-variant2 duration-300">Previous</div>
-                                            <div className="title heading6 duration-300 mt-2">{blogData[blogData.length - 1].title}</div>
+                                            <div className="title heading6 duration-300 mt-2">{communityData[communityData.length - 1].title}</div>
                                         </div>
                                     </>
                                 ) : (
                                     <>
                                         <div className="left cursor-pointer xl:pr-[140px] sm:pr-[60px]"
-                                            onClick={() => handleBlogDetail(blogData[Number(blogId) - 2].id)}
+                                            onClick={() => handleBlogDetail(communityData[Number(communityId) - 2].id)}
                                         >
                                             <div className="text-button text-variant2 duration-300">Previous</div>
-                                            <div className="title heading6 duration-300 mt-2">{blogData[Number(blogId) - 2].title}</div>
+                                            <div className="title heading6 duration-300 mt-2">{communityData[Number(communityId) - 2].title}</div>
                                         </div>
                                     </>
                                 )}
                                 <div className='h-[60px] w-px bg-outline absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-sm:hidden'></div>
-                                {Number(blogId) === blogData.length ? (
+                                {Number(communityId) === communityData.length ? (
                                     <>
                                         <div className="right sm:text-right cursor-pointer xl:pl-[140px] sm:pl-[60px] max-sm:mt-6"
                                             onClick={() => handleBlogDetail('1')}
                                         >
                                             <div className="text-button text-variant2 duration-300">Next</div>
-                                            <div className="title heading6 duration-300 mt-2">{blogData[0].title}</div>
+                                            <div className="title heading6 duration-300 mt-2">{communityData[0].title}</div>
                                         </div>
                                     </>
                                 ) : (
                                     <>
                                         <div className="right sm:text-right cursor-pointer xl:pl-[140px] sm:pl-[60px] max-sm:mt-6"
-                                            onClick={() => handleBlogDetail(blogData[Number(blogId)].id)}
+                                            onClick={() => handleBlogDetail(communityData[Number(communityId)].id)}
                                         >
                                             <div className="text-button text-variant2 duration-300">Next</div>
-                                            <div className="title heading6 duration-300 mt-2">{blogData[Number(blogId)].title}</div>
+                                            <div className="title heading6 duration-300 mt-2">{communityData[Number(communityId)].title}</div>
                                         </div>
                                     </>
                                 )}
@@ -267,8 +267,8 @@ const Community = () => {
                     <div className='news-insight-block lg:py-20 md:py-14 py-10'>
                         <div className="heading3 text-center">News insight</div>
                         <div className="list-blog grid lg:grid-cols-3 sm:grid-cols-2 gap-[30px] md:mt-10 mt-6">
-                            {blogData.slice(0, 3).map(item => (
-                                <BlogItem data={item} type='style-grid' key={item.id} />
+                            {communityData.slice(0, 3).map(item => (
+                                <CommunityItem data={item} type='style-grid' key={item.id} />
                             ))}
                         </div>
                     </div>

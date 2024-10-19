@@ -1,5 +1,5 @@
 
-export interface BlogType {
+export interface CommunityType {
     id: string,
     category: string,
     title: string,
