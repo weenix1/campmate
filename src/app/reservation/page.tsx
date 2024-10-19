@@ -17,20 +17,25 @@ const ExploreCamp = dynamic(() => import('@/components/Other/ExploreCamp'), {
 import StickyBox from 'react-sticky-box';
 import toast from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
+import TentDetailsModal from '@/components/TentDetailsModal/TentDetailsModal';
 
 const Reservation = () => {
     const [reservationDetails, setReservationDetails] = useState<any>(null);
-    const [viewMoreDesc, setViewMoreDesc] = useState<boolean>(false);
+    const [checkedIn, setCheckedIn] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+
     const router = useRouter();
     useEffect(() => {
         const reservationData = JSON.parse(
             localStorage.getItem('reservationData')!
         );
+        const checkedIn = localStorage.getItem('checkedIn');
+        checkedIn ? setCheckedIn(true) : setCheckedIn(false);
         setReservationDetails(reservationData);
-    }, []);
+    }, [showModal]);
 
     const reservationMain = tentData.find(
-        (tent) => tent.id === reservationDetails?.reservationData.tentId
+        (tent) => tent.id === reservationDetails?.reservationData?.tentId
     ) as TentType;
 
     const settings = {
@@ -89,14 +94,31 @@ const Reservation = () => {
         });
     };
 
-    const handleCancelReservation = ()=>{
-        localStorage.removeItem('reservationData')
+    const handleCheckIn = () => {
+        setShowModal(true);
+
+        setCheckedIn(true);
+    };
+
+    const handleCheckOut = () => {
+        localStorage.removeItem('checkedIn');
+        setCheckedIn(false);
+    };
+
+    const handleCancelReservation = () => {
+        localStorage.removeItem('reservationData');
         toast.success('Reservation Cancelled successfully');
-        router.replace('/')
-    }
+        router.replace('/');
+    };
 
     return (
         <>
+            {showModal && (
+                <TentDetailsModal
+                    setShowModal={setShowModal}
+                    reservationData={reservationDetails}
+                />
+            )}
             <div className="ten-detail">
                 <HeaderOne />
 
@@ -153,28 +175,9 @@ const Reservation = () => {
                                                 Description
                                             </div>
                                             <div className="body2 text-variant1 mt-3">
-                                                {reservationMain.shortDesc}
-                                            </div>
-                                            <div
-                                                className={`body2 text-variant1 ${
-                                                    viewMoreDesc ? '' : 'hidden'
-                                                }`}
-                                            >
-                                                {reservationMain.description}
-                                            </div>
-                                            <div
-                                                className="text-button-sm underline inline-block duration-300 cursor-pointer mt-3 hover:text-primary"
-                                                onClick={() =>
-                                                    setViewMoreDesc(
-                                                        !viewMoreDesc
-                                                    )
-                                                }
-                                            >
-                                                {viewMoreDesc ? (
-                                                    <>Hidden less</>
-                                                ) : (
-                                                    <>View More</>
-                                                )}
+                                                Thank you for booking with us!
+                                                We look forward to making your
+                                                experience unforgettable.
                                             </div>
                                         </div>
                                         <div className="rule lg:mt-8 mt-5">
@@ -188,28 +191,18 @@ const Reservation = () => {
                                                         Check-in: From 1pm
                                                     </div>
                                                 </div>
-                                                <div className="flex items-center gap-2">
-                                                    <Icon.Confetti className="text-2xl" />
-                                                    <div className="body2">
-                                                        Parties and events
-                                                    </div>
-                                                </div>
-                                                <div className="flex items-center gap-2">
-                                                    <Icon.PawPrint className="text-2xl" />
-                                                    <div className="body2">
-                                                        Pet allowed
-                                                    </div>
-                                                </div>
+
                                                 <div className="flex items-center gap-2">
                                                     <Icon.Alarm className="text-2xl" />
                                                     <div className="body2">
                                                         Check-out: By 11am
                                                     </div>
                                                 </div>
+
                                                 <div className="flex items-center gap-2">
-                                                    <Icon.ShieldSlash className="text-2xl" />
+                                                    <Icon.PawPrint className="text-2xl" />
                                                     <div className="body2">
-                                                        No smoking
+                                                        Pet allowed
                                                     </div>
                                                 </div>
                                             </div>
@@ -479,9 +472,33 @@ const Reservation = () => {
                                                             }
                                                         </div>
                                                     </div>
+                                                    {checkedIn ? (
+                                                        <button
+                                                            type="button"
+                                                            onClick={
+                                                                handleCheckOut
+                                                            }
+                                                            className="button-main bg-primary w-full text-center mt-5"
+                                                        >
+                                                            Check Out
+                                                        </button>
+                                                    ) : (
+                                                        <button
+                                                            type="button"
+                                                            onClick={
+                                                                handleCheckIn
+                                                            }
+                                                            className="button-main bg-primary w-full text-center mt-5"
+                                                        >
+                                                            Check In
+                                                        </button>
+                                                    )}
+
                                                     <button
                                                         type="button"
-                                                        onClick={handleCancelReservation}
+                                                        onClick={
+                                                            handleCancelReservation
+                                                        }
                                                         className="button-main bg-primary w-full text-center mt-5"
                                                     >
                                                         Cancel Reservation

@@ -35,7 +35,7 @@ import Rate from '@/components/Other/Rate';
 import StickyBox from 'react-sticky-box';
 import { useUser } from '@clerk/nextjs';
 import toast from 'react-hot-toast';
-import TentDetailsModal from '@/components/TentDetailsModal/TentDetailsModal';
+import {useRouter} from 'next/navigation'
 
 interface GuestType {
     adult: number;
@@ -60,8 +60,7 @@ const TentDetail = () => {
             key: 'selection',
         },
     ]);
-
-    const [showModal, setShowModal] = useState(false);
+const router= useRouter()
     const { isLoaded, isSignedIn, user } = useUser();
     console.log('User', user);
     const [guest, setGuest] = useState<GuestType>({
@@ -319,9 +318,14 @@ const TentDetail = () => {
             startDate,
             endDate,
         };
-
+        localStorage.setItem(
+            'reservationData',
+            JSON.stringify({ user, reservationData:newReservationData })
+        );
+        toast.success('Tent has been booked successfully')
+router.push(`/reservation?id=${tentId}`)
         setReservationData(newReservationData);
-        setShowModal(true);
+      
     };
 
     // Function to update the rate of a category
@@ -387,12 +391,7 @@ const TentDetail = () => {
 
     return (
         <>
-            {showModal && (
-                <TentDetailsModal
-                    setShowModal={setShowModal}
-                    reservationData={reservationData}
-                />
-            )}
+        
             <div className="ten-detail">
                 <HeaderOne />
 

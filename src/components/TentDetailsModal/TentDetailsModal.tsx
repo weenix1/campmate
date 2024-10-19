@@ -15,6 +15,7 @@ const TentDetailsModal = ({
     setShowModal,
     reservationData,
 }: TentDetailsModalProps) => {
+    console.log(reservationData);
     const { isLoaded, isSignedIn, user } = useUser();
     const router = useRouter();
     const [files, setFiles] = useState<any>([]);
@@ -68,12 +69,9 @@ const TentDetailsModal = ({
     const handleUploadImage = (e: { preventDefault: () => void }) => {
         e.preventDefault();
         if (files[0]) {
-            localStorage.setItem(
-                'reservationData',
-                JSON.stringify({ user, imageId: files[0].base64, reservationData })
-            );
-            toast.success('Image uploaded successfully');
-            router.push(`/reservation?id=${reservationData.tentId}`);
+            localStorage.setItem('checkedIn', 'checkedIn');
+            setShowModal(false);
+            toast.success('Image ID has been verified successfully');
         } else {
             toast.error('Please upload an image');
         }
