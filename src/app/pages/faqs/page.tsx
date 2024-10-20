@@ -24,7 +24,7 @@ const Faqs = () => {
         <>
             <HeaderOne />
             <Breadcrumb
-                img="/images/breadcrumb/1920x320.png"
+                img="/images/breadcrumb/contact.jpg"
                 heading="Frequently Asked Questions"
                 subHeading="Curious Minds, Clear Answers. Navigating CampingMate's FAQs."
             />
@@ -40,11 +40,10 @@ const Faqs = () => {
                                     {faqData.slice(0, 5).map((item) => (
                                         <div
                                             key={item.id}
-                                            className={`question-item cursor-pointer p-5 border border-outline rounded-xl duration-500 hover:border-variant1 ${
-                                                activeQuestion === item.id
+                                            className={`question-item cursor-pointer p-5 border border-outline rounded-xl duration-500 hover:border-variant1 ${activeQuestion === item.id
                                                     ? 'open'
                                                     : ''
-                                            }`}
+                                                }`}
                                             onClick={() =>
                                                 handleActiveQuestion(item.id)
                                             }
@@ -71,11 +70,10 @@ const Faqs = () => {
                                     {faqData.slice(5, 13).map((item) => (
                                         <div
                                             key={item.id}
-                                            className={`question-item cursor-pointer p-5 border border-outline rounded-xl duration-500 hover:border-variant1 ${
-                                                activeQuestion === item.id
+                                            className={`question-item cursor-pointer p-5 border border-outline rounded-xl duration-500 hover:border-variant1 ${activeQuestion === item.id
                                                     ? 'open'
                                                     : ''
-                                            }`}
+                                                }`}
                                             onClick={() =>
                                                 handleActiveQuestion(item.id)
                                             }
@@ -102,11 +100,10 @@ const Faqs = () => {
                                     {faqData.slice(13, 20).map((item) => (
                                         <div
                                             key={item.id}
-                                            className={`question-item cursor-pointer p-5 border border-outline rounded-xl duration-500 hover:border-variant1 ${
-                                                activeQuestion === item.id
+                                            className={`question-item cursor-pointer p-5 border border-outline rounded-xl duration-500 hover:border-variant1 ${activeQuestion === item.id
                                                     ? 'open'
                                                     : ''
-                                            }`}
+                                                }`}
                                             onClick={() =>
                                                 handleActiveQuestion(item.id)
                                             }

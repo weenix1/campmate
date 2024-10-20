@@ -11,6 +11,7 @@ import * as Icon from 'phosphor-react';
 import Rate from '@/components/Other/Rate';
 import CommunityItem from '@/components/Community/CommunityItem';
 import testimonialData from '@/data/Testimonial.json';
+import { useUser } from '@clerk/nextjs';
 
 const CommunityDetail = () => {
     const searchParams = useSearchParams();
@@ -20,12 +21,21 @@ const CommunityDetail = () => {
     if (communityId === null) {
         communityId = '1';
     }
+    const { user } = useUser();
+
     useEffect(() => {
-        setCommunityData(JSON.parse(localStorage.getItem('community')!));
+        const storedCommunity = localStorage.getItem('community');
+        if (storedCommunity) {
+            setCommunityData(JSON.parse(storedCommunity));
+        }
     }, []);
-    const blogMain = JSON.parse(localStorage.getItem('community')!).find(
-        (main: any) => main.id === communityId
-    );
+
+    const blogMain = communityData[Number(communityId) - 1];
+
+    if (!blogMain) {
+        return <div>Community data is not available.</div>;
+    }
+
 
     const handleBlogClick = (category: string) => {
         // Go to blog detail with category selected
@@ -250,7 +260,7 @@ const CommunityDetail = () => {
                                 )}
                                 <div className="h-[60px] w-px bg-outline absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-sm:hidden"></div>
                                 {Number(communityId) ===
-                                communityData.length ? (
+                                    communityData.length ? (
                                     <>
                                         <div
                                             className="right sm:text-right cursor-pointer xl:pl-[140px] sm:pl-[60px] max-sm:mt-6"
@@ -293,7 +303,7 @@ const CommunityDetail = () => {
                                 )}
                             </div>
                             <div className="list-comment md:mt-[60px] mt-8">
-                                <div className="heading flex items-center justify-between flex-wrap gap-4">
+                                {/*   <div className="heading flex items-center justify-between flex-wrap gap-4">
                                     <div className="heading4">03 Comments</div>
                                     <div className="right flex items-center gap-3">
                                         <label
@@ -340,8 +350,8 @@ const CommunityDetail = () => {
                                             />
                                         </div>
                                     </div>
-                                </div>
-                                <div className="list-review">
+                                </div> */}
+                                {/*     <div className="list-review">
                                     {testimonialData.slice(0, 3).map((item) => (
                                         <div
                                             className="item mt-7"
@@ -409,7 +419,8 @@ const CommunityDetail = () => {
                                                 id="username"
                                                 type="text"
                                                 placeholder="Your Name *"
-                                                required
+                                                value={user?.fullName ?? ''}
+                                                readOnly
                                             />
                                         </div>
                                         <div className="mail ">
@@ -424,7 +435,10 @@ const CommunityDetail = () => {
                                                 id="email"
                                                 type="email"
                                                 placeholder="Your Email *"
-                                                required
+                                                value={`${user?.emailAddresses[0]
+                                                    .emailAddress ?? ''
+                                                    }`}
+                                                readOnly
                                             />
                                         </div>
                                         <div className="col-span-full review">
@@ -432,7 +446,7 @@ const CommunityDetail = () => {
                                                 htmlFor="review"
                                                 className="text-variant1"
                                             >
-                                                Review
+                                                Comment
                                             </label>
                                             <textarea
                                                 className="border border-line px-4 py-3 w-full rounded-lg mt-3"
@@ -443,28 +457,13 @@ const CommunityDetail = () => {
                                                 required
                                             ></textarea>
                                         </div>
-                                        <div className="col-span-full flex items-start -mt-2 gap-2">
-                                            <input
-                                                type="checkbox"
-                                                id="saveAccount"
-                                                name="saveAccount"
-                                                className="mt-1.5"
-                                            />
-                                            <label
-                                                className=""
-                                                htmlFor="saveAccount"
-                                            >
-                                                Save your name, email for the
-                                                next time review
-                                            </label>
-                                        </div>
                                         <div className="col-span-full">
                                             <button className="button-main">
-                                                Submit Reviews
+                                                Submit Comment
                                             </button>
                                         </div>
                                     </form>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>

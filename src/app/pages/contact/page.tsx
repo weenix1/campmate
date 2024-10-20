@@ -78,7 +78,7 @@ const Contact = () => {
                                         </div>
                                         <div className="w-px h-12 bg-outline"></div>
                                         <div className="body2">
-                                            hi.avitex@gmail.com
+                                            contact@hizelus.com
                                         </div>
                                     </div>
                                     <div className="item flex items-center gap-6 mt-5">
@@ -87,7 +87,7 @@ const Contact = () => {
                                         </div>
                                         <div className="w-px h-12 bg-outline"></div>
                                         <div className="body2">
-                                            1-333-345-6868
+                                            +491575-123-4567
                                         </div>
                                     </div>
                                     <div className="item flex items-center gap-6 mt-5">
@@ -96,8 +96,7 @@ const Contact = () => {
                                         </div>
                                         <div className="w-px h-12 bg-outline"></div>
                                         <div className="body2">
-                                            101 E 129th St, East Chicago, IN
-                                            46312, US
+                                            Meisenweg 8, 67661 Kaiserslautern, Germany
                                         </div>
                                     </div>
                                 </div>
@@ -171,10 +170,16 @@ const Contact = () => {
                 <div className="container">
                     <div className="map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11895.370988980812!2d-87.938181987167!3d41.810147885967005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e4eb1d9c53135%3A0x1e7c2347e59cb561!2sIBJI%20OrthoAccess%20Immediate%20Care%20-%20Hinsdale!5e0!3m2!1svi!2s!4v1705375385853!5m2!1svi!2s"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2534.4381946777025!2d7.747413476597738!3d49.426169871617874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47963445a545f4fd%3A0xd7c78b0b8f4a8746!2sMeisenweg%208%2C%2067617%20Kaiserslautern%2C%20Germany!5e0!3m2!1sen!2s!4v1705382645671!5m2!1sen!2s"
                             loading="lazy"
                             className="w-full lg:h-[600px] md:h-[500px] sm:h-[400px] h-[360px] rounded-[20px]"
                         ></iframe>
+
+                        {/*  <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11895.370988980812!2d-87.938181987167!3d41.810147885967005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e4eb1d9c53135%3A0x1e7c2347e59cb561!2sIBJI%20OrthoAccess%20Immediate%20Care%20-%20Hinsdale!5e0!3m2!1svi!2s!4v1705375385853!5m2!1svi!2s"
+                            loading="lazy"
+                            className="w-full lg:h-[600px] md:h-[500px] sm:h-[400px] h-[360px] rounded-[20px]"
+                        ></iframe> */}
                     </div>
                 </div>
             </div>

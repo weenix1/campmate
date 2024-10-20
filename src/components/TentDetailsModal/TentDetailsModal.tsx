@@ -7,7 +7,7 @@ import toast from 'react-hot-toast';
 
 interface TentDetailsModalProps {
     setShowModal: Dispatch<SetStateAction<boolean>>;
-    setCheckedIn:Dispatch<SetStateAction<boolean>>
+    setCheckedIn: Dispatch<SetStateAction<boolean>>
 }
 
 const TentDetailsModal = ({
@@ -68,7 +68,7 @@ const TentDetailsModal = ({
         e.preventDefault();
         if (files[0]) {
             toast.success('Image uploaded successfully');
-            localStorage.setItem('checkedIn','checkedIn')
+            localStorage.setItem('checkedIn', 'checkedIn')
             setCheckedIn(true)
             setShowModal(false)
         } else {
@@ -89,7 +89,7 @@ const TentDetailsModal = ({
             >
                 <form onSubmit={handleUploadImage}>
                     <label htmlFor="images" className="text-variant1">
-                        Upload Image ID
+                        Upload a copy of your ID for Verification
                     </label>
                     <ul
                         className={` ${files.length !== 0 ? ' p-2 mt-3 ' : ''

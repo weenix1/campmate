@@ -30,7 +30,7 @@ const Community = () => {
         review: '',
     });
     const [files, setFiles] = useState<any>([]);
-    const { isLoaded, isSignedIn, user } = useUser();
+    const { user } = useUser();
     const [isReplying, setIsReplying] = useState<string | null>(null);
 
     const convertToBase64 = (file: File): Promise<string> => {
@@ -576,7 +576,7 @@ const Community = () => {
                                                 placeholder="Your Name *"
                                                 value={/* reviewData.name */ user?.fullName ?? ''}
                                                 onChange={handleInputChange}
-                                                required
+                                                readOnly
                                             />
                                         </div>
                                         <div className="email">
@@ -593,7 +593,7 @@ const Community = () => {
                                                 type="email"
                                                 placeholder="Your Email *"
                                                 value={`${user?.emailAddresses[0]
-                                                        .emailAddress ?? ''
+                                                    .emailAddress ?? ''
                                                     }`}
                                                 onChange={handleInputChange}
                                                 readOnly
@@ -608,8 +608,8 @@ const Community = () => {
                                             </label>
                                             <ul
                                                 className={` ${files.length !== 0
-                                                        ? ' p-2 mt-3 '
-                                                        : ''
+                                                    ? ' p-2 mt-3 '
+                                                    : ''
                                                     } flex gap-6`}
                                             >
                                                 {files.map((file: any) => (
@@ -659,7 +659,7 @@ const Community = () => {
                                                 htmlFor="review"
                                                 className="text-variant1"
                                             >
-                                                Review
+                                                Comment
                                             </label>
                                             <textarea
                                                 className="border border-line px-4 py-3 w-full rounded-lg mt-3"
@@ -672,24 +672,12 @@ const Community = () => {
                                                 required
                                             ></textarea>
                                         </div>
-                                        <div className="col-span-full flex items-start gap-2">
-                                            <input
-                                                type="checkbox"
-                                                id="saveAccount"
-                                                name="saveAccount"
-                                                className="mt-1.5"
-                                            />
-                                            <label htmlFor="saveAccount">
-                                                Save your name and email for
-                                                next time
-                                            </label>
-                                        </div>
                                         <div className="col-span-full">
                                             <button
                                                 type="submit"
                                                 className="button-main bg-primary"
                                             >
-                                                Submit Review
+                                                Submit Comment
                                             </button>
                                         </div>
                                     </form>
