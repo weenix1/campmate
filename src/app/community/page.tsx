@@ -357,7 +357,7 @@ const Community = () => {
                                 )}
                                 <div className="h-[60px] w-px bg-outline absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-sm:hidden"></div>
                                 {Number(communityId) ===
-                                communityData.length ? (
+                                    communityData.length ? (
                                     <>
                                         <div
                                             className="right sm:text-right cursor-pointer xl:pl-[140px] sm:pl-[60px] max-sm:mt-6"
@@ -574,7 +574,7 @@ const Community = () => {
                                                 name="name"
                                                 type="text"
                                                 placeholder="Your Name *"
-                                                value={reviewData.name}
+                                                value={/* reviewData.name */ user?.fullName ?? ''}
                                                 onChange={handleInputChange}
                                                 required
                                             />
@@ -592,10 +592,9 @@ const Community = () => {
                                                 name="email"
                                                 type="email"
                                                 placeholder="Your Email *"
-                                                value={`${
-                                                    user?.emailAddresses[0]
+                                                value={`${user?.emailAddresses[0]
                                                         .emailAddress ?? ''
-                                                }`}
+                                                    }`}
                                                 onChange={handleInputChange}
                                                 readOnly
                                             />
@@ -608,11 +607,10 @@ const Community = () => {
                                                 Upload Images (optional)
                                             </label>
                                             <ul
-                                                className={` ${
-                                                    files.length !== 0
+                                                className={` ${files.length !== 0
                                                         ? ' p-2 mt-3 '
                                                         : ''
-                                                } flex gap-6`}
+                                                    } flex gap-6`}
                                             >
                                                 {files.map((file: any) => (
                                                     <li
