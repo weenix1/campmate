@@ -401,7 +401,7 @@ const Community = () => {
                             </div>
                             <div className="list-comment md:mt-[60px] mt-8">
                                 <div className="heading flex items-center justify-between flex-wrap gap-4">
-                                    <div className="heading4">03 Comments</div>
+                                    <div className="heading4">Community Posts</div>
                                     <div className="right flex items-center gap-3">
                                         <label
                                             htmlFor="select-filter"
@@ -478,10 +478,10 @@ const Community = () => {
                                                     <div className="text-variant2 mt-1">
                                                         {item.date}
                                                     </div>
-                                                    <Rate
+                                                    {/*    <Rate
                                                         currentRate={item.star}
                                                         classname="text-base mt-2"
-                                                    />
+                                                    /> */}
                                                     <div className="body2 mt-3">
                                                         {item.description}
                                                     </div>
@@ -518,12 +518,12 @@ const Community = () => {
                                                                 <div className="text-variant2 mt-1">
                                                                     {reply.date}
                                                                 </div>
-                                                                <Rate
+                                                                {/*   <Rate
                                                                     currentRate={
                                                                         reply.star
                                                                     }
                                                                     classname="text-base mt-2"
-                                                                />
+                                                                /> */}
                                                                 <div className="body2 mt-3">
                                                                     {
                                                                         reply.description
