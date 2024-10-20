@@ -507,7 +507,7 @@ const Community = () => {
                                                                 <div className="flex items-center gap-2">
                                                                     <div className="heading5">
                                                                         {
-                                                                            reply.name
+                                                                            user?.fullName
                                                                         }
                                                                     </div>
                                                                     <Icon.CheckCircle
